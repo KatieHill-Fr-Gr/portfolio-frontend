@@ -46,9 +46,53 @@
   justify-content: flex-end;
 }
 
+.project-info {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+}
+
+.project-description {
+  color: white;
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--dark-secondary);;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    color: white;
+    background-color: var(--dark-primary);
+}
+
 
 @media (max-width: 768px) {
-  .feature-row {
+  .project-row {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
