@@ -1,0 +1,69 @@
+/* @tailwind base
+@tailwind components
+@tailwind utilities */
+
+* {
+  font-family: 'BBH Sans Hegarty', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --light-primary: #fff;
+  --light-secondary: #000;
+  --dark-teal: #8CBDB9;
+  --dark-lightteal: #E8ECEB;
+  --dark-yellow: #E09E50;
+  --dark-red: #e05050;
+  --light-fonts: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'BBH Sans Hegarty', sans-serif;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+button, input, textarea, select, label {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+}
+
+.page-button {
+    padding: 0.5rem 1rem;
+    color: var(--light-fonts);
+    text-decoration: none;
+    border: 1px solid var(--light-fonts);
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.page-button:hover {
+    color: white;
+    background-color: var(--light-secondary);
+}
+
+.tag-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, var(--dark-yellow) 0%, var(--dark-red) 100%);
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+}
