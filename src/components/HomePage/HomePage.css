@@ -6,6 +6,7 @@
   text-align: center;  
   padding: 1rem var(--content-padding);
   gap: 0.5rem;
+  max-width: 1000px;
 }
 
 .hero > h1 {
