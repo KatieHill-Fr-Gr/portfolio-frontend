@@ -13,7 +13,7 @@
   gap: 1rem;
 }
 
-.center-section {
+.right-section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -21,12 +21,6 @@
 
 
 #main-pages {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-#user-access {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -49,35 +43,6 @@ a.page-link {
   font-size: 1rem;
 }
 
-a.nav-button {
-  padding: 0.5rem 1rem;
-  border: 1px solid #000;
-  border-radius: 5px;
-  color: var(--dark-fonts);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-a.nav-button:hover {
-  color: var(--dark-teal);
-}
-
-.profile-button {
-  padding: 0.5rem 1rem;
-  border: none;
-  color: var(--dark-fonts);
-  background: none;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.profile-button:hover {
-  color: var(--dark-teal);
-}
-
 .logo-image {
   width: 1.5rem;
   height: 1.5rem;
@@ -96,20 +61,13 @@ a.nav-button:hover {
 
 .hamburger {
   display: none;
-  background: none;
+  background: var(--light-primary);
   border: none;
   cursor: pointer;
 }
 
-.mobile-user-controls {
-  display: none;
-}
-
 @media (max-width: 768px) {
-
-  .center-section,
-  .right-section,
-  .nav-button {
+  .right-section {
     display: none;
   }
 
@@ -132,7 +90,7 @@ a.nav-button:hover {
     top: 70px;
     left: 0;
     width: 100%;
-    background: var(--dark-primary);
+    background: var(--light-primary);
     padding: 1rem 2rem;
     gap: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
