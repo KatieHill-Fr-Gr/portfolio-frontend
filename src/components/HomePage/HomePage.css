@@ -5,14 +5,13 @@
   justify-content: center;
   text-align: center;  
   padding: 1rem var(--content-padding);
-  margin: 3rem auto 0;
   gap: 0.5rem;
-  max-width: 600px;
 }
 
 .hero > h1 {
   text-align: left;
   margin: 0; 
+  font-size: 6rem;
 }
 
 .homepage-content {
@@ -21,8 +20,8 @@
     font-style: normal;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     padding: 1rem var(--content-padding);
     gap: 5rem;
 }

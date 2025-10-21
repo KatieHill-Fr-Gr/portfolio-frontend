@@ -3,7 +3,7 @@
 @tailwind utilities */
 
 * {
-  font-family: 'BBH Sans Hegarty', sans-serif;
+  font-family: "Onest", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -19,19 +19,19 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'BBH Sans Hegarty', sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 button, input, textarea, select, label {
-  font-family: "Inter", sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 a {
-  font-family: "Inter", sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 .page-button {
