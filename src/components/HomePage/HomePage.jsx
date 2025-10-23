@@ -32,28 +32,42 @@ const HomePage = () => {
         <h1>Full-stack developer, React, Node.js, Python</h1>
       </section>
 
-      <section className="page-content">
+      <section className="homepage-content">
         {projectsLoading ? (
           <p>Loading projects...</p>
         ) : projects.length > 0 ? (
           projects.map((project) => (
-              <div key={project.id} className="project-row">
-                <div className="project-info">
-                  <h3>{project.name}</h3>
-                  <div className="project-description">
-                    <p>{project.description}</p>
+            <div key={project.id} className="project-gallery">
+
+              {project.images && project.images.length > 0 && (
+                <div className="image-row">
+                  {project.images.map((img, index) =>(
+                    <img
+                    key={img.image_url || index}
+                    src={img.image_url}
+                    alt={project.name}
+                    className="project-img"
+                    />
+                  )
+                  )}
                   </div>
-                </div>
-                <div className="project-actions">
+              )}
+
+              <div className="project-info">
+                <h3>{project.name}</h3>
+              </div>
+              {/* <div className="project-actions">
                   <Link to={`/projects/${project.id}`} className="project-button">
                     View project
                   </Link>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p> No projects found</p>
-          )}
+                </div> */}
+                <p className="project-description">{project.description}</p>
+
+            </div>
+          ))
+        ) : (
+          <p> No projects found</p>
+        )}
       </section>
     </main>
   )
