@@ -9,14 +9,11 @@
 }
 
 :root {
+  --light-background: #fff;
   --light-primary: #fff;
   --light-secondary: #000;
-  --dark-teal: #8CBDB9;
-  --dark-lightteal: #E8ECEB;
-  --dark-yellow: #E09E50;
-  --dark-red: #e05050;
   --light-fonts: #000;
-  --light-body-font: #dbdbdb;
+  --light-body-font: #b7b7b7;
 }
 
 h1, h2, h3, h4, h5, h6 {

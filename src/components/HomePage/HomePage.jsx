@@ -2,11 +2,17 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
+// import { ExternalLink } from 'lucide-react' // put this on project page
 
 const HomePage = () => {
   const navigate = useNavigate()
   const [projects, setProjects] = useState([])
   const [projectsLoading, setProjectsLoading] = useState(true)
+
+  // const LINK_ICONS = {
+  //   live: ExternalLink,
+  //   github: Github,
+  // }
 
   useEffect(() => {
     const loadProjects = async () => {
@@ -54,17 +60,20 @@ const HomePage = () => {
                   )}
                 </div>
               )}
-
-              <div className="project-info">
-                <h3>{project.name}</h3>
-              </div>
-              <p className="project-description">{project.description}</p>
-              {/* <div className="project-actions">
+              <div className="project-row">
+                <div className="project-info">
+                  <h3>{project.name}</h3>
+                  <p className="project-subtitle">
+                    {project.subtitle}
+                  </p>
+                </div>
+                <p className="project-description">{project.description}</p>
+                {/* <div className="project-actions">
                   <Link to={`/projects/${project.id}`} className="project-button">
                     View project
                   </Link>
                 </div> */}
-
+              </div>
             </div>
           ))
         ) : (

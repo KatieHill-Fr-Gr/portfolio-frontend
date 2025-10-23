@@ -61,7 +61,7 @@ a.page-link {
 
 .hamburger {
   display: none;
-  background: var(--light-primary);
+  background: var(--light-background);
   border: none;
   cursor: pointer;
 }

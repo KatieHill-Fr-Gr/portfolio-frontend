@@ -15,14 +15,11 @@
 }
 
 .homepage-content {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding: var(--content-padding);
+    padding: 4rem;
     border-top: 1px solid var(--light-secondary);
     margin: 1rem;
     gap: 5rem;
@@ -57,59 +54,56 @@
   object-fit: cover;
 }
 
-.project-info {
+.project-row {
   display: flex;
   gap: 1rem;
-  padding: 1.25rem;
-  text-align: center;
+  justify-content: space-between;
+  align-items: middle;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem 0;
+  margin: 0;
 }
 
 .project-info h3 {
-  margin: 0 0 0.5rem 0;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 1.3;
 }
 
-.project-description {
+.project-subtitle {
   color: var(--light-body-font);
   margin: 0;
   font-size: 0.9rem;
 }
 
-.project-actions {
+.project-description {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: 600px;
+}
+
+.project-link {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.project-button {
-    padding: 0.5rem 1rem;
-    background-color: var(--dark-secondary);;
-    color: white;
-    text-decoration: none;
-    border: none;
-    font-weight: 400;
-    font-size: 0.75rem;
-    transition: background-color 0.3s ease;
-}
-
-.project-button:hover {
-    color: white;
-    background-color: var(--dark-primary);
-}
-
 
 @media (max-width: 768px) {
   .image-row {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
   }
   .project-row {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
   }
 }
