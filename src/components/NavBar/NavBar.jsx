@@ -14,8 +14,10 @@ const NavBar = () => {
                 </div>
 
                 <div className="center-section">
-                    <Link to="/" className="profile-button">Projects</Link>
-                    <Link to="/" className="profile-button">About</Link>
+                    <Link to="/" className="page-link">Projects</Link>
+                    <Link to="/" className="page-link">About</Link>
+                    <Link to="/" className="page-link">Contact</Link>
+                    <Link to="/" className="page-link">Articles</Link>
                 </div>
                 <div className="mobile-user-controls">
                     <button

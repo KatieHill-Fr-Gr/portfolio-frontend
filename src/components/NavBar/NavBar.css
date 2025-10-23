@@ -34,7 +34,7 @@ a.home-link {
 }
 
 a.home-link:hover {
-  color: var(--dark-teal);
+  color: var(--light-links);
 }
 
 a.page-link {
@@ -42,6 +42,11 @@ a.page-link {
   text-decoration: none;
   font-size: 1rem;
 }
+
+a.page-link:hover {
+  color: var(--light-links);
+}
+
 
 .logo-image {
   width: 1.5rem;
@@ -91,7 +96,7 @@ a.page-link {
     top: 70px;
     left: 0;
     width: 100%;
-    background: var(--light-primary);
+    background: var(--light-background);
     padding: 1rem 2rem;
     gap: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -105,7 +110,7 @@ a.page-link {
 
   .mobile-link {
     font-size: 1.1rem;
-    color: var(--dark-fonts);
+    color: var(--light-fonts);
     text-decoration: none;
     background: none;
     border: none;
@@ -114,7 +119,7 @@ a.page-link {
   }
 
   .mobile-link:hover {
-    color: var(--dark-teal);
+    color: var(--light-links);
   }
 
   .mobile-menu.hidden {
