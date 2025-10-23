@@ -33,6 +33,7 @@ const HomePage = () => {
       </section>
 
       <section className="homepage-content">
+        <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
         ) : projects.length > 0 ? (
@@ -41,27 +42,28 @@ const HomePage = () => {
 
               {project.images && project.images.length > 0 && (
                 <div className="image-row">
-                  {project.images.map((img, index) =>(
-                    <img
-                    key={img.image_url || index}
-                    src={img.image_url}
-                    alt={project.name}
-                    className="project-img"
-                    />
+                  {project.images.map((img, index) => (
+                    <div key={img.image_url || index} className="img-container">
+                      <img
+                        src={img.image_url}
+                        alt={project.name}
+                        className="img"
+                      />
+                    </div>
                   )
                   )}
-                  </div>
+                </div>
               )}
 
               <div className="project-info">
                 <h3>{project.name}</h3>
               </div>
+              <p className="project-description">{project.description}</p>
               {/* <div className="project-actions">
                   <Link to={`/projects/${project.id}`} className="project-button">
                     View project
                   </Link>
                 </div> */}
-                <p className="project-description">{project.description}</p>
 
             </div>
           ))
@@ -69,7 +71,7 @@ const HomePage = () => {
           <p> No projects found</p>
         )}
       </section>
-    </main>
+    </main >
   )
 }
 

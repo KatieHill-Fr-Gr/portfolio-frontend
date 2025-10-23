@@ -4,14 +4,13 @@
   align-items: center; 
   justify-content: center;
   text-align: center;  
-  padding: 1rem var(--content-padding);
+  padding: var(--content-padding);
   gap: 0.5rem;
   max-width: 1000px;
 }
 
 .hero > h1 {
-  text-align: left;
-  margin: 0; 
+  text-align: left; 
   font-size: 6rem;
 }
 
@@ -23,7 +22,7 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    padding: 1rem var(--content-padding);
+    padding: var(--content-padding);
     border-top: 1px solid var(--light-secondary);
     margin: 1rem;
     gap: 5rem;
@@ -44,14 +43,18 @@
   align-items: stretch; 
 }
 
-
-.project-img {
+.img-container {
   background: linear-gradient(180deg, var(--dark-secondary) 0%, var(--dark-primary) 100%);
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   width: 600px;
+  gap: 1rem;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-info {
