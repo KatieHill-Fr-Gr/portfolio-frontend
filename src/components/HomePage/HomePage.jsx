@@ -24,6 +24,8 @@ const HomePage = () => {
     loadProjects()
   }, [])
 
+  console.log(projects)
+
   return (
     <main>
       <section className="hero">
@@ -42,11 +44,11 @@ const HomePage = () => {
                     <p>{project.description}</p>
                   </div>
                 </div>
-                {/* <div className="project-actions">
+                <div className="project-actions">
                   <Link to={`/projects/${project.id}`} className="project-button">
                     View project
                   </Link>
-                </div> */}
+                </div>
               </div>
             ))
           ) : (
