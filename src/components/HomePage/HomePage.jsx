@@ -67,14 +67,14 @@ const HomePage = () => {
                     {project.subtitle}
                   </p>
                 </div>
-                <p className="project-description">{project.description}</p>
-                {/* <div className="project-actions">
-                  <Link to={`/projects/${project.id}`} className="project-button">
+                <div className="project-description">
+                  <p>{project.description}</p>
+                  <Link to={`/projects/${project.id}`} className="project-link">
                     View project
                   </Link>
-                </div> */}
+                </div>
+                </div>
               </div>
-            </div>
           ))
         ) : (
           <p> No projects found</p>

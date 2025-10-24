@@ -89,7 +89,9 @@
 
 .project-link {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    text-decoration: none;
+    color: var(--light-body-font);
     gap: 1rem;
     margin-top: 1rem;
 }
