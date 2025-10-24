@@ -83,7 +83,7 @@ const ProjectPage = () => {
                             <div className="project-technologies">
                                 {project.technologies.map((tech, index) => {
                                     return (
-                                       <p key={index}>{tech.name}</p>
+                                       <span key={index}> {tech.name}/</span>
                                     )
                                 })}
                             </div>
