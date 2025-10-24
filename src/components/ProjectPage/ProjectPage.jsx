@@ -2,6 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { projectShow } from '../../services/projects'
 import { ChevronsRightLeft } from 'lucide-react'
+// import { ExternalLink } from 'lucide-react' // put this on project page
+
 
 
 const ProjectPage = () => {
@@ -10,6 +12,11 @@ const ProjectPage = () => {
     const [error, setError] = useState({})
     const [uploading, setUploading] = useState(false)
     const navigate = useNavigate()
+
+    // const LINK_ICONS = {
+    //   live: ExternalLink,
+    //   github: Github,
+    // }
 
     useEffect(() => {
         const getProject = async () => {
@@ -36,15 +43,33 @@ const ProjectPage = () => {
     return (
         <div className="page-content">
             {project.name ? (
-            <div className="page-title">
-                <h1>{project.name}</h1>
-                <p>{project.subtitle}</p>
-                <p>{project.description}</p>
-            </div>
+                <div className="project-row">
+                    <div className="page-title">
+                        <h1>{project.name}</h1>
+                        <p>{project.subtitle}</p>
+                        <p>{project.description}</p>
+                    </div>
+                </div>
             ) : (
-                <p>Loading...</p>  
+                <p>Loading...</p>
             )}
-        </div>
+
+            <div className="project-gallery">
+                {project.images && project.images.length > 0 ? (
+                    project.images.map((img, index) => (
+                    <div key={img.image_url || index} className="img-container">
+                      <img
+                        src={img.image_url}
+                        alt={project.name}
+                        className="img"
+                      />
+                    </div>
+                    ))
+                ) : (
+                    <p>No images available</p>
+                )}
+                </div>
+            </div>
 
     )
 
