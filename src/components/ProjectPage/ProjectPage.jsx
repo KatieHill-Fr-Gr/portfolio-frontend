@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { projectShow } from '../../services/projects'
-import { ChevronsRightLeft } from 'lucide-react'
+import { projectShow, projectUpdate } from '../../services/projects'
+
 import { LuExternalLink } from "react-icons/lu"
 import { LuGithub } from "react-icons/lu"
 
@@ -9,6 +9,7 @@ import { LuGithub } from "react-icons/lu"
 const ProjectPage = () => {
     const { projectId } = useParams()
     const [project, setProject] = useState({})
+    const [isEditing, setIsEditing] = useState(false)
     const [error, setError] = useState({})
     const [uploading, setUploading] = useState(false)
     const navigate = useNavigate()
@@ -17,6 +18,17 @@ const ProjectPage = () => {
         live: LuExternalLink,
         github: LuGithub,
     }
+
+    const [formData, setFormData] = useState({
+        name: '',
+        subtitle: '',
+        description: '',
+        contributors: [],
+        technologies: [],
+        links: [{ url: '' }],
+        images: [{ image_url: '' }],
+        is_public: false
+    })
 
     useEffect(() => {
         const getProject = async () => {
