@@ -2,8 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { projectShow } from '../../services/projects'
 import { ChevronsRightLeft } from 'lucide-react'
-// import { ExternalLink } from 'lucide-react' // put this on project page
-
+import { LuExternalLink } from "react-icons/lu"
+import { LuGithub } from "react-icons/lu"
 
 
 const ProjectPage = () => {
@@ -13,10 +13,10 @@ const ProjectPage = () => {
     const [uploading, setUploading] = useState(false)
     const navigate = useNavigate()
 
-    // const LINK_ICONS = {
-    //   live: ExternalLink,
-    //   github: Github,
-    // }
+    const LINK_TYPE_ICONS = {
+        live: LuExternalLink,
+        github: LuGithub,
+    }
 
     useEffect(() => {
         const getProject = async () => {
@@ -37,17 +37,36 @@ const ProjectPage = () => {
         }
     }, [projectId, navigate])
 
-    console.log(projectId)
-    console.log(project)
-
     return (
-        <div className="page-content">
+       <section className="page-content">
             {project.name ? (
-                <div className="project-row">
-                    <div className="page-title">
+                <div className="page-title">
+                    <div className="project-title">
                         <h1>{project.name}</h1>
-                        <p>{project.subtitle}</p>
+                        <p className="project-subtitle">
+                            {project.subtitle}
+                        </p>
+                    </div>
+                    <div className="project-description">
                         <p>{project.description}</p>
+                        {project.links && project.links.length > 0 && (
+                            <div className="project-links">
+                                {project.links.map((link, index) => {
+                                    const Icon = LINK_TYPE_ICONS[link.link_type]
+                                    return (
+                                       <a 
+                                            key={index} 
+                                            href={link.url} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="project-link"
+                                        >
+                                            {Icon && <Icon size={20} />}
+                                        </a>
+                                    )
+                                })}
+                            </div>
+                        )}
                     </div>
                 </div>
             ) : (
@@ -57,23 +76,21 @@ const ProjectPage = () => {
             <div className="project-gallery">
                 {project.images && project.images.length > 0 ? (
                     project.images.map((img, index) => (
-                    <div key={img.image_url || index} className="img-container">
-                      <img
-                        src={img.image_url}
-                        alt={project.name}
-                        className="img"
-                      />
-                    </div>
+                        <div key={img.image_url || index} className="page-img-container">
+                            <img
+                                src={img.image_url}
+                                alt={project.name}
+                                className="page-img"
+                            />
+                        </div>
                     ))
                 ) : (
                     <p>No images available</p>
                 )}
-                </div>
             </div>
+        </section>
 
     )
-
-
 }
 
 export default ProjectPage
