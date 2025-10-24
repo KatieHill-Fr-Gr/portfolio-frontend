@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { projectShow, projectUpdate } from '../../services/projects'
-
+// import { getTechnologies } from '../../services/technologies'
 import { LuExternalLink } from "react-icons/lu"
 import { LuGithub } from "react-icons/lu"
 
@@ -9,7 +9,7 @@ import { LuGithub } from "react-icons/lu"
 const ProjectPage = () => {
     const { projectId } = useParams()
     const [project, setProject] = useState({})
-    const [isEditing, setIsEditing] = useState(false)
+    // const [isEditing, setIsEditing] = useState(false)
     const [error, setError] = useState({})
     const [uploading, setUploading] = useState(false)
     const navigate = useNavigate()
@@ -19,16 +19,16 @@ const ProjectPage = () => {
         github: LuGithub,
     }
 
-    const [formData, setFormData] = useState({
-        name: '',
-        subtitle: '',
-        description: '',
-        contributors: [],
-        technologies: [],
-        links: [{ url: '' }],
-        images: [{ image_url: '' }],
-        is_public: false
-    })
+    // const [formData, setFormData] = useState({
+    //     name: '',
+    //     subtitle: '',
+    //     description: '',
+    //     contributors: [],
+    //     technologies: [],
+    //     links: [{ url: '' }],
+    //     images: [{ image_url: '' }],
+    //     is_public: false
+    // })
 
     useEffect(() => {
         const getProject = async () => {
@@ -75,6 +75,15 @@ const ProjectPage = () => {
                                         >
                                             {Icon && <Icon size={20} />}
                                         </a>
+                                    )
+                                })}
+                            </div>
+                        )}
+                        {project.technologies && project.technologies.length > 0 && (
+                            <div className="project-technologies">
+                                {project.technologies.map((tech, index) => {
+                                    return (
+                                       <p key={index}>{tech.name}</p>
                                     )
                                 })}
                             </div>
