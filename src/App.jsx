@@ -25,8 +25,10 @@ function App() {
         <div className='page-container'>
       <Routes>
         <Route index element={<HomePage />} />
+        <Route path='/projects' element={<HomePage />} />
         <Route path='/projects/:projectId' element={<ProjectPage />} />
-        // <Route path='*' element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       </div>
       <FooterBar />

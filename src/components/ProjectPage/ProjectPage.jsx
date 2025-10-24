@@ -1,41 +1,49 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { projectShow } from '../../services/projects'
 import { ChevronsRightLeft } from 'lucide-react'
 
 
 const ProjectPage = () => {
-    const [project, setProject] = useState(null)
+    const { projectId } = useParams()
+    const [project, setProject] = useState({})
     const [error, setError] = useState({})
     const [uploading, setUploading] = useState(false)
-
     const navigate = useNavigate()
 
     useEffect(() => {
         const getProject = async () => {
             try {
-                const response = await projectShow(project)
-                const projectData = response.data
-                setProject(projectData)
+                const response = await projectShow(projectId)
+                setProject(response.data)
             } catch (error) {
                 console.error('Error fetching data:', error)
-                setError({ message: 'Unable to load project' })
+                if (error.response && error.response.status === 404) {
+                    navigate('/404', { replace: true })
+                } else {
+                    setError({ message: 'Unable to load project' })
+                }
             }
         }
-
-        if (project) {
+        if (projectId) {
             getProject()
         }
-    }, [project])
+    }, [projectId, navigate])
 
+    console.log(projectId)
     console.log(project)
 
     return (
         <div className="page-content">
+            {project.name ? (
             <div className="page-title">
                 <h1>{project.name}</h1>
-                <h2>{project.subtitle}</h2>
+                <p>{project.subtitle}</p>
+                <p>{project.description}</p>
             </div>
+            ) : (
+                <p>Loading...</p>  
+            )}
         </div>
 
     )
