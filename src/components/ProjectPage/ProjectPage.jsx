@@ -1,3 +1,5 @@
+import './ProjectPage.css'
+
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { projectShow, projectUpdate } from '../../services/projects'
@@ -51,7 +53,7 @@ const ProjectPage = () => {
 
     return (
        <section className="page-content">
-            {project.name ? (
+            {project?.name ? (
                 <div className="page-title">
                     <div className="project-title">
                         <h1>{project.name}</h1>
@@ -59,6 +61,7 @@ const ProjectPage = () => {
                             {project.subtitle}
                         </p>
                     </div>
+                    <div className="project-wrapper">
                     <div className="project-description">
                         <p>{project.description}</p>
                         {project.links && project.links.length > 0 && (
@@ -73,7 +76,7 @@ const ProjectPage = () => {
                                             rel="noopener noreferrer"
                                             className="project-link"
                                         >
-                                            {Icon && <Icon size={20} />}
+                                            <span>{Icon && <Icon size={20} />} {link.link_type}</span>
                                         </a>
                                     )
                                 })}
@@ -88,11 +91,14 @@ const ProjectPage = () => {
                                 })}
                             </div>
                         )}
+                        </div>
                     </div>
-                </div>
+                    </div>
             ) : (
                 <p>Loading...</p>
             )}
+            
+            
 
             <div className="project-gallery">
                 {project.images && project.images.length > 0 ? (
