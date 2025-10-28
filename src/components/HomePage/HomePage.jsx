@@ -40,7 +40,7 @@ const HomePage = () => {
 
               {project.images && project.images.length > 0 && (
                 <div className="image-row">
-                  {project.images.map((img, index) => (
+                  {project.images.slice(0, 3).map((img, index) => (
                     <div key={img.image_url || index} className="img-container">
                       <img
                         src={img.image_url}

@@ -61,7 +61,6 @@ const ProjectPage = () => {
                             {project.subtitle}
                         </p>
                     </div>
-                    <div className="project-wrapper">
                     <div className="project-description">
                         <p>{project.description}</p>
                         {project.links && project.links.length > 0 && (
@@ -93,14 +92,11 @@ const ProjectPage = () => {
                         )}
                         </div>
                     </div>
-                    </div>
             ) : (
                 <p>Loading...</p>
             )}
-            
-            
-
-            <div className="project-gallery">
+                        
+            <div className="image-gallery">
                 {project.images && project.images.length > 0 ? (
                     project.images.map((img, index) => (
                         <div key={img.image_url || index} className="page-img-container">
