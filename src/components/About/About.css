@@ -1,0 +1,11 @@
+.tech-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.technologies {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}

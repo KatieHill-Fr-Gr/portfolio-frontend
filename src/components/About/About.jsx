@@ -12,7 +12,6 @@ const About = () => {
         const fetchTechnologies = async () => {
             try {
                 const response = await getTechnologies()
-                console.log('Response data:', response)
                 setTechnologies(response)
             } catch (error) {
                 console.error('Error fetching data:', error)
@@ -25,8 +24,6 @@ const About = () => {
         }
             fetchTechnologies()
     }, [])
-
-    console.log(technologies)
 
     return (
        <section className="page-content">
