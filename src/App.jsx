@@ -11,8 +11,7 @@ import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import FooterBar from './components/FooterBar/FooterBar'
 import HomePage from './components/HomePage/HomePage'
-// import MyProjects from './components/MyProjects/MyProjects'
-// import ProjectPage from './components/ProjectPage/ProjectPage'
+import ProjectPage from './components/ProjectPage/ProjectPage'
 import NotFound from './components/404NotFound/404NotFound'
 
 // Contexts
@@ -26,9 +25,10 @@ function App() {
         <div className='page-container'>
       <Routes>
         <Route index element={<HomePage />} />
-        {/* <Route path='/projects' element={<MyProjects />} />
-        <Route path='/projects/:projectId' element={<ProjectPage />} /> */}
-        // <Route path='*' element={<NotFound />} />
+        <Route path='/projects' element={<HomePage />} />
+        <Route path='/projects/:projectId' element={<ProjectPage />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       </div>
       <FooterBar />

@@ -2,17 +2,11 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-// import { ExternalLink } from 'lucide-react' // put this on project page
 
 const HomePage = () => {
   const navigate = useNavigate()
   const [projects, setProjects] = useState([])
   const [projectsLoading, setProjectsLoading] = useState(true)
-
-  // const LINK_ICONS = {
-  //   live: ExternalLink,
-  //   github: Github,
-  // }
 
   useEffect(() => {
     const loadProjects = async () => {
@@ -30,15 +24,13 @@ const HomePage = () => {
     loadProjects()
   }, [])
 
-  console.log(projects)
-
   return (
     <main>
       <section className="hero">
         <h1>Full-stack developer, React, Node.js, Python</h1>
       </section>
 
-      <section className="homepage-content">
+      <section className="page-content">
         <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
@@ -48,7 +40,7 @@ const HomePage = () => {
 
               {project.images && project.images.length > 0 && (
                 <div className="image-row">
-                  {project.images.map((img, index) => (
+                  {project.images.slice(0, 3).map((img, index) => (
                     <div key={img.image_url || index} className="img-container">
                       <img
                         src={img.image_url}
