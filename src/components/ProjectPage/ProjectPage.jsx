@@ -1,4 +1,5 @@
 import './ProjectPage.css'
+import { Carousel } from "../Carousel/Carousel"
 
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -111,6 +112,7 @@ const ProjectPage = () => {
                     <p>No images available</p>
                 )}
             </div>
+            {/* <Carousel items={otherProjects} type="project" /> */}
         </section>
 
     )
