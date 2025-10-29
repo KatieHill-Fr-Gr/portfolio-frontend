@@ -1,0 +1,29 @@
+.project-title {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  gap: 0.5rem;
+}
+
+.project-link {
+  display: inline-flex;
+  justify-content: left;
+  text-decoration: none;
+  color: var(--light-body-font);
+}
+
+.project-link svg {
+  color: var(--light-body-font);
+}
+
+.project-technologies {
+  gap: 0.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
