@@ -12,7 +12,8 @@ const About = () => {
         const fetchTechnologies = async () => {
             try {
                 const response = await getTechnologies()
-                setTechnologies(response.data)
+                console.log('Response data:', response)
+                setTechnologies(response)
             } catch (error) {
                 console.error('Error fetching data:', error)
                 if (error.response && error.response.status === 404) {
@@ -25,6 +26,8 @@ const About = () => {
             fetchTechnologies()
     }, [])
 
+    console.log(technologies)
+
     return (
        <section className="page-content">
                 <div className="page-title">
@@ -35,9 +38,9 @@ const About = () => {
                         <h2>Tech</h2>
                         {technologies && technologies.length > 0 && (
                             <div className="technologies">
-                                {technologies.map((tech, index) => {
+                                {technologies.map((tech, index) => (
                                        <p key={index}>{tech.name}</p>
-                                })}
+                                ))}
                             </div>
                         )}
                         </div>
