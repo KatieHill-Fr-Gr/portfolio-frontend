@@ -2,6 +2,7 @@ import './About.css'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
+import { Section } from 'lucide-react'
 
 const About = () => {
     const [error, setError] = useState({})
@@ -25,43 +26,70 @@ const About = () => {
         fetchTechnologies()
     }, [])
 
-    console.log(technologies)
-
     return (
         <section className="page-content">
             <div className="page-title">
                 <h1>About</h1>
             </div>
-            <div className="tech-section">
+            <div className="about-section">
                 <h2>Tech</h2>
+                <div className="tech-grid">
                 <div className="technologies">
                     <h3 className="sub-heading">FRONTEND</h3>
                     {technologies && technologies.length > 0 && (
                         <div className="tech-list">
                             {technologies
-                                .filter((tech) => tech.category === "frontend")
+                                .filter((tech) => tech.category === "Frontend")
                                 .map((tech, index) => (
                                     <p key={index}>{tech.name}</p>
                                 ))}
                         </div>
                     )}
                 </div>
-
                 <div className="technologies">
-                    <h3 className="sub-heading">BACKEND & DATABASES</h3>
-                    <h3 className="sub-heading">LANGUAGES</h3>
-                    <h3 className="sub-heading">PLATFORMS & TOOLS</h3>
+                    <h3 className="sub-heading">BACKEND</h3>
+                    {technologies && technologies.length > 0 && (
+                        <div className="tech-list">
+                            {technologies
+                                .filter((tech) => tech.category === "Backend")
+                                .map((tech, index) => (
+                                    <p key={index}>{tech.name}</p>
+                                ))}
+                        </div>
+                    )}
                 </div>
+                <div className="technologies">
+                    <h3 className="sub-heading">DATABASES</h3>
+                    {technologies && technologies.length > 0 && (
+                        <div className="tech-list">
+                            {technologies
+                                .filter((tech) => tech.category === "Databases")
+                                .map((tech, index) => (
+                                    <p key={index}>{tech.name}</p>
+                                ))}
+                        </div>
+                    )}
+                </div>
+                <div className="technologies">
+                    <h3 className="sub-heading">TOOLS & PLATFORMS</h3>
+                    {technologies && technologies.length > 0 && (
+                        <div className="tech-list">
+                            {technologies
+                                .filter((tech) => tech.category === "Tools & Platforms")
+                                .map((tech, index) => (
+                                    <p key={index}>{tech.name}</p>
+                                ))}
+                        </div>
+                    )}
+                </div>
+                </div>
+                </div>
+                <div className="about-section">
+                <h2>Tech</h2>
+                
 
-{/* 
-                {technologies && technologies.length > 0 && (
-                    <div className="tech-list">
-                        {technologies.map((tech, index) => (
-                            <p key={index}>{tech.name}</p>
-                        ))}
-                    </div>
-                )} */}
-            </div>
+      
+                </div>
 
 
             <div className="image-gallery">

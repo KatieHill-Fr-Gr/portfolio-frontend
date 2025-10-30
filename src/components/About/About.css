@@ -1,7 +1,17 @@
-.tech-section {
+.about-section {
     display: flex;
     gap: 1rem;
+    padding: 2rem;
     justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: solid 1px var(--light-body-font);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
 }
 
 .tech-category {
@@ -21,4 +31,10 @@
     margin: 0;
     font-size: 0.9rem;
     font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
 }
