@@ -33,6 +33,36 @@
     font-weight: 400;
 }
 
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0, 3rem;
+    width: 50%;
+}
+
+.experience {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--light-body-font);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.job-title {
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.year {
+    color: var(--light-body-font);
+}
+
+.about-me {
+    width: 50%;
+}
+
 @media (max-width: 600px) {
     .tech-grid {
         grid-template-columns: 1fr;
