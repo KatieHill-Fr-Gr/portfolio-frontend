@@ -1,5 +1,5 @@
 import './About.css'
-import { useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 
@@ -22,31 +22,52 @@ const About = () => {
                 }
             }
         }
-            fetchTechnologies()
+        fetchTechnologies()
     }, [])
 
+    console.log(technologies)
+
     return (
-       <section className="page-content">
-                <div className="page-title">
-                        <h1>About</h1>
-                        <p>...</p>
-                </div>
-                    <div className="tech-section">
-                        <h2>Tech</h2>
-                        {technologies && technologies.length > 0 && (
-                            <div className="technologies">
-                                {technologies.map((tech, index) => (
-                                       <p key={index}>{tech.name}</p>
+        <section className="page-content">
+            <div className="page-title">
+                <h1>About</h1>
+            </div>
+            <div className="tech-section">
+                <h2>Tech</h2>
+                <div className="technologies">
+                    <h3 className="sub-heading">FRONTEND</h3>
+                    {technologies && technologies.length > 0 && (
+                        <div className="tech-list">
+                            {technologies
+                                .filter((tech) => tech.category === "frontend")
+                                .map((tech, index) => (
+                                    <p key={index}>{tech.name}</p>
                                 ))}
-                            </div>
-                        )}
                         </div>
-  
-                        
+                    )}
+                </div>
+
+                <div className="technologies">
+                    <h3 className="sub-heading">BACKEND & DATABASES</h3>
+                    <h3 className="sub-heading">LANGUAGES</h3>
+                    <h3 className="sub-heading">PLATFORMS & TOOLS</h3>
+                </div>
+
+{/* 
+                {technologies && technologies.length > 0 && (
+                    <div className="tech-list">
+                        {technologies.map((tech, index) => (
+                            <p key={index}>{tech.name}</p>
+                        ))}
+                    </div>
+                )} */}
+            </div>
+
+
             <div className="image-gallery">
                 {/* pictures of me */}
 
-                        </div>
+            </div>
         </section>
 
     )
