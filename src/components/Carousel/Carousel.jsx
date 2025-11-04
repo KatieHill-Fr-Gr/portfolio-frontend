@@ -1,26 +1,11 @@
 import './Carousel.css'
 import useEmblaCarousel from 'embla-carousel-react'
-
-// import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-// import {
-//   PrevButton,
-//   NextButton,
-//   usePrevNextButtons
-// } from './EmblaCarouselArrowButtons'
+import { useCarouselButtons } from '../../hooks/useCarouselButtons'
 
 
-export const Carousel = ({ items, type = "project" }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" })
-
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
-    usePrevNextButtons(emblaApi)
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
-
-  useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes())
-    }
-  }, [emblaApi])
+export const ProjectsCarousel = ({ projects }) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel
+  const { scrollPrev, scrollNext, prevBtnDisabled, nextBtnDisabled } = useCarouselButtons(emblaApi)
 
   return (
     <div className="carousel">
@@ -52,7 +37,7 @@ export const Carousel = ({ items, type = "project" }) => {
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
 
-      <div className="carousel__dots">
+      {/* <div className="carousel__dots">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -61,7 +46,7 @@ export const Carousel = ({ items, type = "project" }) => {
               }`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   )
 } 
