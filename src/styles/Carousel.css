@@ -37,8 +37,8 @@
 .carousel__buttons {
   position: absolute;
   top: 50%;
-  width: 100%;
-  /* margin: 0 1rem; */
+  left: 0.5rem;
+  right: 0.5rem;
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
@@ -55,4 +55,8 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background 0.3s;
+}
+
+.carousel__buttons button:hover {
+  background: rgba(255, 255, 255, 1);
 }
