@@ -140,17 +140,8 @@ const About = () => {
                 ) : (
                     <p>Loading your info...</p>
                 )}
-
-                <div className="page-img-container">
-                    {/* <img src= alt='Katie Hill, profile photo' className="page-img" /> */}
-                </div>
-                <p>
-                </p>
             </div>
-
-
-
-            {/* pictures of me */}
+            {/* contributors */}
         </section>
 
     )
