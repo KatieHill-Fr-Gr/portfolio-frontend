@@ -39,7 +39,7 @@ export const ProjectsCarousel = () => {
             {projects.map((project) => (
               <div key={project._id} className="carousel__slide">
                 <div className="item-image">
-                  <img src={project.images?.[0]} alt={project.name} />
+                  <img src={project.images?.[0]?.image_url} alt={project.name} />
                 </div>
                 <div className="item-info">
                   <h3>{project.name}</h3>
