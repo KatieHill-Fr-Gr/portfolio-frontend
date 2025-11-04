@@ -12,6 +12,7 @@ import NavBar from './components/NavBar/NavBar'
 import FooterBar from './components/FooterBar/FooterBar'
 import HomePage from './components/HomePage/HomePage'
 import ProjectPage from './components/ProjectPage/ProjectPage'
+import About from './components/About/About'
 import NotFound from './components/404NotFound/404NotFound'
 
 // Contexts
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path='/projects' element={<HomePage />} />
+        <Route path='/about' element={<About />} />
         <Route path='/projects/:projectId' element={<ProjectPage />} />
         <Route path="/404" element={<NotFound />} />
         <Route path='*' element={<NotFound />} />

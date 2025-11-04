@@ -123,8 +123,6 @@ p {
     gap: 1rem;
     text-align: right;
   }
-
-
   .content-wrapper {
     flex-direction: column;
   }

@@ -15,7 +15,7 @@ const NavBar = () => {
 
                 <div className="center-section">
                     <Link to="/" className="page-link">Projects</Link>
-                    <Link to="/" className="page-link">About</Link>
+                    <Link to="/about" className="page-link">About</Link>
                     <Link to="/" className="page-link">Contact</Link>
                     <Link to="/" className="page-link">Articles</Link>
                 </div>
@@ -31,7 +31,7 @@ const NavBar = () => {
                     <div className="mobile-menu">
                         <div className="mobile-links">
                             <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Projects</Link>
-                            <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
+                            <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
                         </div>
                     </div>
                 )}
