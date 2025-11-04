@@ -1,6 +1,7 @@
-/* @tailwind base
-@tailwind components
-@tailwind utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 * {
   font-family: "Inclusive Sans", sans-serif;

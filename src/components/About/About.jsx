@@ -10,6 +10,7 @@ const About = () => {
     const [technologies, setTechnologies] = useState([])
     const [myInfo, setMyInfo] = useState(null)
     const [users, setUsers] = useState([])
+    const [loading, setLoading] = useState([])
 
     useEffect(() => {
         const fetchTechnologies = async () => {
