@@ -34,3 +34,7 @@ export const projectDelete = (projectId) => {
         }
     })
 }
+
+export const getProjectContributors = (projectId) => {
+  return axios.get(`${BASE_URL}/projects/${projectId}/users/`)
+}

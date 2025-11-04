@@ -2,15 +2,14 @@ import './About.css'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
-
-import profilePic from '../../assets/profilePic.jpg'
-
-import { Section } from 'lucide-react'
+import { getUsers, getUserById } from '../../services/users'
 
 const About = () => {
     const [error, setError] = useState({})
     const navigate = useNavigate()
     const [technologies, setTechnologies] = useState([])
+    const [myInfo, setMyInfo] = useState(null)
+    const [users, setUsers] = useState([])
 
     useEffect(() => {
         const fetchTechnologies = async () => {
@@ -27,6 +26,26 @@ const About = () => {
             }
         }
         fetchTechnologies()
+    }, [])
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const [userRes, contributorsRes] = await Promise.all([
+                    getUserById(1),
+                    getUsers
+                ])
+
+                setMyInfo(userRes.data)
+                setUsers(contributorsRes.data)
+            } catch (error) {
+                console.error('Error fetching data:', error)
+            } finally {
+                setLoading(false)
+            }
+        }
+
+        fetchUsers()
     }, [])
 
     return (
@@ -110,20 +129,19 @@ const About = () => {
             </div>
             <div className="about-section">
                 <h2>My story</h2>
-                <div className="about-me">
-                <div className="page-img-container">
-                    <img src={profilePic} alt='Katie Hill, profile photo' className="page-img"/>
-                </div>
-                <p>
-                    I’m a junior full-stack developer transitioning from a career as a creative copywriter & translator. After experimenting with Python for text analysis, I developed a deep interest in building software and completed the General Assembly Software Engineering Bootcamp in 2025.
-                    Along with solid skills in React, Node.js and Python, I bring excellent communication skills, attention to detail, a strong work ethic, and creative problem-solving from years of producing content for fashion and beauty brands. I’m keen to contribute to projects where tech meets creativity, especially in e-commerce or translation and localisation.
-                </p>
-                </div>
+
+                {myInfo ? (
+                    <div className="about-me">
+                        <div className="page-img-container">
+                        <img src={myInfo.profile_img} alt={myInfo.username} className="page-img" />
+                        </div>
+                        <p>{myInfo.bio}</p>
+                    </div>
+                ) : (
+                    <p>Loading your info...</p>
+                )}
             </div>
-
-
-
-            {/* pictures of me */}
+            {/* contributors */}
         </section>
 
     )
