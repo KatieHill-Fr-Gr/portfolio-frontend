@@ -1,8 +1,4 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .footer-bar {
   background-color: var(--light-primary);
   color: var(--light-fonts);
