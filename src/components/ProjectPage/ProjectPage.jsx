@@ -99,6 +99,7 @@ const ProjectPage = () => {
                     <p>No images available</p>
                 )}
             </div>
+            <h2>All projects</h2>
             <ProjectsCarousel />
         </section>
 
