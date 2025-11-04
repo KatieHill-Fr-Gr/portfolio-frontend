@@ -19,13 +19,6 @@
   margin-right: 1rem;
 }
 
-.item-card {
-  background: #fff;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
-}
-
 .item-image {
   width: 100%;
   height: 320px;
@@ -34,12 +27,31 @@
 
 }
 
-.item-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .carousel__buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.carousel__buttons button {
+  pointer-events: all;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
 }
