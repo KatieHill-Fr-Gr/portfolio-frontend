@@ -2,12 +2,13 @@ import './About.css'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
-import { getUsers } from '../../services/users'
+import { getUsers, getUserById } from '../../services/users'
 
 const About = () => {
     const [error, setError] = useState({})
     const navigate = useNavigate()
     const [technologies, setTechnologies] = useState([])
+    const [myInfo, setMyInfo] = useState(null)
     const [users, setUsers] = useState([])
 
     useEffect(() => {
@@ -30,17 +31,20 @@ const About = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await getUsers()
-                setUsers(response)
+                const [userRes, contributorsRes] = await Promise.all([
+                    getUserById(1),
+                    getUsers
+                ])
+
+                setMyInfo(userRes.data)
+                setUsers(contributorsRes.data)
             } catch (error) {
                 console.error('Error fetching data:', error)
-                if (error.response && error.response.status === 404) {
-                    navigate('/404', { replace: true })
-                } else {
-                    setError({ message: 'Unable to load users' })
-                }
+            } finally {
+                setLoading(false)
             }
         }
+
         fetchUsers()
     }, [])
 
@@ -125,22 +129,16 @@ const About = () => {
             </div>
             <div className="about-section">
                 <h2>My story</h2>
+
                 <div className="about-me">
-                    {technologies && technologies.length > 0 && (
-                        <div className="tech-list">
-                            {technologies
-                                .filter((tech) => tech.category === "Tools & Platforms")
-                                .map((tech, index) => (
-                                    <p key={index}>{tech.name}</p>
-                                ))}
-                        </div>
-                    )}
-                    <div className="page-img-container">
-                        {/* <img src= alt='Katie Hill, profile photo' className="page-img" /> */}
-                    </div>
-                    <p>
-                    </p>
+
                 </div>
+
+                <div className="page-img-container">
+                    {/* <img src= alt='Katie Hill, profile photo' className="page-img" /> */}
+                </div>
+                <p>
+                </p>
             </div>
 
 
