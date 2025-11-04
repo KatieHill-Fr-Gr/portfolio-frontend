@@ -32,10 +32,10 @@ const About = () => {
     return (
         <section className="page-content">
             <div className="page-title">
-                <h1>About</h1>
+                <h1>A junior software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
             </div>
             <div className="about-section">
-                <h2>Tech</h2>
+                <h2>Tech skills</h2>
                 <div className="tech-grid">
                     <div className="technologies">
                         <h3 className="sub-heading">FRONTEND</h3>
@@ -109,10 +109,10 @@ const About = () => {
                 </div>
             </div>
             <div className="about-section">
-                <h2>Who I am</h2>
+                <h2>My story</h2>
                 <div className="about-me">
                 <div className="page-img-container">
-                        <img src={profilePic} alt='Katie Hill, profile photo' className="page-img"/>
+                    <img src={profilePic} alt='Katie Hill, profile photo' className="page-img"/>
                 </div>
                 <p>
                     I’m a junior full-stack developer transitioning from a career as a creative copywriter & translator. After experimenting with Python for text analysis, I developed a deep interest in building software and completed the General Assembly Software Engineering Bootcamp in 2025.

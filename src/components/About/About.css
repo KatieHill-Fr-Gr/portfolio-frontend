@@ -33,6 +33,16 @@
     font-weight: 400;
 }
 
+.about-stats {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+
 .experience-list {
     display: flex;
     flex-direction: column;
