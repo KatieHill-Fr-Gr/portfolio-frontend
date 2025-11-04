@@ -130,9 +130,16 @@ const About = () => {
             <div className="about-section">
                 <h2>My story</h2>
 
-                <div className="about-me">
-
-                </div>
+                {myInfo ? (
+                    <div className="about-me">
+                        <div className="page-img-container">
+                        <img src={myInfo.profile_img} alt={myInfo.username} className="page-img" />
+                        </div>
+                        <p>{myInfo.bio}</p>
+                    </div>
+                ) : (
+                    <p>Loading your info...</p>
+                )}
 
                 <div className="page-img-container">
                     {/* <img src= alt='Katie Hill, profile photo' className="page-img" /> */}
