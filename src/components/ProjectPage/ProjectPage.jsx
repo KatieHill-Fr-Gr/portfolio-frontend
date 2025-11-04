@@ -1,10 +1,9 @@
 import './ProjectPage.css'
-import { Carousel } from "../Carousel/Carousel"
+import { ProjectsCarousel } from "../ProjectsCarousel/ProjectsCarousel"
 
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { projectShow, projectUpdate } from '../../services/projects'
-// import { getTechnologies } from '../../services/technologies'
+import { projectShow } from '../../services/projects'
 import { LuExternalLink } from "react-icons/lu"
 import { LuGithub } from "react-icons/lu"
 
@@ -12,7 +11,6 @@ import { LuGithub } from "react-icons/lu"
 const ProjectPage = () => {
     const { projectId } = useParams()
     const [project, setProject] = useState({})
-    // const [isEditing, setIsEditing] = useState(false)
     const [error, setError] = useState({})
     const [uploading, setUploading] = useState(false)
     const navigate = useNavigate()
@@ -21,17 +19,6 @@ const ProjectPage = () => {
         live: LuExternalLink,
         github: LuGithub,
     }
-
-    // const [formData, setFormData] = useState({
-    //     name: '',
-    //     subtitle: '',
-    //     description: '',
-    //     contributors: [],
-    //     technologies: [],
-    //     links: [{ url: '' }],
-    //     images: [{ image_url: '' }],
-    //     is_public: false
-    // })
 
     useEffect(() => {
         const getProject = async () => {
@@ -112,7 +99,7 @@ const ProjectPage = () => {
                     <p>No images available</p>
                 )}
             </div>
-            {/* <Carousel items={otherProjects} type="project" /> */}
+            <ProjectsCarousel />
         </section>
 
     )
