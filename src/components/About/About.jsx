@@ -2,15 +2,13 @@ import './About.css'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
-
-import profilePic from '../../assets/profilePic.jpg'
-
-import { Section } from 'lucide-react'
+import { getUsers } from '../../services/users'
 
 const About = () => {
     const [error, setError] = useState({})
     const navigate = useNavigate()
     const [technologies, setTechnologies] = useState([])
+    const [users, setUsers] = useState([])
 
     useEffect(() => {
         const fetchTechnologies = async () => {
@@ -27,6 +25,23 @@ const About = () => {
             }
         }
         fetchTechnologies()
+    }, [])
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await getUsers()
+                setUsers(response)
+            } catch (error) {
+                console.error('Error fetching data:', error)
+                if (error.response && error.response.status === 404) {
+                    navigate('/404', { replace: true })
+                } else {
+                    setError({ message: 'Unable to load users' })
+                }
+            }
+        }
+        fetchUsers()
     }, [])
 
     return (
@@ -111,13 +126,20 @@ const About = () => {
             <div className="about-section">
                 <h2>My story</h2>
                 <div className="about-me">
-                <div className="page-img-container">
-                    <img src={profilePic} alt='Katie Hill, profile photo' className="page-img"/>
-                </div>
-                <p>
-                    I’m a junior full-stack developer transitioning from a career as a creative copywriter & translator. After experimenting with Python for text analysis, I developed a deep interest in building software and completed the General Assembly Software Engineering Bootcamp in 2025.
-                    Along with solid skills in React, Node.js and Python, I bring excellent communication skills, attention to detail, a strong work ethic, and creative problem-solving from years of producing content for fashion and beauty brands. I’m keen to contribute to projects where tech meets creativity, especially in e-commerce or translation and localisation.
-                </p>
+                    {technologies && technologies.length > 0 && (
+                        <div className="tech-list">
+                            {technologies
+                                .filter((tech) => tech.category === "Tools & Platforms")
+                                .map((tech, index) => (
+                                    <p key={index}>{tech.name}</p>
+                                ))}
+                        </div>
+                    )}
+                    <div className="page-img-container">
+                        {/* <img src= alt='Katie Hill, profile photo' className="page-img" /> */}
+                    </div>
+                    <p>
+                    </p>
                 </div>
             </div>
 
