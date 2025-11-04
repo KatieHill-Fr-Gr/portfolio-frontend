@@ -5,20 +5,16 @@
   padding: 1rem 2rem;
 }
 
-.left-section,
-.center-section,
-.right-section {
+.left-section {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
 .right-section {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
 }
-
 
 #main-pages {
   display: flex;
@@ -72,8 +68,7 @@ a.page-link:hover {
 }
 
 @media (max-width: 768px) {
-  .right-section,
-  .center-section {
+  .right-section {
     display: none;
   }
 
