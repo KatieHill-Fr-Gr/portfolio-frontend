@@ -12,7 +12,8 @@
   --light-primary: #fff;
   --light-links: rgb(246, 3, 246);
   --light-fonts: #000;
-  --light-body-font: #e5e7eb;
+  --light-body-font: #c8ccd5;
+   --light-graphics-font: #e5e7eb;
 }
 
 h1, h2, h3, h4, h5, h6 {
