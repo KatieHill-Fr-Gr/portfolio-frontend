@@ -3,10 +3,6 @@ import { SocialIcon } from 'react-social-icons'
 
 const LINKS = [
   {
-    title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
-  },
-  {
     title: "Company",
     items: ["About us", "Careers", "Press", "News"],
   },
