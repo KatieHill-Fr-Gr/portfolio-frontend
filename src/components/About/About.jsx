@@ -113,18 +113,22 @@ const About = () => {
                     <div className="experience">
                         <span className="job-title">Software Engineer</span>
                         <span className="year">2025</span>
+                        <span className="job-title"> → </span>
                     </div>
                     <div className="experience">
                         <span className="job-title">Director, Copywriter & Translator</span>
                         <span className="year">2015-2025</span>
+                        <span className="job-title"> → </span>
                     </div>
                     <div className="experience">
                         <span className="job-title">Consultant Copywriter</span>
                         <span className="year">2021-2024</span>
+                        <span className="job-title"> → </span>
                     </div>
                     <div className="experience">
                         <span className="job-title">Web Producer & SEO Specialist</span>
                         <span className="year">2016</span>
+                        <span className="job-title"> → </span>
                     </div>
                 </div>
             </div>

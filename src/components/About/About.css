@@ -67,6 +67,7 @@
 
 .year {
     color: var(--light-body-font);
+    text-align: right;
 }
 
 .about-me {
