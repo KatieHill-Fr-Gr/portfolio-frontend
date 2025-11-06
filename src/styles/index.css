@@ -58,7 +58,7 @@ a {
 .tech-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: linear-gradient(45deg, var(--dark-yellow) 0%, var(--dark-red) 100%);
+  background: #98b1c8;
   color: white;
   font-size: 0.75rem;
   border-radius: 25px;
