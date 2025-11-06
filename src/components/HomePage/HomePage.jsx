@@ -60,7 +60,7 @@ const HomePage = () => {
                   </p>
                 </div>
                 <div className="project-description">
-                  <p>{project.description}</p>
+                  <p className="summary">{project.summary}</p>
                   <Link to={`/projects/${project.id}`} className="project-link">
                     View project
                   </Link>
