@@ -1,16 +1,7 @@
 import './FooterBar.css'
 import { SocialIcon } from 'react-social-icons'
+import { Link } from 'react-router-dom'
 
-const LINKS = [
-  {
-    title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
-  },
-  {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
-  },
-];
 
 const currentYear = new Date().getFullYear();
 
@@ -19,28 +10,23 @@ export default function FooterWithTailwind() {
     <footer className="bg-white w-full">
       <div className="border-t border-gray-200 mx-auto w-full max-w-7xl px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Logo / Title */}
           <h5 className="text-2xl font-bold mb-6 text-gray-900">
-            Get in touch
+            short blurb about me like an elevator pitch just two lines or something
           </h5>
 
           {/* Links */}
-          <div className="grid grid-cols-3 gap-6">
-            {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <li className="mb-3 font-medium text-gray-500">{title}</li>
-                {items.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="block py-1.5 text-gray-700 hover:text-gray-900 transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ))}
+          <div className="grid grid-cols-2 gap-6">
+            <ul>
+              <li>
+                <Link to="/about" className="page-link">About  →</Link>
+              </li>
+              <li>
+                <Link to="/" className="page-link">Articles  →</Link>
+              </li>
+              <li>
+                <Link to="/" className="page-link">Contact  →</Link>
+              </li>
+            </ul>
           </div>
         </div>
 
