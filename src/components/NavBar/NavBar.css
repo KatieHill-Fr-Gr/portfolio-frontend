@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  border-bottom: 1px solid var(--light-secondary);
 }
 
 .left-section {
@@ -10,19 +11,8 @@
   gap: 1rem;
 }
 
-.right-section {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto;
-}
-
-#main-pages {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
 a.home-link {
+  text-transform: uppercase;
   font-weight: 400;
   color: var(--light-fonts);
   font-size: 1.25rem;
@@ -33,7 +23,35 @@ a.home-link:hover {
   color: var(--light-links);
 }
 
+.right-section {
+  display: flex;      
+  gap: 1rem;           
+  margin-left: auto;   
+  align-items: center;
+}
+
+.right-section a.page-link {
+  text-transform: uppercase;
+  color: var(--light-fonts);
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.right-section a.page-link:hover {
+  color: var(--light-links);
+}
+
+.right-section a.page-link:not(:last-child)::after {
+  content: '•';      
+  margin-left: 0.5rem;
+  color: var(--light-fonts);
+  vertical-align: middle;
+  display: inline;
+}
+
 a.page-link {
+  text-transform: uppercase;
   color: var(--light-fonts);
   text-decoration: none;
   font-size: 1rem;
@@ -42,7 +60,6 @@ a.page-link {
 a.page-link:hover {
   color: var(--light-links);
 }
-
 
 .logo-image {
   width: 1.5rem;
