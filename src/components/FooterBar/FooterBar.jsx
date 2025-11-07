@@ -16,17 +16,17 @@ export default function FooterWithTailwind() {
 
           {/* Links */}
           <div className="grid grid-cols-2 gap-6">
-            <ul>
-              <li>
+            <div className="item-list">
+              <div className="item">
                 <Link to="/about" className="page-link">About  →</Link>
-              </li>
-              <li>
+              </div>
+              <div className="item">
                 <Link to="/" className="page-link">Articles  →</Link>
-              </li>
-              <li>
+              </div>
+              <div className="item">
                 <Link to="/" className="page-link">Contact  →</Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
 
