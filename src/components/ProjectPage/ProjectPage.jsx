@@ -71,11 +71,13 @@ const ProjectPage = () => {
                         )}
                         {project.technologies && project.technologies.length > 0 && (
                             <div className="project-technologies">
+                                <div className="tag-container">
                                 {project.technologies.map((tech, index) => {
                                     return (
-                                       <span key={index}> {tech.name}/</span>
+                                       <div key={index} className="tech-tag"> {tech.name}</div>
                                     )
                                 })}
+                                </div>
                             </div>
                         )}
                         </div>

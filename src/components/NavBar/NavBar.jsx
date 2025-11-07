@@ -13,11 +13,10 @@ const NavBar = () => {
                     <Link to="/" className="home-link">Katie Hill</Link>
                 </div>
 
-                <div className="center-section">
-                    <Link to="/" className="page-link">Projects</Link>
+                <div className="right-section">
                     <Link to="/about" className="page-link">About</Link>
-                    <Link to="/" className="page-link">Contact</Link>
                     <Link to="/" className="page-link">Articles</Link>
+                    <Link to="/" className="page-link">Contact</Link>
                 </div>
                 <div className="mobile-user-controls">
                     <button

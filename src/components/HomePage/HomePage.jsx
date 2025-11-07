@@ -24,6 +24,11 @@ const HomePage = () => {
     loadProjects()
   }, [])
 
+  const recentProjects = [...projects]
+  .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
+  .slice(0, 4)
+
+
   return (
     <main>
       <section className="hero">
@@ -35,7 +40,7 @@ const HomePage = () => {
         {projectsLoading ? (
           <p>Loading projects...</p>
         ) : projects.length > 0 ? (
-          projects.map((project) => (
+          recentProjects.map((project) => (
             <div key={project.id} className="project-gallery">
 
               {project.images && project.images.length > 0 && (
@@ -60,7 +65,7 @@ const HomePage = () => {
                   </p>
                 </div>
                 <div className="project-description">
-                  <p>{project.description}</p>
+                  <p className="summary">{project.summary}</p>
                   <Link to={`/projects/${project.id}`} className="project-link">
                     View project
                   </Link>
