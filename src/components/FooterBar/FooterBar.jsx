@@ -9,7 +9,7 @@ export default function FooterWithTailwind() {
   return (
     <footer className="bg-white w-full">
       <div className="border-t border-gray-200 mx-auto w-full max-w-7xl px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h5 className="text-2xl font-bold mb-6 text-gray-900">
               short blurb about me like an elevator pitch just two lines or something
@@ -19,9 +19,9 @@ export default function FooterWithTailwind() {
           {/* Contact Details */}
           <div className="text-right">
             <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Contact</h6>
-            <ul className="divide-y divide-gray-200 w-full text-gray-600">
-              <li className="flex items-center justify-between w-full py-2">
-                <span>Email</span>
+            <ul className="w-full text-gray-600">
+              <li className="flex items-center gap-1 w-full py-2">
+                <span>Email: </span>
                 <a
                   href="mailto:khill.fr.gr@gmail.com"
                   className="hover:text-gray-900 transition-colors"
@@ -29,8 +29,8 @@ export default function FooterWithTailwind() {
                   khill.fr.gr@gmail.com
                 </a>
               </li>
-              <li className="flex items-center justify-between w-full py-2">
-                <span>Phone</span>
+              <li className="flex items-center gap-1 w-full py-2">
+                <span>Phone: </span>
                 <a
                   href="tel:+447847924407"
                   className="hover:text-gray-900 transition-colors"
@@ -38,8 +38,8 @@ export default function FooterWithTailwind() {
                   +44 7847 924407
                 </a>
               </li>
-              <li className="flex items-center justify-between w-full py-2">
-                <span>Location</span>
+              <li className="flex items-center gap-1 w-full py-2">
+                <span>Location: </span>
                 <span>London, UK</span>
               </li>
             </ul>
