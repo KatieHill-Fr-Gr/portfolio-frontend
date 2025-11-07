@@ -10,6 +10,7 @@ const About = () => {
     const [technologies, setTechnologies] = useState([])
     const [myInfo, setMyInfo] = useState(null)
     const [users, setUsers] = useState([])
+    const [loading, setLoading] = useState([])
 
     useEffect(() => {
         const fetchTechnologies = async () => {
@@ -108,22 +109,26 @@ const About = () => {
             </div>
             <div className="about-section">
                 <h2>Experience</h2>
-                <div className="experience-list">
-                    <div className="experience">
+                <div className="item-list">
+                    <div className="item">
                         <span className="job-title">Software Engineer</span>
                         <span className="year">2025</span>
+                        <span className="job-title"> → </span>
                     </div>
-                    <div className="experience">
+                    <div className="item">
                         <span className="job-title">Director, Copywriter & Translator</span>
                         <span className="year">2015-2025</span>
+                        <span className="job-title"> → </span>
                     </div>
-                    <div className="experience">
+                    <div className="item">
                         <span className="job-title">Consultant Copywriter</span>
                         <span className="year">2021-2024</span>
+                        <span className="job-title"> → </span>
                     </div>
-                    <div className="experience">
+                    <div className="item">
                         <span className="job-title">Web Producer & SEO Specialist</span>
                         <span className="year">2016</span>
+                        <span className="job-title"> → </span>
                     </div>
                 </div>
             </div>

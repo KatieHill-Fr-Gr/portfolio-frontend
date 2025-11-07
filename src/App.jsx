@@ -1,6 +1,5 @@
 import './styles/layout.css'
 import './styles/index.css'
-// import './styles/forms.css'
 
 import { Routes, Route } from 'react-router-dom'
 
@@ -9,7 +8,7 @@ import { Routes, Route } from 'react-router-dom'
 
 
 import NavBar from './components/NavBar/NavBar'
-import FooterBar from './components/FooterBar/FooterBar'
+import FooterWithSocialLinks from './components/FooterBar/FooterBar'
 import HomePage from './components/HomePage/HomePage'
 import ProjectPage from './components/ProjectPage/ProjectPage'
 import About from './components/About/About'
@@ -33,7 +32,7 @@ function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
       </div>
-      <FooterBar />
+      <FooterWithSocialLinks />
     </>
   )
 }

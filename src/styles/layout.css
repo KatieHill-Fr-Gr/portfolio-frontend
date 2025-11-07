@@ -114,6 +114,21 @@ p {
   object-fit: cover;
 }
 
+.item-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0, 3rem;
+    width: 50%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--light-body-font);
+    gap: 1rem;
+    padding: 1rem;
+}
 
 @media (max-width: 768px) {
   .page-title {

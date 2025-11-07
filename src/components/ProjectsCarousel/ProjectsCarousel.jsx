@@ -37,7 +37,7 @@ export const ProjectsCarousel = () => {
         {projects.length > 0 ? (
           <div className="carousel__container">
             {projects.map((project) => (
-              <div key={project._id} className="carousel__slide">
+              <div key={project.id} className="carousel__slide">
                 <div className="item-image">
                   <img src={project.images?.[0]?.image_url} alt={project.name} />
                 </div>
@@ -45,7 +45,10 @@ export const ProjectsCarousel = () => {
                   <h3>{project.name}</h3>
                   <span>{project.subtitle}</span>
                 </div>
-                <Link to={`/projects/${project._id}`} className="project-link">
+                <Link to={`/projects/${project.id}`}
+                  onClick={(e) => {
+                    if (emblaApi && !emblaApi.clickAllowed()) e.preventDefault()
+                  }} className="project-link">
                   View
                 </Link>
               </div>

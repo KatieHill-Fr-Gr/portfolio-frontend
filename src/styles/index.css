@@ -1,6 +1,5 @@
-/* @tailwind base
-@tailwind components
-@tailwind utilities */
+
+@import "tailwindcss";
 
 * {
   font-family: "Inclusive Sans", sans-serif;
@@ -11,9 +10,11 @@
 :root {
   --light-background: #fff;
   --light-primary: #fff;
+  --light-secondary: #e5e7eb;
   --light-links: rgb(246, 3, 246);
   --light-fonts: #000;
-  --light-body-font: #b7b7b7;
+  --light-body-font: #c8ccd5;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +59,7 @@ a {
 .tech-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: linear-gradient(45deg, var(--dark-yellow) 0%, var(--dark-red) 100%);
+  background: #98b1c8;
   color: white;
   font-size: 0.75rem;
   border-radius: 25px;

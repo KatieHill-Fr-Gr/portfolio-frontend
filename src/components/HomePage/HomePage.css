@@ -90,6 +90,10 @@
   max-width: 400px;
 }
 
+.summary {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
   .image-row {
     flex-direction: column;
