@@ -1,9 +1,8 @@
-import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
 
-const HomePage = () => {
+const ProjectsPage = () => {
   const navigate = useNavigate()
   const [projects, setProjects] = useState([])
   const [projectsLoading, setProjectsLoading] = useState(true)
@@ -24,24 +23,21 @@ const HomePage = () => {
     loadProjects()
   }, [])
 
-  const recentProjects = [...projects]
+  const orderedProjects = [...projects]
   .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
-  .slice(0, 3)
 
   return (
     <main>
-      <section className="hero">
-        <h1>Full-stack developer, React, Node.js, Python</h1>
-      </section>
-
-      <section className="page-content">
+    <section className="page-content">
+      <div className="page-title">
+        <h1>See all my latest work</h1>
+      </div>
         <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
         ) : projects.length > 0 ? (
-          recentProjects.map((project) => (
+          orderedProjects.map((project) => (
             <div key={project.id} className="project-gallery">
-
               {project.images && project.images.length > 0 && (
                 <div className="image-row">
                   {project.images.slice(0, 3).map((img, index) => (
@@ -80,4 +76,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default ProjectsPage

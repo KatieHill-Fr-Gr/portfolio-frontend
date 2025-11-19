@@ -2,10 +2,11 @@
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}", // Add more specific paths if needed
+    "./src/components/**/*.{js,jsx,ts,tsx}", 
   ],
   theme: {
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }

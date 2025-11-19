@@ -1,5 +1,6 @@
 .navbar {
   display: flex;
+  background: var(--light-primary);
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -12,6 +13,7 @@
 }
 
 a.home-link {
+  font-family: "BBH Sans Hegarty", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   color: var(--light-fonts);
@@ -79,7 +81,7 @@ a.page-link:hover {
 
 .hamburger {
   display: none;
-  background: var(--light-background);
+  background: var(--light-primary);
   border: none;
   cursor: pointer;
 }
@@ -108,7 +110,7 @@ a.page-link:hover {
     top: 70px;
     left: 0;
     width: 100%;
-    background: var(--light-background);
+    background: var(--light-primary);
     padding: 1rem 2rem;
     gap: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
