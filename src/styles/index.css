@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 
 * {
@@ -9,9 +8,11 @@
 
 :root {
   --light-background: #fff;
-  --light-primary: #fff;
+  --light-primary: #D2FF72;
+  /* --light-primary: #f54129; */
+    /* --light-primary: #7bfff2; */
   --light-secondary: #e5e7eb;
-  --light-links: rgb(246, 3, 246);
+  --light-links: #fff;
   --light-fonts: #000;
   --light-body-font: #c8ccd5;
 
@@ -59,7 +60,7 @@ a {
 .tech-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: #98b1c8;
+  background: var(--light-primary);;
   color: white;
   font-size: 0.75rem;
   border-radius: 25px;

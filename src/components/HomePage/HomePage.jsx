@@ -26,7 +26,9 @@ const HomePage = () => {
 
   const recentProjects = [...projects]
   .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
-  .slice(0, 4)
+  .slice(0, 3)
+
+  console.log(projects)
 
 
   return (

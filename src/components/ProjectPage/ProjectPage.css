@@ -6,9 +6,9 @@
 
 .project-links {
   display: flex;
-  flex-direction: column;
-  justify-content: right;
-  gap: 0.5rem;
+  justify-content: left;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
 .project-link {
