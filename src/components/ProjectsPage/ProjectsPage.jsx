@@ -23,20 +23,20 @@ const ProjectsPage = () => {
     loadProjects()
   }, [])
 
-  console.log(projects)
+  const orderedProjects = [...projects]
+  .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
 
   return (
     <main>
-      <section className="hero">
+    <section className="page-content">
+      <div className="page-title">
         <h1>See all my latest work</h1>
-      </section>
-
-      <section className="page-content">
+      </div>
         <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
         ) : projects.length > 0 ? (
-          projects.map((project) => (
+          orderedProjects.map((project) => (
             <div key={project.id} className="project-gallery">
               {project.images && project.images.length > 0 && (
                 <div className="image-row">

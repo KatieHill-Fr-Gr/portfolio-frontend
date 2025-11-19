@@ -28,9 +28,6 @@ const HomePage = () => {
   .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
   .slice(0, 3)
 
-  console.log(projects)
-
-
   return (
     <main>
       <section className="hero">
