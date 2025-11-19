@@ -1,4 +1,3 @@
-import './FooterBar.css'
 import { SocialIcon } from 'react-social-icons'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +6,7 @@ const currentYear = new Date().getFullYear();
 
 export default function FooterWithTailwind() {
   return (
-    <footer className="bg-white w-full">
+    <footer className="w-full" style={{ backgroundColor: '#D2FF72' }}>
       <div className="border-t border-gray-200 mx-auto w-full max-w-7xl px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>

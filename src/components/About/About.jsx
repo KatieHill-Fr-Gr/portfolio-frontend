@@ -54,6 +54,9 @@ const About = () => {
             <div className="page-title">
                 <h1>A junior software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
             </div>
+                {/* <div className="page-img-container">
+                        <img src={myInfo.profile_img} alt={myInfo.username} className="page-img" />
+                </div> */}
             <div className="about-section">
                 <h2>Tech skills</h2>
                 <div className="tech-grid">
@@ -137,9 +140,6 @@ const About = () => {
 
                 {myInfo ? (
                     <div className="about-me">
-                        <div className="page-img-container">
-                        <img src={myInfo.profile_img} alt={myInfo.username} className="page-img" />
-                        </div>
                         <p>{myInfo.bio}</p>
                     </div>
                 ) : (

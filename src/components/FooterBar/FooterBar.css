@@ -1,6 +1,6 @@
-
+/* 
 .footer-bar {
-  background-color: var(--light-primary);
+  background: var(--light-primary);
   color: var(--light-fonts);
   border-top: 1px solid var(--light-secondary);
   margin: 1rem;
@@ -9,4 +9,4 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
+} */
