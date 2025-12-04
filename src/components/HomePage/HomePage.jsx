@@ -2,6 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
+import hero from '../../assets/hero.jpg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -30,8 +31,13 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="hero">
-        <h1>Full-stack developer, React, Node.js, Python</h1>
+      <section className="hero" style={{
+        backgroundImage: `url(${hero})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: "no-repeat",
+      }}>
+        <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
 
       <section className="page-content">
