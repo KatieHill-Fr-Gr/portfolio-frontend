@@ -11,6 +11,11 @@ const About = () => {
     const [myInfo, setMyInfo] = useState(null)
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState([])
+    const [openItem, setOpenItem] = useState(null)
+
+    const toggleItem = (index) => {
+        setOpenItem(openItem === index ? null : index)
+    }
 
     useEffect(() => {
         const fetchTechnologies = async () => {
@@ -54,7 +59,7 @@ const About = () => {
             <div className="page-title">
                 <h1>A junior software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
             </div>
-                {/* <div className="page-img-container">
+            {/* <div className="page-img-container">
                         <img src={myInfo.profile_img} alt={myInfo.username} className="page-img" />
                 </div> */}
             <div className="about-section">
@@ -113,26 +118,69 @@ const About = () => {
             <div className="about-section">
                 <h2>Experience</h2>
                 <div className="item-list">
-                    <div className="item">
+                    <div className="item" onClick={() => toggleItem(0)}>
                         <span className="job-title">Software Engineer</span>
                         <span className="year">2025</span>
-                        <span className="job-title"> → </span>
+                        <span className="arrow" style={{ transform: openItem === 0 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                            ↓
+                        </span>
                     </div>
-                    <div className="item">
+                    {openItem === 0 && (
+                        <div className='item-details'>
+                            <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
+                            </p>
+                            <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
+                            </p>
+                        </div>
+                    )}
+                    <div className="item" onClick={() => toggleItem(1)}>
                         <span className="job-title">Director, Copywriter & Translator</span>
                         <span className="year">2015-2025</span>
-                        <span className="job-title"> → </span>
+                        <span className="arrow" style={{ transform: openItem === 1 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                            ↓
+                        </span>
                     </div>
-                    <div className="item">
+                    {openItem === 1 && (
+                        <div className='item-details'>
+                            <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
+                            </p>
+                            <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
+                            </p>
+                        </div>
+                    )}
+                    <div className="item" onClick={() => toggleItem(2)}>
                         <span className="job-title">Consultant Copywriter</span>
                         <span className="year">2021-2024</span>
-                        <span className="job-title"> → </span>
-                    </div>
-                    <div className="item">
+                         <span className="arrow" style={{ transform: openItem === 2 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                            ↓
+                        </span>
+                        </div>
+                    {openItem === 2 && (
+                        <div className='item-details'>
+                            <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
+                            </p>
+                            <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
+                            </p>
+                            <p> For more,
+                                <Link to="/projects/" >View project</Link>
+                            </p>
+                        </div>
+                    )}
+                    <div className="item" onClick={() => toggleItem(3)}>
                         <span className="job-title">Web Producer & SEO Specialist</span>
                         <span className="year">2016</span>
-                        <span className="job-title"> → </span>
+                        <span className="arrow" style={{ transform: openItem === 3 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                            ↓
+                        </span>
                     </div>
+                    {openItem === 3 && (
+                        <div className='item-details'>
+                            <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
+                            </p>
+                            <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
             <div className="about-section">
