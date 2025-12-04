@@ -11,16 +11,22 @@ export default function FooterWithTailwind() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h5 className="text-2xl font-bold mb-6 text-gray-900">
-              Software engineer, digital storyteller, and linguist
+              CIAO!
+            </h5>
+            <h5 className="text-2xl font-bold mb-6 text-gray-900">
+              BONJOUR
+            </h5>
+            <h5 className="text-2xl font-bold mb-6 text-gray-900">
+              ΚΑΛΗΜΕΡΑ
             </h5>
           </div>
 
           {/* Contact Details */}
           <div className="text-right">
-            <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Contact</h6>
+            <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Let's chat</h6>
             <ul className="w-full text-gray-600">
               <li className="flex items-center gap-1 w-full py-2">
-                <span>Email: </span>
+                <span>E:</span>
                 <a
                   href="mailto:khill.fr.gr@gmail.com"
                   className="hover:text-gray-900 transition-colors"
@@ -29,7 +35,7 @@ export default function FooterWithTailwind() {
                 </a>
               </li>
               <li className="flex items-center gap-1 w-full py-2">
-                <span>Phone: </span>
+                <span>M: </span>
                 <a
                   href="tel:+447847924407"
                   className="hover:text-gray-900 transition-colors"
@@ -38,7 +44,7 @@ export default function FooterWithTailwind() {
                 </a>
               </li>
               <li className="flex items-center gap-1 w-full py-2">
-                <span>Location: </span>
+                <span>IRL: </span>
                 <span>London, UK</span>
               </li>
             </ul>
@@ -46,7 +52,7 @@ export default function FooterWithTailwind() {
 
           {/* Links */}
           <div className="text-right">
-            <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Pages</h6>
+            <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Read more</h6>
             <ul className="divide-y divide-gray-200 w-full">
               <li>
                 <Link
