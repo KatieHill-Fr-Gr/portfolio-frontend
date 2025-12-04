@@ -14,14 +14,20 @@
   /* --light-primary: #f54129; */
     /* --light-primary: #7bfff2; */
   --light-secondary: #ff232a;
-  --light-links: #88c6c1;
+  --light-links: #ff232a;
   --light-fonts: #000;
   --dark-fonts: #fff;
   --light-body-font: #aca9a0;
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: "BBH Sans Hegarty", sans-serif;
+  color: #ff232a;
+}
+
+
+h2, h3, h4, h5, h6 {
   font-family: "BBH Sans Hegarty", sans-serif;
 }
 

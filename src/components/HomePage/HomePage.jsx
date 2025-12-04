@@ -37,7 +37,7 @@ const HomePage = () => {
         backgroundPosition: 'center',
         backgroundRepeat: "no-repeat",
       }}>
-        <h1>Full-stack developer, React, Node.js, Python</h1>
+        <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
 
       <section className="page-content">
