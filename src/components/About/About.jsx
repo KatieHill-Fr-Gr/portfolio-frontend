@@ -126,7 +126,12 @@ const About = () => {
                         </span>
                     </div>
                     {openItem === 0 && (
-                        <div className='item-details'>
+                        <div className='item-details'
+                            style={{
+                                maxHeight: openItem === 0 ? "32rem" : "0rem",
+                                overflow: "hidden",
+                                transition: "max-height 0.9s ease",
+                            }}>
                             <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
                             </p>
                             <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
@@ -141,7 +146,12 @@ const About = () => {
                         </span>
                     </div>
                     {openItem === 1 && (
-                        <div className='item-details'>
+                        <div className='item-details'
+                            style={{
+                                maxHeight: openItem === 1 ? "32rem" : "0rem",
+                                overflow: "hidden",
+                                transition: "max-height 0.9s ease",
+                            }}>
                             <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
                             </p>
                             <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
@@ -151,18 +161,20 @@ const About = () => {
                     <div className="item" onClick={() => toggleItem(2)}>
                         <span className="job-title">Consultant Copywriter</span>
                         <span className="year">2021-2024</span>
-                         <span className="arrow" style={{ transform: openItem === 2 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                        <span className="arrow" style={{ transform: openItem === 2 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
                             ↓
                         </span>
-                        </div>
+                    </div>
                     {openItem === 2 && (
-                        <div className='item-details'>
+                        <div className='item-details'
+                            style={{
+                                maxHeight: openItem === 2 ? "32rem" : "0rem",
+                                overflow: "hidden",
+                                transition: "max-height 0.9s ease",
+                            }}>
                             <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
                             </p>
                             <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
-                            </p>
-                            <p> For more,
-                                <Link to="/projects/" >View project</Link>
                             </p>
                         </div>
                     )}
@@ -174,7 +186,12 @@ const About = () => {
                         </span>
                     </div>
                     {openItem === 3 && (
-                        <div className='item-details'>
+                        <div className='item-details'
+                            style={{
+                                maxHeight: openItem === 3 ? "32rem" : "0rem",
+                                overflow: "hidden",
+                                transition: "max-height 0.9s ease",
+                            }}>
                             <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
                             </p>
                             <p> My final project was a workflow management and translation app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend designed to support a high volume of data and allow for text analysis.
