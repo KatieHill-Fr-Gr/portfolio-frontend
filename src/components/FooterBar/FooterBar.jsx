@@ -6,12 +6,12 @@ const currentYear = new Date().getFullYear();
 
 export default function FooterWithTailwind() {
   return (
-    <footer className="w-full" style={{ backgroundColor: '#D2FF72' }}>
+    <footer className="w-full" style={{ backgroundColor: '#fff' }}>
       <div className="border-t border-gray-200 mx-auto w-full max-w-7xl px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h5 className="text-2xl font-bold mb-6 text-gray-900">
-              short blurb about me like an elevator pitch just two lines or something
+              Software engineer, digital storyteller, and linguist
             </h5>
           </div>
 
@@ -89,13 +89,13 @@ export default function FooterWithTailwind() {
           {/* Social icons */}
           <div className="flex gap-4 text-gray-700">
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://www.instagram.com/katiefrgr" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://www.instagram.com/katiefrgr" bgColor="#ff232a" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://www.linkedin.com/in/katie-hill-fullstack/" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://www.linkedin.com/in/katie-hill-fullstack/" bgColor="#ff232a" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://github.com/KatieHill-Fr-Gr" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://github.com/KatieHill-Fr-Gr" bgColor="#ff232a" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
           </div>
         </div>

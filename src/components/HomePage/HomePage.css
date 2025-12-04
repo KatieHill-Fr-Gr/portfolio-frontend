@@ -6,6 +6,8 @@
   text-align: center;
   padding: var(--content-padding);
   gap: 0.5rem;
+  height: 100vh;
+  width: 100%;
   max-width: 1000px;
 }
 

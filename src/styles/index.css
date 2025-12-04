@@ -7,14 +7,17 @@
 }
 
 :root {
+  /* --light-background: #ebe5e3; */
   --light-background: #fff;
-  --light-primary: #D2FF72;
+  --light-primary: #ff232a; 
+  /* --light-primary: #D2FF72; */
   /* --light-primary: #f54129; */
     /* --light-primary: #7bfff2; */
-  --light-secondary: #e5e7eb;
-  --light-links: #fff;
+  --light-secondary: #ff232a;
+  --light-links: #88c6c1;
   --light-fonts: #000;
-  --light-body-font: #c8ccd5;
+  --dark-fonts: #fff;
+  --light-body-font: #aca9a0;
 
 }
 
@@ -60,8 +63,8 @@ a {
 .tech-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--light-primary);;
-  color: var(--light-fonts);
+  background: var(--light-secondary);;
+  color: var(--dark-fonts);
   font-size: 0.75rem;
   border-radius: 25px;
   font-weight: 600;
