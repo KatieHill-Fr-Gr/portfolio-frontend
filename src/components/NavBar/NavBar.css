@@ -1,10 +1,15 @@
 .navbar {
   display: flex;
-  background: var(--light-primary);
+  background: transparent;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
   align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid var(--light-secondary);
+  padding: 1rem 4rem;
+  border-bottom: 1px solid var(--light-body-font);
 }
 
 .left-section {
@@ -81,7 +86,7 @@ a.page-link:hover {
 
 .hamburger {
   display: none;
-  background: var(--light-primary);
+  background: transparent;
   border: none;
   cursor: pointer;
 }
@@ -124,7 +129,7 @@ a.page-link:hover {
 
   .mobile-link {
     font-size: 1.1rem;
-    color: var(--light-fonts);
+    color: var(--dark-fonts);
     text-decoration: none;
     background: none;
     border: none;
@@ -133,7 +138,7 @@ a.page-link:hover {
   }
 
   .mobile-link:hover {
-    color: var(--light-links);
+    color: var(--light-body-font);
   }
 
   .mobile-menu.hidden {
