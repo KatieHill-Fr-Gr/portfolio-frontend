@@ -39,13 +39,16 @@
     padding: 2rem;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .job-title {
     font-family: "Inclusive Sans", sans-serif;
     font-weight: 600;
     font-size: 1rem;
+}
+
+.item-details {
+    margin: 2rem 1rem;
 }
 
 .year {

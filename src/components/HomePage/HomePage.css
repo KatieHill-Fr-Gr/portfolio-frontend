@@ -14,7 +14,6 @@
 .hero>h1 {
   text-align: left;
   font-size: 6rem;
-  color: #ff232a;
 }
 
 .project-gallery {
@@ -27,6 +26,7 @@
 
 .image-row {
   margin: 2rem 0;
+  gap: 0.5rem;
   display: flex;
   align-items: stretch;
 }
@@ -70,12 +70,6 @@
   padding: 1rem 0;
   margin: 0;
   gap: 1rem;
-}
-
-.project-info h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
 }
 
 .project-subtitle {

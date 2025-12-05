@@ -7,6 +7,10 @@
   --content-padding: 4rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -42,19 +46,9 @@ section {
   padding: 0 var(--section-spacing);
 }
 
-h1 {
-  text-align: left;
-  font-size: 2.5rem;
-}
-
-h2 {
-  text-align: left;
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
-
 p {
   text-align: left;
+  margin: 1rem;
 }
 
 .page-title {
@@ -76,7 +70,7 @@ p {
   flex-direction: column;
   text-align: left;
   padding: 4rem;
-  margin: 1rem;
+  margin: 2rem;
   gap: 5rem;
 }
 
@@ -93,6 +87,18 @@ p {
   gap: 1rem;
   width: 100%;
   margin: 2rem 0;
+}
+
+
+.hero-img.vertical {
+    width: 35rem;
+    height: 55rem;
+}
+
+.hero-img.horizontal {
+    margin-top: 5rem;
+    width: 45rem;
+    height: 30rem;
 }
 
 .page-img-container {
