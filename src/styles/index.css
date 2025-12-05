@@ -12,7 +12,8 @@
   /* --light-primary: #f54129; */
   /* --light-primary: #7bfff2; */
   --light-secondary: #ccc4bf;
-  --light-links: #ff232a;
+  /* --light-links: #ff232a; */
+  --light-links: #a29d94;
   --light-fonts: #000;
   --dark-fonts: #fff;
   --light-body-font: #a29d94;
@@ -21,6 +22,34 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "BBH Sans Hegarty", sans-serif;
+}
+
+h1 {
+  text-align: left;
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
+
+h3 { 
+  font-size: 1.75rem;
+  margin-bottom: 0; 
+}
+
+h4 { 
+  font-size: 1.5rem; 
+}
+
+h5 { 
+  font-size: 1.25rem; 
+}
+
+h6 { 
+  font-size: 1rem; 
 }
 
 p {

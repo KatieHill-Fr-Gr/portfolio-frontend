@@ -71,12 +71,6 @@
   gap: 1rem;
 }
 
-.project-info h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
 .project-subtitle {
   color: var(--light-body-font);
   margin: 0;

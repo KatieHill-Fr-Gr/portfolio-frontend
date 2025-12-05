@@ -46,17 +46,6 @@ section {
   padding: 0 var(--section-spacing);
 }
 
-h1 {
-  text-align: left;
-  font-size: 2.5rem;
-}
-
-h2 {
-  text-align: left;
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
-
 p {
   text-align: left;
 }
