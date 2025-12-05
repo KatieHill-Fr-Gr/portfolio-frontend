@@ -3,30 +3,23 @@
 * {
   font-family: "Inclusive Sans", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 :root {
-  /* --light-background: #ebe5e3; */
   --light-background: #fff;
-  --light-primary: #ff232a; 
+  --light-primary: #ccc4bf; 
   /* --light-primary: #D2FF72; */
   /* --light-primary: #f54129; */
-    /* --light-primary: #7bfff2; */
-  --light-secondary: #ff232a;
+  /* --light-primary: #7bfff2; */
+  --light-secondary: #ccc4bf;
   --light-links: #ff232a;
   --light-fonts: #000;
   --dark-fonts: #fff;
-  --light-body-font: #aca9a0;
+  --light-body-font: #a29d94;
 
 }
 
-h1 {
-  font-family: "BBH Sans Hegarty", sans-serif;
-}
-
-
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "BBH Sans Hegarty", sans-serif;
 }
 
@@ -39,7 +32,7 @@ button, input, textarea, select, label {
 }
 
 a {
-  font-family: "Inclusive Sans", sans-serif;
+  text-decoration: none;
 }
 
 .page-button {
@@ -48,7 +41,6 @@ a {
     text-decoration: none;
     border: 1px solid var(--light-fonts);
     border-radius: 5px;
-    font-weight: 400;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }

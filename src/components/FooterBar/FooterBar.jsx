@@ -95,13 +95,13 @@ export default function FooterWithTailwind() {
           {/* Social icons */}
           <div className="flex gap-4 text-gray-700">
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://www.instagram.com/katiefrgr" bgColor="#ff232a" fgColor="white" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://www.instagram.com/katiefrgr" bgColor="#ccc4bf" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://www.linkedin.com/in/katie-hill-fullstack/" bgColor="#ff232a" fgColor="white" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://www.linkedin.com/in/katie-hill-fullstack/" bgColor="#ccc4bf" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://github.com/KatieHill-Fr-Gr" bgColor="#ff232a" fgColor="white" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://github.com/KatieHill-Fr-Gr" bgColor="#ccc4bf" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
           </div>
         </div>
