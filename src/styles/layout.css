@@ -88,6 +88,18 @@ p {
   margin: 2rem 0;
 }
 
+
+.hero-img.vertical {
+    width: 35rem;
+    height: 55rem;
+}
+
+.hero-img.horizontal {
+    margin-top: 5rem;
+    width: 45rem;
+    height: 30rem;
+}
+
 .page-img-container {
   display: flex;
   flex: 1 1 100%;

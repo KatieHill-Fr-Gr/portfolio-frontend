@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
+import aboutPicture from '../../assets/aboutPicture.png'
 
 const About = () => {
     const [error, setError] = useState({})
@@ -55,13 +56,17 @@ const About = () => {
     }, [])
 
     return (
-        <section className="page-content">
+        <main>
+         <section className="hero" style={{
+                    backgroundImage: `url(${aboutPicture})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: "no-repeat",
+                  }}>
             <div className="page-title">
                 <h1>A junior software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
-            </div>
-            {/* <div className="page-img-container">
-                        <img src={myInfo.profile_img} alt={myInfo.username} className="page-img" />
-                </div> */}
+            </div></section>   
+        <section className="page-content">
             <div className="about-section">
                 <h2>Tech skills</h2>
                 <div className="tech-grid">
@@ -213,6 +218,7 @@ const About = () => {
             </div>
             {/* contributors */}
         </section>
+        </main>
 
     )
 }

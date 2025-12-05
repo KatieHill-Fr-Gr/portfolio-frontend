@@ -26,6 +26,7 @@
 
 .image-row {
   margin: 2rem 0;
+  gap: 0.5rem;
   display: flex;
   align-items: stretch;
 }
