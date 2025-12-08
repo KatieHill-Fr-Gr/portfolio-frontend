@@ -116,6 +116,22 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-section">
+                    <div className="about-stats">
+                        <div className="stat-1">
+                        <h2>10</h2>
+                        <p>years of experience in creative industries</p>
+                        </div>
+                        <div className="stat-2">
+                        <h2>35</h2>
+                        <p>repositories on GitHub</p>
+                        </div>
+                        <div className="stat-3">
+                        <h2>420+</h2>
+                        <p>hours of coding in an agile environment</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="about-section">
                     <h2>Experience</h2>
                     <div className="item-list">
                         <div className="item" onClick={() => toggleItem(0)}>
