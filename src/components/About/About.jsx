@@ -57,12 +57,7 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero" style={{
-                backgroundImage: `url(${aboutPicture})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: "no-repeat",
-            }}>
+            <section className="hero">
                 <div className="page-title">
                     <h1>A junior software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
                 </div></section>
