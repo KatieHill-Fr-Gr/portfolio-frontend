@@ -117,15 +117,15 @@ const About = () => {
                 </div>
                 <div className="about-section">
                     <div className="about-stats">
-                        <div className="stat-1">
+                        <div className="stat">
                         <h2>10</h2>
                         <p>years of experience in creative industries</p>
                         </div>
-                        <div className="stat-2">
+                        <div className="stat">
                         <h2>35</h2>
                         <p>repositories on GitHub</p>
                         </div>
-                        <div className="stat-3">
+                        <div className="stat">
                         <h2>420+</h2>
                         <p>hours of coding in an agile environment</p>
                         </div>
@@ -150,7 +150,7 @@ const About = () => {
                                 }}>
                                 <p>This was an intense but incredibly enjoyable 12-week bootcamp that covered software engineering fundamentals, agile methodologies and basic UX design. It gave me the chance to develop my understanding of Python and Object Oriented Programming (OOP) while also providing a solid introduction to web development using Javascript, React, Node.js, Express, and Django, as well as database management (MongoDB, PostgreSQL) and REST API design.
                                 </p>
-                                <p> My final project was a translation and project management app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend integrated with the Deepl API and designed to support a high volume of data.
+                                <p> My final project was a translation and project management app called Catseye – something I’ve been wanting to build for a while. The app combines a React frontend, for a fully responsive and interactive UI, with a Python Django backend integrated with the DeepL API and designed to support a high volume of data.
                                 </p>
                             </div>
                         )}

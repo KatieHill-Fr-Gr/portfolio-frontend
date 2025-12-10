@@ -22,8 +22,8 @@
 
 .sub-heading {
     font-size: 1rem;
-    color: var(--light-body-font);
-    font-family: "Inclusive Sans", sans-serif;
+    margin-bottom: 0.5rem;
+    color: var(--light-fonts);
     font-weight: 600;
 }
 
@@ -37,8 +37,18 @@
     display: flex;
     gap: 1rem;
     padding: 2rem;
-    justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-right: solid 1px var(--light-body-font);
+}
+
+.stat:last-child {
+  border-right: none;
 }
 
 .job-title {
