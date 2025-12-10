@@ -7,11 +7,11 @@
 
 :root {
   --light-background: #fff;
-  --light-primary: #ccc4bf; 
-  /* --light-primary: #D2FF72; */
-  /* --light-primary: #f54129; */
+  /* --light-primary: #ccc4bf;  */
+  --light-primary: #D2FF72;
+  --light-primary-transparent: rgb(210, 255, 114, 0.8);
   /* --light-primary: #7bfff2; */
-  --light-secondary: #ccc4bf;
+  --light-secondary: #D2FF72;
   /* --light-links: #ff232a; */
   --light-links: #a29d94;
   --light-fonts: #000;
@@ -75,8 +75,8 @@ a {
 }
 
 .page-button:hover {
-    color: white;
-    background-color: var(--light-secondary);
+    color: var(--light-secondary);
+    background-color: #fff;
 }
 
 .tag-container {
@@ -90,7 +90,7 @@ a {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--light-secondary);;
-  color: var(--dark-fonts);
+  color: var(--light-fonts);
   font-size: 0.75rem;
   border-radius: 25px;
   font-weight: 600;
