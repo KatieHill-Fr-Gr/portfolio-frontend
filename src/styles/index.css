@@ -7,13 +7,10 @@
 
 :root {
   --light-background: #fff;
-  /* --light-primary: #ccc4bf;  */
   --light-primary: #D2FF72;
   --light-primary-transparent: rgb(210, 255, 114, 0.8);
-  /* --light-primary: #7bfff2; */
   --light-secondary: #D2FF72;
-  /* --light-links: #ff232a; */
-  --light-links: #a29d94;
+  --light-links: #D2FF72;
   --light-fonts: #000;
   --dark-fonts: #fff;
   --light-body-font: #a29d94;

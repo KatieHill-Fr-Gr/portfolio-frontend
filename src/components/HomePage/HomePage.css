@@ -85,6 +85,10 @@
   max-width: 400px;
 }
 
+.project-link {
+  color: var(--light-links);
+}
+
 .summary {
   margin-bottom: 0.5rem;
 }
