@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
-import aboutPicture from '../../assets/aboutPicture.png'
+import about from '../../assets/about.jpeg'
+
 
 const About = () => {
     const [error, setError] = useState({})
@@ -57,9 +58,11 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero">
+            <section className="hero vertical" style={{
+                    '--hero-bg': `url(${about})`
+                  }}>
                 <div className="page-title">
-                    <h1>A junior software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
+                    <h1>Software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
                 </div></section>
             <section className="page-content">
                 <div className="about-section">

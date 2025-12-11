@@ -31,11 +31,8 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="hero" style={{
-        backgroundImage: `url(${hero})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: "no-repeat",
+      <section className="hero vertical" style={{
+        '--hero-bg': `url(${hero})`
       }}>
         <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
