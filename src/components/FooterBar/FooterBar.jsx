@@ -35,16 +35,7 @@ export default function FooterWithTailwind() {
                 </a>
               </li>
               <li className="flex items-center gap-1 w-full py-2">
-                <span>M: </span>
-                <a
-                  href="tel:+447847924407"
-                  className="hover:text-gray-900 transition-colors"
-                >
-                  +44 7847 924407
-                </a>
-              </li>
-              <li className="flex items-center gap-1 w-full py-2">
-                <span>IRL: </span>
+                <span>Based in </span>
                 <span>London, UK</span>
               </li>
             </ul>
@@ -95,13 +86,13 @@ export default function FooterWithTailwind() {
           {/* Social icons */}
           <div className="flex gap-4 text-gray-700">
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://www.instagram.com/katiefrgr" bgColor="#ccc4bf" fgColor="white" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://www.instagram.com/katiefrgr" bgColor="#D2FF72" fgColor="black" style={{ height: '100%', width: '100%' }} />
             </div>
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://www.linkedin.com/in/katie-hill-fullstack/" bgColor="#ccc4bf" fgColor="white" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://www.linkedin.com/in/katie-hill-fullstack/" bgColor="#D2FF72" fgColor="black" style={{ height: '100%', width: '100%' }} />
             </div>
             <div className="w-[28px] h-[28px]">
-              <SocialIcon url="https://github.com/KatieHill-Fr-Gr" bgColor="#ccc4bf" fgColor="white" style={{ height: '100%', width: '100%' }} />
+              <SocialIcon url="https://github.com/KatieHill-Fr-Gr" bgColor="#D2FF72" fgColor="black" style={{ height: '100%', width: '100%' }} />
             </div>
           </div>
         </div>

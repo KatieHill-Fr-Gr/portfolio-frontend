@@ -27,7 +27,8 @@ const NavBar = () => {
                 <div className="right-section">
                     <Link to="/projects" className="page-link">Projects</Link>
                     <Link to="/about" className="page-link">About</Link>
-                    <Link to="/" className="page-link">Articles</Link>
+                    <Link to="/" className="page-link">Skills</Link>
+                    <Link to="/" className="page-link">Contact</Link>
                 </div>
                 <div className="mobile-user-controls">
                     <button
