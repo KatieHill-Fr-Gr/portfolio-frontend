@@ -2,7 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import hero from '../../assets/hero.jpg'
+import Cover from '../../assets/Cover.JPG'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <main>
       <section className="hero vertical" style={{
-        '--hero-bg': `url(${hero})`
+        '--hero-bg': `url(${Cover})`
       }}>
         <h1>Software engineer, digital storyteller & linguist</h1>
       </section>

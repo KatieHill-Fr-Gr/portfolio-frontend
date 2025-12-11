@@ -20,17 +20,16 @@
     font-weight: 400;
 }
 
-.sub-heading {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--light-fonts);
-    font-weight: 600;
-}
-
 .tech-list p {
     margin: 0;
     font-size: 0.9rem;
     font-weight: 400;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .about-stats {
@@ -53,19 +52,42 @@
   border-right: none;
 }
 
-.job-title {
-    font-family: "Inclusive Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
+.item-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0, 3rem;
+    width: 50%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--light-body-font);
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .item-details {
     margin: 2rem 1rem;
 }
 
+.job-title {
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.year-arrow-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .year {
     color: var(--light-body-font);
-    text-align: right;
 }
 
 .about-me {

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
 import about from '../../assets/about.jpeg'
+import { SiTechcrunch } from 'react-icons/si'
 
 
 const About = () => {
@@ -56,11 +57,13 @@ const About = () => {
         fetchUsers()
     }, [])
 
+    console.log(technologies)
+
     return (
         <main>
             <section className="hero vertical" style={{
-                    '--hero-bg': `url(${about})`
-                  }}>
+                '--hero-bg': `url(${about})`
+            }}>
                 <div className="page-title">
                     <h1>Software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
                 </div></section>
@@ -72,10 +75,15 @@ const About = () => {
                             <h3 className="sub-heading">FRONTEND</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
-                                    {technologies
+                                               {technologies
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
-                                            <p key={index}>{tech.name}</p>
+                                            <div key={index} className="tech-item">
+                                            <div className="icon-container">   
+                                            <img src={tech.icon} alt={tech.name} className="icon"/>
+                                            </div>
+                                            <p>{tech.name}</p>
+                                            </div>
                                         ))}
                                 </div>
                             )}
@@ -87,7 +95,12 @@ const About = () => {
                                     {technologies
                                         .filter((tech) => tech.category === "Backend")
                                         .map((tech, index) => (
-                                            <p key={index}>{tech.name}</p>
+                                            <div key={index} className="tech-item">
+                                            <div className="icon-container">   
+                                            <img src={tech.icon} alt={tech.name} className="icon"/>
+                                            </div>
+                                            <p>{tech.name}</p>
+                                            </div>
                                         ))}
                                 </div>
                             )}
@@ -96,10 +109,15 @@ const About = () => {
                             <h3 className="sub-heading">DATABASES</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
-                                    {technologies
+                                             {technologies
                                         .filter((tech) => tech.category === "Databases")
                                         .map((tech, index) => (
-                                            <p key={index}>{tech.name}</p>
+                                            <div key={index} className="tech-item">
+                                            <div className="icon-container">   
+                                            <img src={tech.icon} alt={tech.name} className="icon"/>
+                                            </div>
+                                            <p>{tech.name}</p>
+                                            </div>
                                         ))}
                                 </div>
                             )}
@@ -111,7 +129,12 @@ const About = () => {
                                     {technologies
                                         .filter((tech) => tech.category === "Tools & Platforms")
                                         .map((tech, index) => (
-                                            <p key={index}>{tech.name}</p>
+                                            <div key={index} className="tech-item">
+                                            <div className="icon-container">   
+                                            <img src={tech.icon} alt={tech.name} className="icon"/>
+                                            </div>
+                                            <p>{tech.name}</p>
+                                            </div>
                                         ))}
                                 </div>
                             )}
@@ -121,16 +144,16 @@ const About = () => {
                 <div className="about-section">
                     <div className="about-stats">
                         <div className="stat">
-                        <h2>10</h2>
-                        <p>years of experience in creative industries</p>
+                            <h2>10</h2>
+                            <p>years of experience in creative industries</p>
                         </div>
                         <div className="stat">
-                        <h2>35</h2>
-                        <p>repositories on GitHub</p>
+                            <h2>35</h2>
+                            <p>repositories on GitHub</p>
                         </div>
                         <div className="stat">
-                        <h2>420+</h2>
-                        <p>hours of coding in an agile environment</p>
+                            <h2>420+</h2>
+                            <p>hours of coding in an agile environment</p>
                         </div>
                     </div>
                 </div>
@@ -139,10 +162,12 @@ const About = () => {
                     <div className="item-list">
                         <div className="item" onClick={() => toggleItem(0)}>
                             <span className="job-title">Software Engineer</span>
-                            <span className="year">2025</span>
-                            <span className="arrow" style={{ transform: openItem === 0 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
-                                ↓
-                            </span>
+                            <div className="year-arrow-wrapper">
+                                <span className="year">2025</span>
+                                <span className="arrow" style={{ transform: openItem === 0 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                                    ↓
+                                </span>
+                            </div>
                         </div>
                         {openItem === 0 && (
                             <div className='item-details'
@@ -159,10 +184,12 @@ const About = () => {
                         )}
                         <div className="item" onClick={() => toggleItem(1)}>
                             <span className="job-title">Director, Copywriter & Translator</span>
-                            <span className="year">2015-2025</span>
-                            <span className="arrow" style={{ transform: openItem === 1 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
-                                ↓
-                            </span>
+                            <div className="year-arrow-wrapper">
+                                <span className="year">2015-2025</span>
+                                <span className="arrow" style={{ transform: openItem === 1 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                                    ↓
+                                </span>
+                            </div>
                         </div>
                         {openItem === 1 && (
                             <div className='item-details'
@@ -187,10 +214,12 @@ const About = () => {
                         )}
                         <div className="item" onClick={() => toggleItem(2)}>
                             <span className="job-title">Consultant Copywriter</span>
-                            <span className="year">2021-2024</span>
-                            <span className="arrow" style={{ transform: openItem === 2 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
-                                ↓
-                            </span>
+                            <div className="year-arrow-wrapper">
+                                <span className="year">2021-2024</span>
+                                <span className="arrow" style={{ transform: openItem === 2 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                                    ↓
+                                </span>
+                            </div>
                         </div>
                         {openItem === 2 && (
                             <div className='item-details'
@@ -208,10 +237,12 @@ const About = () => {
                         )}
                         <div className="item" onClick={() => toggleItem(3)}>
                             <span className="job-title">Web Producer & SEO Specialist</span>
-                            <span className="year">2016</span>
-                            <span className="arrow" style={{ transform: openItem === 3 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
-                                ↓
-                            </span>
+                            <div className="year-arrow-wrapper">
+                                <span className="year">2016</span>
+                                <span className="arrow" style={{ transform: openItem === 3 ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }}>
+                                    ↓
+                                </span>
+                            </div>
                         </div>
                         {openItem === 3 && (
                             <div className='item-details'
@@ -228,14 +259,18 @@ const About = () => {
                 </div>
                 <div className="about-section">
                     <h2>My story</h2>
+                    <div className="about-me">
+                        <h3 className="sub-heading">"Why did you learn Greek?"</h3>
+                        <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
+                        <h3 className="sub-heading">Let me take you back to 2018...</h3>
+                        <p> The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
+                        <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
+                        <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
+                        <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
+                        <p>(Oh and the Greek thing? I really wanted to learn another language and, attracted by the idea of spending my year abroad in Greece, I chose to study it at university – and yes, it was hard!).</p>
 
-                    {myInfo ? (
-                        <div className="about-me">
-                            <p>{myInfo.bio}</p>
-                        </div>
-                    ) : (
-                        <p>Loading your info...</p>
-                    )}
+                    </div>
+
                 </div>
                 {/* contributors */}
             </section>

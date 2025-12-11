@@ -35,15 +35,6 @@ export default function FooterWithTailwind() {
                 </a>
               </li>
               <li className="flex items-center gap-1 w-full py-2">
-                <span>M: </span>
-                <a
-                  href="tel:+447847924407"
-                  className="hover:text-gray-900 transition-colors"
-                >
-                  +44 7847 924407
-                </a>
-              </li>
-              <li className="flex items-center gap-1 w-full py-2">
                 <span>Based in </span>
                 <span>London, UK</span>
               </li>
