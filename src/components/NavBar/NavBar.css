@@ -1,15 +1,11 @@
 .navbar {
   display: flex;
-  background: transparent;
+  background: var(--light-primary);
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
   align-items: center;
   padding: 1rem 4rem;
-  border-bottom: 1px solid var(--light-body-font);
+  position: relative;
+  z-index: 10;
 }
 
 .left-section {
@@ -27,7 +23,7 @@ a.home-link {
 }
 
 a.home-link:hover {
-  color: var(--light-links);
+  color: #fff;
 }
 
 .right-section {
@@ -46,7 +42,7 @@ a.home-link:hover {
 }
 
 .right-section a.page-link:hover {
-  color: var(--light-links);
+  color: #fff;
 }
 
 .right-section a.page-link:not(:last-child)::after {
@@ -109,16 +105,19 @@ a.page-link:hover {
   }
 
   .mobile-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--light-primary);
+    width: 90%;
+    max-width: 380px;
+    background-color: var(--light-primary-transparent);
     padding: 1rem 2rem;
     gap: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(120, 160, 40, 0.25);
+
   }
 
   .mobile-links {
@@ -129,7 +128,7 @@ a.page-link:hover {
 
   .mobile-link {
     font-size: 1.1rem;
-    color: var(--dark-fonts);
+    color: var(--light-fonts);
     text-decoration: none;
     background: none;
     border: none;
@@ -145,4 +144,10 @@ a.page-link:hover {
     display: none;
   }
 
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }

@@ -20,26 +20,58 @@
     font-weight: 400;
 }
 
-.sub-heading {
-    font-size: 1rem;
-    color: var(--light-body-font);
-    font-family: "Inclusive Sans", sans-serif;
-    font-weight: 600;
-}
-
-.tech {
+.tech-list p {
     margin: 0;
     font-size: 0.9rem;
     font-weight: 400;
 }
 
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .about-stats {
     display: flex;
+    margin: 0 auto;
     gap: 1rem;
     padding: 2rem;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
 
+.stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-right: solid 1px var(--light-body-font);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0, 3rem;
+    width: 50%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--light-body-font);
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.item-details {
+    margin: 2rem 1rem;
 }
 
 .job-title {
@@ -48,9 +80,14 @@
     font-size: 1rem;
 }
 
+.year-arrow-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .year {
     color: var(--light-body-font);
-    text-align: right;
 }
 
 .about-me {

@@ -3,31 +3,50 @@
 * {
   font-family: "Inclusive Sans", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 :root {
-  /* --light-background: #ebe5e3; */
   --light-background: #fff;
-  --light-primary: #ff232a; 
-  /* --light-primary: #D2FF72; */
-  /* --light-primary: #f54129; */
-    /* --light-primary: #7bfff2; */
-  --light-secondary: #ff232a;
-  --light-links: #ff232a;
+  --light-primary: #D2FF72;
+  --light-primary-transparent: rgb(210, 255, 114, 0.8);
+  --light-secondary: #D2FF72;
+  --light-links: #D2FF72;
   --light-fonts: #000;
   --dark-fonts: #fff;
-  --light-body-font: #aca9a0;
+  --light-body-font: #a29d94;
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "BBH Sans Hegarty", sans-serif;
 }
 
 h1 {
-  font-family: "BBH Sans Hegarty", sans-serif;
+  text-align: left;
+  font-size: 3rem;
 }
 
+h2 {
+  text-align: left;
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
 
-h2, h3, h4, h5, h6 {
-  font-family: "BBH Sans Hegarty", sans-serif;
+h3 { 
+  font-size: 1.75rem;
+  margin-bottom: 0; 
+}
+
+h4 { 
+  font-size: 1.5rem; 
+}
+
+h5 { 
+  font-size: 1.25rem; 
+}
+
+h6 { 
+  font-size: 1rem; 
 }
 
 p {
@@ -39,39 +58,18 @@ button, input, textarea, select, label {
 }
 
 a {
-  font-family: "Inclusive Sans", sans-serif;
+  text-decoration: none;
 }
 
-.page-button {
-    padding: 0.5rem 1rem;
-    color: var(--light-fonts);
-    text-decoration: none;
-    border: 1px solid var(--light-fonts);
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.page-button:hover {
-    color: white;
-    background-color: var(--light-secondary);
-}
-
-.tag-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.tech-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--light-secondary);;
-  color: var(--dark-fonts);
-  font-size: 0.75rem;
-  border-radius: 25px;
+.sub-heading {
+  background-color: var(--light-primary);
+  color: var(--light-fonts);
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  border: none;
 }
+
+
+
+
