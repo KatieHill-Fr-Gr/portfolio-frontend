@@ -31,9 +31,7 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="hero vertical" style={{
-        '--hero-bg': `url(${Cover})`
-      }}>
+      <section className="hero">
         <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
 

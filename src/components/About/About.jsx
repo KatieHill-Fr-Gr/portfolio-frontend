@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
 import about from '../../assets/about.jpeg'
-import { SiTechcrunch } from 'react-icons/si'
 
 
 const About = () => {
@@ -61,9 +60,7 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero vertical" style={{
-                '--hero-bg': `url(${about})`
-            }}>
+            <section className="hero">
                 <div className="page-title">
                     <h1>Software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
                 </div></section>
@@ -79,9 +76,9 @@ const About = () => {
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                            <div className="icon-container">   
+                                            {/* <div className="icon-container">   
                                             <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
+                                            </div> */}
                                             <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -260,10 +257,10 @@ const About = () => {
                 <div className="about-section">
                     <h2>My story</h2>
                     <div className="about-me">
-                        <h3 className="sub-heading">"Why did you learn Greek?"</h3>
+                        <h3>"Why did you learn Greek?"</h3>
                         <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
-                        <h3 className="sub-heading">Let me take you back to 2018...</h3>
-                        <p> The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
+                        <h3>Rewind to 2018...</h3>
+                        <p> The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
                         <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
                         <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
                         <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
