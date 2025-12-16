@@ -69,16 +69,16 @@ const About = () => {
                     <h2>Tech skills</h2>
                     <div className="tech-grid">
                         <div className="technologies">
-                            <h3 className="sub-heading">FRONTEND</h3>
+                            <h3 className="tech-category">FRONTEND</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
                                                {technologies
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                            {/* <div className="icon-container">   
+                                            <div className="icon-container">   
                                             <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div> */}
+                                            </div>
                                             <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -86,7 +86,7 @@ const About = () => {
                             )}
                         </div>
                         <div className="technologies">
-                            <h3 className="sub-heading">BACKEND</h3>
+                            <h3 className="tech-category">BACKEND</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
                                     {technologies
@@ -103,7 +103,7 @@ const About = () => {
                             )}
                         </div>
                         <div className="technologies">
-                            <h3 className="sub-heading">DATABASES</h3>
+                            <h3 className="tech-category">DATABASES</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
                                              {technologies
@@ -120,7 +120,7 @@ const About = () => {
                             )}
                         </div>
                         <div className="technologies">
-                            <h3 className="sub-heading">TOOLS & PLATFORMS</h3>
+                            <h3 className="tech-category">TOOLS & PLATFORMS</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
                                     {technologies

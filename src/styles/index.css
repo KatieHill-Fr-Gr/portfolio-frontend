@@ -7,7 +7,8 @@
 
 :root {
   --light-background: #fff;
-  --light-primary: #D2FF72;
+  --light-primary: #f63c29;
+  /* --light-primary: #ff2527; */
   --light-primary-transparent: rgb(210, 255, 114, 0.8);
   --light-secondary: #D2FF72;
   --light-links: #D2FF72;
