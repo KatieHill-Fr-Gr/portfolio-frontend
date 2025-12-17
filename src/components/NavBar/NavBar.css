@@ -4,15 +4,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
+  border-bottom: 1px solid var(--light-secondary);
 }
 
 .navbar.scrolled {
-  background: var(--light-primary-transparent);
+  background: var(--light-secondary-transparent);
   box-shadow: none;
 }
 

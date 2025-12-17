@@ -68,8 +68,12 @@
   max-width: 400px;
 }
 
-.project-link {
-  color: var(--light-links);
+.project-link,
+.project-link:visited,
+.project-link:hover,
+.project-link:active {
+  color: var(--light-secondary);
+  text-decoration: none;
 }
 
 .summary {

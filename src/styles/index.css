@@ -6,15 +6,14 @@
 }
 
 :root {
-  --light-background: #fff;
-  /* --light-primary: #f63c29; */
-  --light-primary: #f9438d;
-  --light-primary-transparent: rgba(182, 163, 159, 0.5);
-  --light-secondary: rgba(182, 163, 159);
-  --light-links: #f9438d;
+  --light-background: #f3f3f3;
+  --light-primary: #f30421;
+  --light-secondary: rgba(138, 138, 138);
+  --light-secondary-transparent: rgba(138, 138, 138, 0.5);
+  --light-links: #f30421;
   --light-fonts: #000;
   --dark-fonts: #fff;
-  --light-body-font: #a29d94;
+  --light-body-font: #8A8A8A;
 
 }
 
