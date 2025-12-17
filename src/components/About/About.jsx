@@ -60,17 +60,8 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero"
-                style={{
-                    backgroundImage: `url(${profileIMG})`,
-                    height: '100vh',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}>
-
+            <section className="hero">
                 <h1>Software engineer with a background in the creative industries.</h1>
-
             </section>
             <section className="page-content">
                 <div className="about-section">

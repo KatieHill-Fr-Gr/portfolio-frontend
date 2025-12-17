@@ -2,7 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import profileIMG from '../../assets/profileIMG.jpeg'
+import profileIMG2 from '../../assets/profileIMG2.jpeg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -36,13 +36,14 @@ const HomePage = () => {
           <h1>Software engineer</h1>
         </div>
           <div className="hero-item text">
-          <p>10 years of experience in the creative industries</p>
+          <p>Full-stack software engineer, experienced in building apps in Python, React, Node.js/Express, MongoDB, and PostgreSQL</p>
         </div>
           <div className="hero-item image small">
-          <img src={profileIMG} alt="Description 1" />
+          <img src={profileIMG2} alt="Description 1" />
         </div>
-
-
+          <div className="hero-item text large">
+          <p>10 years of experience in the creative industries</p>
+          </div>
       </section>
 
       <section className="page-content">

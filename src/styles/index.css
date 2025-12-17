@@ -8,8 +8,8 @@
 :root {
   --light-background: #f3f3f3;
   --light-primary: #f30421;
-  --light-secondary: rgba(138, 138, 138);
-  --light-secondary-transparent: rgba(138, 138, 138, 0.5);
+  --light-secondary: rgba(182, 163, 159);
+  --light-secondary-transparent: rgba(182, 163, 159, 0.5);
   --light-links: #f30421;
   --light-fonts: #000;
   --dark-fonts: #fff;

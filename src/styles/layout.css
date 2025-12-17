@@ -55,7 +55,6 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
   align-content: center;
   min-height: 100vh;
 }
@@ -70,7 +69,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  border: 1px solid var(--light-secondary-transparent);}
 
 .hero-item.text h1 {
   font-size: 5rem;
