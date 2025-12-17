@@ -2,7 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import Cover from '../../assets/Cover.JPG'
+import IMG_1817 from '../../assets/IMG_1817.jpg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -26,12 +26,15 @@ const HomePage = () => {
   }, [])
 
   const recentProjects = [...projects]
-  .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
-  .slice(0, 3)
+    .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
+    .slice(0, 3)
 
   return (
     <main>
-      <section className="hero">
+      <section className="hero"
+        style={{
+          backgroundImage: `url(${IMG_1817})`,
+        }}>
         <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
 
@@ -70,8 +73,8 @@ const HomePage = () => {
                     View project
                   </Link>
                 </div>
-                </div>
               </div>
+            </div>
           ))
         ) : (
           <p> No projects found</p>

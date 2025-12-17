@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
-import about from '../../assets/about.jpeg'
+import profileIMG from '../../assets/profileIMG.jpeg'
 
 
 const About = () => {
@@ -60,10 +60,18 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero">
-                <div className="page-title">
-                    <h1>Software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
-                </div></section>
+            <section className="hero"
+                style={{
+                    backgroundImage: `url(${profileIMG})`,
+                    height: '100vh',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}>
+
+                <h1>Software engineer with a background in the creative industries.</h1>
+
+            </section>
             <section className="page-content">
                 <div className="about-section">
                     <h2>Tech skills</h2>
@@ -72,14 +80,14 @@ const About = () => {
                             <h3 className="tech-category">FRONTEND</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
-                                               {technologies
+                                    {technologies
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>
@@ -93,10 +101,10 @@ const About = () => {
                                         .filter((tech) => tech.category === "Backend")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>
@@ -106,14 +114,14 @@ const About = () => {
                             <h3 className="tech-category">DATABASES</h3>
                             {technologies && technologies.length > 0 && (
                                 <div className="tech-list">
-                                             {technologies
+                                    {technologies
                                         .filter((tech) => tech.category === "Databases")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>
@@ -127,10 +135,10 @@ const About = () => {
                                         .filter((tech) => tech.category === "Tools & Platforms")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>

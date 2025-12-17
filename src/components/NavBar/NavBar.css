@@ -1,11 +1,19 @@
 .navbar {
   display: flex;
-  background: var(--light-primary);
+  background: transparent;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
+}
+
+.navbar.scrolled {
+  background: var(--light-primary-transparent);
+  box-shadow: none;
 }
 
 .left-section {
@@ -23,7 +31,7 @@ a.home-link {
 }
 
 a.home-link:hover {
-  color: #fff;
+  color: var(--light-links);
 }
 
 .right-section {
@@ -42,7 +50,7 @@ a.home-link:hover {
 }
 
 .right-section a.page-link:hover {
-  color: #fff;
+  color: var(--light-links);
 }
 
 .right-section a.page-link:not(:last-child)::after {
