@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
 import profileIMG from '../../assets/profileIMG.jpeg'
+import { SiPandas } from 'react-icons/si'
 
 
 const About = () => {
@@ -70,22 +71,22 @@ const About = () => {
                         <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
                     </div>
                 </div>
-                <div className="about-section">
+                <div className="tech-section">
                     <h2>Tech skills</h2>
                     <div className="tech-grid">
                         <div className="technologies">
                             <h3 className="tech-category">FRONTEND</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
+                                <div className="tag-container">
                                     {technologies
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                                <div className="icon-container">
+                                            <span key={index} className="tech-tag">
+                                                {/* <div className="icon-container">
                                                     <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div>
-                                                <p>{tech.name}</p>
-                                            </div>
+                                                </div> */}
+                                               {tech.name}
+                                            </span>
                                         ))}
                                 </div>
                             )}
@@ -93,14 +94,14 @@ const About = () => {
                         <div className="technologies">
                             <h3 className="tech-category">BACKEND</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
+                                <div className="tag-container">
                                     {technologies
                                         .filter((tech) => tech.category === "Backend")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                                <div className="icon-container">
+                                            <div key={index} className="tech-tag">
+                                                {/* <div className="icon-container">
                                                     <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div>
+                                                </div> */}
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -115,9 +116,9 @@ const About = () => {
                                         .filter((tech) => tech.category === "Databases")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                                <div className="icon-container">
+                                                {/* <div className="icon-container">
                                                     <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div>
+                                                </div> */}
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -132,9 +133,9 @@ const About = () => {
                                         .filter((tech) => tech.category === "Tools & Platforms")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-item">
-                                                <div className="icon-container">
+                                                {/* <div className="icon-container">
                                                     <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div>
+                                                </div> */}
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
