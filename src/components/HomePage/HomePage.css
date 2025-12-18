@@ -72,7 +72,7 @@
 .project-link:visited,
 .project-link:hover,
 .project-link:active {
-  color: var(--light-secondary);
+  color: var(--light-primary);
   text-decoration: none;
 }
 

@@ -15,11 +15,11 @@
   display: inline-flex;
   justify-content: left;
   text-decoration: none;
-  color: var(--light-body-font);
+  color: var(--light-primary);
 }
 
 .project-link svg {
-  color: var(--light-body-font);
+  color: var(--light-primary);
 }
 
 .project-technologies {

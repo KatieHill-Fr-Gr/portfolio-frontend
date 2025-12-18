@@ -6,14 +6,14 @@
 }
 
 :root {
-  --light-background: #e6e6e6;
+  --light-background: #fff;
   --light-primary: #fd6b2d;
   --light-secondary: rgba(255, 231, 232);
   --light-secondary-transparent: rgba(255, 231, 232, 0.5);
   --light-links: #fd6b2d;
-  --light-fonts: #525357;
+  --light-fonts: #000;
   --light-white-fonts: #fff;
-  --light-divider: #fff;
+  --light-divider: #000;
 
 }
 

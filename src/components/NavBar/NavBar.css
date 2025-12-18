@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  /* border-bottom: 1px solid var(--light-secondary); */
+  border-bottom: 1px solid var(--light-secondary);
 }
 
 .navbar.scrolled {
@@ -26,7 +26,7 @@ a.home-link {
   font-family: "BBH Sans Hegarty", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  color: var(--light-white-fonts);
+  color: var(--light-fonts);
   font-size: 1.25rem;
   text-decoration: none;
 }
@@ -44,7 +44,7 @@ a.home-link:hover {
 
 .right-section a.page-link {
   text-transform: uppercase;
-  color: var(--light-white-fonts);
+  color: var(--light-fonts);
   text-decoration: none;
   font-size: 1rem;
   display: inline-block;
@@ -57,14 +57,14 @@ a.home-link:hover {
 .right-section a.page-link:not(:last-child)::after {
   content: '•';      
   margin-left: 0.5rem;
-  color: var(--light-white-fonts);
+  color: var(--light-fonts);
   vertical-align: middle;
   display: inline;
 }
 
 a.page-link {
   text-transform: uppercase;
-  color: var(--light-white-fonts);
+  color: var(--light-fonts);
   text-decoration: none;
   font-size: 1rem;
 }

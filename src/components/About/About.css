@@ -1,3 +1,49 @@
+.about.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-content: center;
+  min-height: 100vh;
+}
+
+.about.hero-item {
+  overflow: hidden;
+  break-inside: avoid;
+  display: block;
+}
+
+.about.hero-item.text {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--light-divider);
+}
+
+.about.hero-item.text h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.about.hero-item.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about.hero-item.large {
+  grid-column: span 2;
+}
+
+.about.hero-item.small {
+  grid-row: span 0.5;
+}
+
+.about.hero-item.tall {
+  grid-row: span 2;
+}
+
 .about-section,
 .tech-section {
     display: flex;
@@ -17,21 +63,12 @@
 }
 
 .about-me {
-    flex: 1;
+    flex: 2;
     padding: 2rem;
 }
 
-.story-section h2 {
-    flex: 1;
-    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-    line-height: 1.35;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    margin: 0;
-}
-
 .about-section h1 {
-    flex: 2;
+    flex: 3;
     font-size: clamp(2rem, 3.5vw, 3.25rem);
     line-height: 1.35;
     font-weight: 500;
@@ -40,7 +77,8 @@
 }
 
 .about-section h2,
-.tech-section h2 {
+.tech-section h2,
+.story-section h2 {
     flex: 2;
     font-size: clamp(1.6rem, 2.5vw, 2.2rem);
     line-height: 1.35;

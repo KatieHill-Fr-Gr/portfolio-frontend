@@ -51,7 +51,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* .hero {
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -62,61 +62,14 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
 }
 
 .hero > h1 {
   font-size: 5rem;
   padding: 0 2rem;
   margin: 0; 
-} */
-
-.hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-  width: 100%;
 }
 
-.hero::before {
-  content: ' ';
-  position: absolute;
-  top: calc(50% + 4rem);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: var(--hero-bg);
-  z-index: 0;
-}
-
-.hero>h1 {
-  position: relative;
-  z-index: 1;
-  text-align: left;
-  font-size: 5rem;
-}
-
-.hero.vertical::before {
-    width: 25rem;
-    height: 45rem;
-}
-
-.hero.horizontal::before {
-    margin-top: 5rem;
-    width: 45rem;
-    height: 30rem;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
 
 .page-title {
   display: flex;

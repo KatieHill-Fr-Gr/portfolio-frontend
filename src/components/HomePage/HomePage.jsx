@@ -2,7 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import heroImg from '../../assets/heroImg.jpeg'
+import profileIMG from '../../assets/profileIMG.jpeg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -31,7 +31,9 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="hero">
+      <section className="hero" style={{
+          backgroundImage: `url(${profileIMG})`,
+        }}>
         <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
       <section className="page-content">
