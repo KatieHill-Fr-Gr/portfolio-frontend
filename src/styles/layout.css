@@ -52,50 +52,23 @@ p {
 }
 
 .hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  align-content: center;
-  min-height: 100vh;
-}
-
-.hero-item {
-  overflow: hidden;
-  break-inside: avoid;
-}
-
-.hero-item.text {
-  padding: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--light-secondary-transparent);}
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem var(--content-padding);
+  margin: auto 0;
+  gap: 0.5rem;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
 
-.hero-item.text h1 {
+.hero > h1 {
   font-size: 5rem;
-  margin: 0;
+  margin: 0; 
 }
-
-.hero-item.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-item.large {
-  grid-column: span 2;
-}
-
-.hero-item.small {
-  grid-row: span 0.5;
-}
-
-
-.hero-item.tall {
-  grid-row: span 2;
-}
-
 
 .page-title {
   display: flex;
