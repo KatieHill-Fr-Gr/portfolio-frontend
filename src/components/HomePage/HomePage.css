@@ -1,3 +1,54 @@
+.home.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-content: start;
+  min-height: 100vh;
+  padding-top: 4rem;
+  gap: 0;
+}
+
+.home.hero-item {
+  overflow: hidden;
+  break-inside: avoid;
+  display: block;
+}
+
+.home.hero-item.text {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--light-divider);
+}
+
+.home.hero-item.text h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.home.hero-item.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home.hero-item.CTA {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--light-divider);
+}
+
+.home.hero-item.large {
+  grid-column: span 2;
+}
+.home.hero-item.tall {
+  grid-row: span 2;
+  background-color: var(--light-secondary-transparent);
+}
 
 .project-gallery {
   display: flex;

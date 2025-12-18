@@ -1,48 +1,3 @@
-.about.hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  align-content: center;
-  min-height: 100vh;
-}
-
-.about.hero-item {
-  overflow: hidden;
-  break-inside: avoid;
-  display: block;
-}
-
-.about.hero-item.text {
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--light-divider);
-}
-
-.about.hero-item.text h1 {
-  font-size: 5rem;
-  margin: 0;
-}
-
-.about.hero-item.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.about.hero-item.large {
-  grid-column: span 2;
-}
-
-.about.hero-item.small {
-  grid-row: span 0.5;
-}
-
-.about.hero-item.tall {
-  grid-row: span 2;
-}
 
 .about-section,
 .tech-section {
@@ -57,9 +12,10 @@
 .story-section {
     display: flex;
     gap: 1rem;
-    padding: 1rem 6rem;
+    padding: 3rem 6rem;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-top: solid 1px var(--light-divider);
 }
 
 .about-me {

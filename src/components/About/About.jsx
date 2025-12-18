@@ -61,21 +61,16 @@ const About = () => {
 
     return (
         <main>
-            <section className="about hero">
-                <div className="about hero-item text large">
-                    <h1>Software engineer</h1>
-                </div>
-                <div className="about hero-item text">
-                    <p>Full-stack software engineer, experienced in building apps in Python, React, Node.js/Express, MongoDB, and PostgreSQL</p>
-                </div>
-                <div className="about hero-item image small">
-                    <img src={profileIMG2} alt="Description 1" />
-                </div>
-                <div className="about hero-item text large">
-                    <p>10 years of experience in the creative industries</p>
-                </div>
+            <section className="hero">
+                <h1>Every story has a beginning. Mine started with content creation & localization</h1>
             </section>
             <section className="page-content">
+                <div className="about-section">
+                    <h1>Full-stack software engineer with creative skills</h1>
+                    <div className="about-me">
+                        <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
+                    </div>
+                </div>
                 <div className="tech-section">
                     <h2>Tech skills</h2>
                     <div className="tech-grid">

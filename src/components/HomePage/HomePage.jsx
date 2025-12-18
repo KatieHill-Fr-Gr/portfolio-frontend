@@ -2,7 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import profileIMG from '../../assets/profileIMG.jpeg'
+import profileIMG2 from '../../assets/profileIMG2.jpeg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -31,18 +31,45 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="hero" style={{
-          backgroundImage: `url(${profileIMG})`,
-        }}>
-        <h1>Software engineer, digital storyteller & linguist</h1>
+      <section className="home hero">
+        <div className="home hero-item text large">
+          <h1>Software engineer</h1>
+        </div>
+        <div className="home hero-item text">
+          <p>Full-stack software engineer, experienced in building apps in Python, React, Node.js/Express, MongoDB, and PostgreSQL</p>
+        </div>
+        <div className="home hero-item image">
+          <img src={profileIMG2} alt="Description 1" />
+        </div>
+        <div className="home hero-item text">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+        <div className="home hero-item text tall">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+        <div className="home hero-item text">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+          <div className="home hero-item text tall">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+                <div className="home hero-item text">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+        <div className="home hero-item text tall">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+        <div className="home hero-item text large">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+        <div className="home hero-item CTA">
+          <Link to="/projects" className="page-link">My Work ↗</Link>
+        </div>
+        <div className="home hero-item CTA">
+          <Link to="/projects" className="page-link">My Story ↗</Link>
+        </div>
       </section>
       <section className="page-content">
-        <div className="about-section">
-          <h1>Full-stack software engineer with creative skills</h1>
-          <div className="about-me">
-            <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
-          </div>
-        </div>
         <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
