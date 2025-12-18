@@ -32,12 +32,18 @@ const HomePage = () => {
   return (
     <main>
       <section className="hero" style={{
-          backgroundImage: `url(${heroImg})`,
-        }}>
-          <h1>Software engineer, digital storyteller & linguist</h1>
+        backgroundImage: `url(${heroImg})`,
+      }}>
+        <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
 
       <section className="page-content">
+        <div className="about-section">
+          <h2>Full-stack software engineer with creative skills</h2>
+          <div className="about-me">
+            <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
+          </div>
+        </div>
         <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>

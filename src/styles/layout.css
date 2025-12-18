@@ -3,8 +3,8 @@
 }
 
 :root {
-  --section-spacing: 4rem;
-  --content-padding: 4rem;
+  --section-spacing: 0rem;
+  --content-padding: 2rem;
 }
 
 html {
@@ -67,6 +67,7 @@ p {
 
 .hero > h1 {
   font-size: 5rem;
+  padding: 0 2rem;
   margin: 0; 
 }
 
@@ -87,7 +88,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 4rem;
+  padding: 4rem 0;
   margin: 2rem;
   gap: 5rem;
 }

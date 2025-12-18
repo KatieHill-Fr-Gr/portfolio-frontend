@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
-import profileIMG from '../../assets/profileIMG.jpeg'
-import { SiPandas } from 'react-icons/si'
+import profileImg3 from '../../assets/profileImg3.png'
+
 
 
 const About = () => {
@@ -61,7 +61,9 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero">
+            <section className="hero" style={{
+                    backgroundImage: `url(${profileImg3})`,
+                  }}>
             </section>
             <section className="page-content">
                 <div className="about-section">
