@@ -61,9 +61,15 @@ const About = () => {
     return (
         <main>
             <section className="hero">
-                <h1>Software engineer with a background in the creative industries.</h1>
+                <h1>Who I am</h1>
             </section>
             <section className="page-content">
+                <div className="about-section">
+                    <h2>Every story has a beginning. Mine started with content creation & localization.</h2>
+                    <div className="about-me">
+                        <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
+                    </div>
+                </div>
                 <div className="about-section">
                     <h2>Tech skills</h2>
                     <div className="tech-grid">
