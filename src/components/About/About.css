@@ -14,6 +14,15 @@
     border-left: 1px solid var(--light-divider);
 }
 
+.about-section h1 {
+    flex: 2;
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    line-height: 1.35;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
 .about-section h2,
 .tech-section h2 {
     flex: 2;
@@ -35,7 +44,7 @@
 }
 
 .tech-category {
-    margin: 0;
+    margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 400;
 }

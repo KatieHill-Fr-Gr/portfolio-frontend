@@ -62,11 +62,10 @@ const About = () => {
     return (
         <main>
             <section className="hero">
-                <h1>Who I am</h1>
             </section>
             <section className="page-content">
                 <div className="about-section">
-                    <h2>Full-stack software engineer with 10 years of experience in the creative industries.</h2>
+                    <h1>Full-stack software engineer with creative skills</h1>
                     <div className="about-me">
                         <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
                     </div>
@@ -82,9 +81,6 @@ const About = () => {
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
                                             <span key={index} className="tech-tag">
-                                                {/* <div className="icon-container">
-                                                    <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div> */}
                                                {tech.name}
                                             </span>
                                         ))}
@@ -99,9 +95,6 @@ const About = () => {
                                         .filter((tech) => tech.category === "Backend")
                                         .map((tech, index) => (
                                             <div key={index} className="tech-tag">
-                                                {/* <div className="icon-container">
-                                                    <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div> */}
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -111,14 +104,11 @@ const About = () => {
                         <div className="technologies">
                             <h3 className="tech-category">DATABASES</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
+                                <div className="tag-container">
                                     {technologies
                                         .filter((tech) => tech.category === "Databases")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                                {/* <div className="icon-container">
-                                                    <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div> */}
+                                            <div key={index} className="tech-tag">
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -128,14 +118,11 @@ const About = () => {
                         <div className="technologies">
                             <h3 className="tech-category">TOOLS & PLATFORMS</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
+                                <div className="tag-container">
                                     {technologies
                                         .filter((tech) => tech.category === "Tools & Platforms")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                                {/* <div className="icon-container">
-                                                    <img src={tech.icon} alt={tech.name} className="icon" />
-                                                </div> */}
+                                            <div key={index} className="tech-tag">
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
