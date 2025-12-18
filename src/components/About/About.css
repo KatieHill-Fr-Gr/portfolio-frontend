@@ -60,7 +60,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    border-right: solid 1px var(--light-body-font);
+    border-right: solid 1px var(--light-divider);
 }
 
 .stat:last-child {
@@ -78,7 +78,7 @@
 .item {
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px var(--light-body-font);
+    border-bottom: solid 1px var(--light-divider);
     align-items: center;
     flex: 1;
     gap: 1rem;
@@ -102,11 +102,19 @@
 }
 
 .year {
-    color: var(--light-body-font);
+    color: var(--light-divider);
 }
 
 @media (max-width: 600px) {
     .tech-grid {
         grid-template-columns: 1fr;
+    }
+    .about-section {
+        flex-direction: column;
+    }
+    .about-section h2,
+    .about-me {
+        flex: unset;
+        width: 100%;
     }
 }

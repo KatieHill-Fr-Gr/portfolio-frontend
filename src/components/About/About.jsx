@@ -65,9 +65,9 @@ const About = () => {
             </section>
             <section className="page-content">
                 <div className="about-section">
-                    <h2>Every story has a beginning. Mine started with content creation & localization.</h2>
+                    <h2>Full-stack software engineer with 10 years of experience in the creative industries.</h2>
                     <div className="about-me">
-                        <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
+                        <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
                     </div>
                 </div>
                 <div className="about-section">
@@ -260,7 +260,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-section">
-                    <h2>My story</h2>
+                    <h2>Every story has a beginning. Mine started with content creation & localization.</h2>
                     <div className="about-me">
                         <h3>"Why did you learn Greek?"</h3>
                         <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>

@@ -122,10 +122,10 @@ a.page-link:hover {
     flex-direction: column;
     width: 90%;
     max-width: 380px;
-    background-color: var(--light-primary-transparent);
+    background-color: var(--light-secondary-transparent);
     padding: 1rem 2rem;
     gap: 1rem;
-    box-shadow: 0 4px 12px rgba(120, 160, 40, 0.25);
+    box-shadow: 0 4px 12px var(--light-secondary-transparent);
 
   }
 
