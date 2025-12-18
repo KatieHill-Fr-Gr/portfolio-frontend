@@ -61,15 +61,20 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero" style={{
-                    backgroundImage: `url(${profileImg3})`,
-                  }}>
+            <section className="hero">
+            <h1>Every story has a beginning. Mine started with content creation & localization.</h1>
             </section>
             <section className="page-content">
-                <div className="about-section">
-                    <h1>Full-stack software engineer with creative skills</h1>
+                <div className="story-section">
+                     <h2></h2>
                     <div className="about-me">
-                        <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
+                        <p> "Why did you learn Greek?" I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
+                        <p> Back in 2018, The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
+                        <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
+                        <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
+                        <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
+                        <p>(Oh and the Greek thing? I really wanted to learn another language and, attracted by the idea of spending my year abroad in Greece, I chose to study it at university – and yes, it was hard!).</p>
+
                     </div>
                 </div>
                 <div className="tech-section">
@@ -83,7 +88,7 @@ const About = () => {
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
                                             <span key={index} className="tech-tag">
-                                               {tech.name}
+                                                {tech.name}
                                             </span>
                                         ))}
                                 </div>
@@ -249,21 +254,7 @@ const About = () => {
                         )}
                     </div>
                 </div>
-                <div className="about-section">
-                    <h2>Every story has a beginning. Mine started with content creation & localization.</h2>
-                    <div className="about-me">
-                        <h3>"Why did you learn Greek?"</h3>
-                        <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
-                        <h3>Rewind to 2018...</h3>
-                        <p> The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
-                        <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
-                        <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
-                        <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
-                        <p>(Oh and the Greek thing? I really wanted to learn another language and, attracted by the idea of spending my year abroad in Greece, I chose to study it at university – and yes, it was hard!).</p>
 
-                    </div>
-
-                </div>
                 {/* contributors */}
             </section>
         </main>

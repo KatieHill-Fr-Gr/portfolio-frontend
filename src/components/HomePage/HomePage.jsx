@@ -31,15 +31,12 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="hero" style={{
-        backgroundImage: `url(${heroImg})`,
-      }}>
+      <section className="hero">
         <h1>Software engineer, digital storyteller & linguist</h1>
       </section>
-
       <section className="page-content">
         <div className="about-section">
-          <h2>Full-stack software engineer with creative skills</h2>
+          <h1>Full-stack software engineer with creative skills</h1>
           <div className="about-me">
             <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
           </div>
