@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
 import { getUsers, getUserById } from '../../services/users'
-import about from '../../assets/about.jpeg'
-import { SiTechcrunch } from 'react-icons/si'
+import profileIMG2 from '../../assets/profileIMG2.jpeg'
+
 
 
 const About = () => {
@@ -61,79 +61,70 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero vertical" style={{
-                '--hero-bg': `url(${about})`
-            }}>
-                <div className="page-title">
-                    <h1>Software engineer with a background in the creative industries, content localization, and digital storytelling.</h1>
-                </div></section>
+            <section className="hero">
+                <h1>Every story has a beginning. Mine started with content creation & localization</h1>
+            </section>
             <section className="page-content">
                 <div className="about-section">
+                    <h1>Full-stack software engineer with creative skills</h1>
+                    <div className="about-me">
+                        <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
+                    </div>
+                </div>
+                <div className="tech-section">
                     <h2>Tech skills</h2>
                     <div className="tech-grid">
                         <div className="technologies">
-                            <h3 className="sub-heading">FRONTEND</h3>
+                            <h3 className="tech-category">FRONTEND</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
-                                               {technologies
+                                <div className="tag-container">
+                                    {technologies
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
-                                            </div>
+                                            <span key={index} className="tech-tag">
+                                                {tech.name}
+                                            </span>
                                         ))}
                                 </div>
                             )}
                         </div>
                         <div className="technologies">
-                            <h3 className="sub-heading">BACKEND</h3>
+                            <h3 className="tech-category">BACKEND</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
+                                <div className="tag-container">
                                     {technologies
                                         .filter((tech) => tech.category === "Backend")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                            <div key={index} className="tech-tag">
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>
                             )}
                         </div>
                         <div className="technologies">
-                            <h3 className="sub-heading">DATABASES</h3>
+                            <h3 className="tech-category">DATABASES</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
-                                             {technologies
+                                <div className="tag-container">
+                                    {technologies
                                         .filter((tech) => tech.category === "Databases")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                            <div key={index} className="tech-tag">
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>
                             )}
                         </div>
                         <div className="technologies">
-                            <h3 className="sub-heading">TOOLS & PLATFORMS</h3>
+                            <h3 className="tech-category">TOOLS & PLATFORMS</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tech-list">
+                                <div className="tag-container">
                                     {technologies
                                         .filter((tech) => tech.category === "Tools & Platforms")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-item">
-                                            <div className="icon-container">   
-                                            <img src={tech.icon} alt={tech.name} className="icon"/>
-                                            </div>
-                                            <p>{tech.name}</p>
+                                            <div key={index} className="tech-tag">
+                                                <p>{tech.name}</p>
                                             </div>
                                         ))}
                                 </div>
@@ -257,21 +248,19 @@ const About = () => {
                         )}
                     </div>
                 </div>
-                <div className="about-section">
-                    <h2>My story</h2>
+                <div className="story-section">
+                    <h2>Every story has a beginning. Mine started with content creation & localization</h2>
                     <div className="about-me">
-                        <h3 className="sub-heading">"Why did you learn Greek?"</h3>
-                        <p> I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
-                        <h3 className="sub-heading">Let me take you back to 2018...</h3>
-                        <p> The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
+                        <p> "Why did you learn Greek?" I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
+                        <p> Back in 2018, The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
                         <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
                         <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
                         <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
                         <p>(Oh and the Greek thing? I really wanted to learn another language and, attracted by the idea of spending my year abroad in Greece, I chose to study it at university – and yes, it was hard!).</p>
 
                     </div>
-
                 </div>
+
                 {/* contributors */}
             </section>
         </main>

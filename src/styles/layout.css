@@ -3,8 +3,8 @@
 }
 
 :root {
-  --section-spacing: 4rem;
-  --content-padding: 4rem;
+  --section-spacing: 0rem;
+  --content-padding: 2rem;
 }
 
 html {
@@ -52,51 +52,24 @@ p {
 }
 
 .hero {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  padding: 1rem var(--content-padding);
+  margin: auto 0;
+  gap: 0.5rem;
   height: 100vh;
-  width: 100%;
-}
-
-.hero::before {
-  content: ' ';
-  position: absolute;
-  top: calc(50% + 4rem);
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: var(--hero-bg);
-  z-index: 0;
 }
 
-.hero>h1 {
-  position: relative;
-  z-index: 1;
-  text-align: left;
-  font-size: 6rem;
+.hero > h1 {
+  font-size: 5rem;
+  padding: 0 2rem;
+  margin: 0; 
 }
 
-.hero.vertical::before {
-    width: 35rem;
-    height: 45rem;
-}
-
-.hero.horizontal::before {
-    margin-top: 5rem;
-    width: 45rem;
-    height: 30rem;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
 
 .page-title {
   display: flex;
@@ -115,7 +88,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 4rem;
+  padding: 4rem 0;
   margin: 2rem;
   gap: 5rem;
 }
@@ -168,9 +141,9 @@ p {
 
 .page-button {
     padding: 0.5rem 1rem;
-    color: var(--light-fonts);
+    color: var(--light-primary);
     text-decoration: none;
-    border: 1px solid var(--light-fonts);
+    border: 1px solid var(--light-primary);
     border-radius: 5px;
     font-size: 1rem;
     transition: background-color 0.3s ease;
@@ -179,24 +152,6 @@ p {
 .page-button:hover {
     color: var(--light-secondary);
     background-color: #fff;
-}
-
-.tag-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.tech-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--light-secondary);;
-  color: var(--light-fonts);
-  font-size: 0.75rem;
-  border-radius: 25px;
-  font-weight: 600;
-  border: none;
 }
 
 

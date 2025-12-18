@@ -1,11 +1,20 @@
 .navbar {
   display: flex;
-  background: var(--light-primary);
+  background: transparent;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
+  /* border-bottom: 1px solid var(--light-secondary); */
+}
+
+.navbar.scrolled {
+  background: var(--light-secondary-transparent);
+  box-shadow: none;
 }
 
 .left-section {
@@ -23,7 +32,7 @@ a.home-link {
 }
 
 a.home-link:hover {
-  color: #fff;
+  color: var(--light-links);
 }
 
 .right-section {
@@ -42,7 +51,7 @@ a.home-link:hover {
 }
 
 .right-section a.page-link:hover {
-  color: #fff;
+  color: var(--light-links);
 }
 
 .right-section a.page-link:not(:last-child)::after {
@@ -113,10 +122,10 @@ a.page-link:hover {
     flex-direction: column;
     width: 90%;
     max-width: 380px;
-    background-color: var(--light-primary-transparent);
+    background-color: var(--light-secondary-transparent);
     padding: 1rem 2rem;
     gap: 1rem;
-    box-shadow: 0 4px 12px rgba(120, 160, 40, 0.25);
+    box-shadow: 0 4px 12px var(--light-secondary-transparent);
 
   }
 
