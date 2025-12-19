@@ -1,35 +1,89 @@
-.about-section {
+
+.about-section,
+.tech-section {
     display: flex;
     gap: 1rem;
-    padding: 2rem;
+    padding: 6rem;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-top: solid 1px var(--light-body-font);
+    border-top: solid 1px var(--light-divider);
+}
+
+.story-section {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: solid 1px var(--light-divider);
+}
+
+.about-me {
+    flex: 2;
+    padding: 0;
+}
+
+.about-img-container {
+    flex: 2;
+    padding: 0;
+}
+
+.about-section h1 {
+    flex: 3;
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    line-height: 1.35;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.about-section h2,
+.tech-section h2,
+.story-section h2 {
+    flex: 2;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    line-height: 1.35;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
 }
 
 .tech-grid {
+    flex: 3;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 2rem;
+    padding: 0;
+    max-width: 65%;
+    min-width: 0;
 }
 
 .tech-category {
-    margin: 0;
-    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
-.tech-list p {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 400;
+.tag-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.tech-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.tech-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--light-primary);
+  color: var(--light-white-fonts);
+  font-size: 0.75rem;
+  border-radius: 25px;
+  font-weight: 600;
+  height: 2rem;
+  max-width: 8rem;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .about-stats {
@@ -45,11 +99,11 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    border-right: solid 1px var(--light-body-font);
+    border-right: solid 1px var(--light-divider);
 }
 
 .stat:last-child {
-  border-right: none;
+    border-right: none;
 }
 
 .item-list {
@@ -63,7 +117,7 @@
 .item {
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px var(--light-body-font);
+    border-bottom: solid 1px var(--light-divider);
     align-items: center;
     flex: 1;
     gap: 1rem;
@@ -87,15 +141,25 @@
 }
 
 .year {
-    color: var(--light-body-font);
-}
-
-.about-me {
-    width: 50%;
+    color: var(--light-divider);
 }
 
 @media (max-width: 600px) {
     .tech-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-section,
+    .tech-section {
+        flex-direction: column;
+    }
+
+    .about-section h2,
+    .about-me {
+        flex: unset;
+        width: 100%;
+    }
+    .tech-grid {
+        max-width: 100%;
     }
 }

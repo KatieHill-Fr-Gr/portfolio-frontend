@@ -59,7 +59,7 @@ const ProjectsPage = () => {
                     {project.subtitle}
                   </p>
                 </div>
-                <div className="project-description">
+                <div className="project-summary">
                   <p className="summary">{project.summary}</p>
                   <Link to={`/projects/${project.id}`} className="project-link">
                     View project

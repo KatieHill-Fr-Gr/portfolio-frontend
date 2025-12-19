@@ -1,16 +1,30 @@
 .navbar {
   display: flex;
-  background: var(--light-primary);
+  background: transparent;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
-  position: relative;
+  padding: 0;
+  height: 4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
+  border-bottom: 1px solid var(--light-divider);
+}
+
+.navbar.scrolled {
+  background: var(--light-secondary-transparent);
+  box-shadow: none;
 }
 
 .left-section {
   display: flex;
+  align-items: center;
   gap: 1rem;
+  padding: 0 1rem;
+  border-right: 1px solid var(--light-divider);
+  height: 100%;
 }
 
 a.home-link {
@@ -20,33 +34,38 @@ a.home-link {
   color: var(--light-fonts);
   font-size: 1.25rem;
   text-decoration: none;
+  padding: 1rem;
 }
 
 a.home-link:hover {
-  color: #fff;
+  background-color: var(--light-secondary-transparent);
 }
 
 .right-section {
   display: flex;      
-  gap: 1rem;           
+  gap: 0;           
   margin-left: auto;   
   align-items: center;
+  height: 100%;
 }
 
 .right-section a.page-link {
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   color: var(--light-fonts);
   text-decoration: none;
+  padding: 0 0.75rem; 
   font-size: 1rem;
-  display: inline-block;
+  border-left: 1px solid var(--light-divider);
+  height: 100%;
 }
 
 .right-section a.page-link:hover {
-  color: #fff;
+  background-color: var(--light-secondary-transparent);
 }
 
-.right-section a.page-link:not(:last-child)::after {
-  content: '•';      
+.right-section a.page-link:not(:last-child)::after {     
   margin-left: 0.5rem;
   color: var(--light-fonts);
   vertical-align: middle;
@@ -113,10 +132,10 @@ a.page-link:hover {
     flex-direction: column;
     width: 90%;
     max-width: 380px;
-    background-color: var(--light-primary-transparent);
+    background-color: var(--light-secondary-transparent);
     padding: 1rem 2rem;
     gap: 1rem;
-    box-shadow: 0 4px 12px rgba(120, 160, 40, 0.25);
+    box-shadow: 0 4px 12px var(--light-secondary-transparent);
 
   }
 

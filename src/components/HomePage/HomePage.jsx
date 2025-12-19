@@ -2,7 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import Cover from '../../assets/Cover.JPG'
+import profileIMG2 from '../../assets/profileIMG2.jpeg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -26,17 +26,37 @@ const HomePage = () => {
   }, [])
 
   const recentProjects = [...projects]
-  .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
-  .slice(0, 3)
+    .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
+    .slice(0, 3)
 
   return (
     <main>
-      <section className="hero vertical" style={{
-        '--hero-bg': `url(${Cover})`
-      }}>
-        <h1>Software engineer, digital storyteller & linguist</h1>
+      <section className="home hero">
+        <div className="home hero-item text large">
+          <h1>Software engineer</h1>
+        </div>
+        <div className="home hero-item text">
+          <p>Full-stack software engineer, experienced in building apps in Python, React, Node.js/Express, MongoDB, and PostgreSQL</p>
+        </div>
+          <div className="home hero-item image">
+          <img src={profileIMG2} alt="Profile image" />
+        </div>
+        <div className="home hero-item text large">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+          <div className="home hero-item text tall">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+          <div className="home hero-item text large">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+        <div className="home hero-item CTA">
+          <Link to="/projects" className="page-link">My Work ↗</Link>
+        </div>
+        <div className="home hero-item CTA">
+          <Link to="/projects" className="page-link">My Story ↗</Link>
+        </div>
       </section>
-
       <section className="page-content">
         <h2>My work</h2>
         {projectsLoading ? (
@@ -66,14 +86,14 @@ const HomePage = () => {
                     {project.subtitle}
                   </p>
                 </div>
-                <div className="project-description">
+                <div className="project-summary">
                   <p className="summary">{project.summary}</p>
                   <Link to={`/projects/${project.id}`} className="project-link">
                     View project
                   </Link>
                 </div>
-                </div>
               </div>
+            </div>
           ))
         ) : (
           <p> No projects found</p>

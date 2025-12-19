@@ -1,29 +1,79 @@
+.page-title {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+
 .project-title {
+  text-align: right;
+}
+
+.project-content {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.project-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-meta {
   display: flex;
   flex-direction: column;
-  text-align: right;
+  margin-left: auto;
+  gap: 1rem;
+  grid-column: 2;
+  max-width: 45%;
 }
 
 .project-links {
   display: flex;
-  justify-content: left;
-  margin-top: 1rem;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .project-link {
   display: inline-flex;
-  justify-content: left;
+  gap: 0.25rem;
   text-decoration: none;
-  color: var(--light-body-font);
+  color: var(--light-primary);
 }
 
 .project-link svg {
-  color: var(--light-body-font);
+  color: var(--light-primary);
 }
 
 .project-technologies {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 2rem;
-  text-align: left;
 }
+
+.page-title {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .project-title {
+    text-align: left; /* Changed from right for mobile */
+  }
+  
+  .project-meta {
+    grid-column: 1; /* Reset to single column */
+    align-items: flex-start; /* Align to left on mobile */
+    max-width: 100%; /* Use full width on mobile */
+  }
+}
+
