@@ -38,16 +38,16 @@ const HomePage = () => {
         <div className="home hero-item text">
           <p>Full-stack software engineer, experienced in building apps in Python, React, Node.js/Express, MongoDB, and PostgreSQL</p>
         </div>
-         <div className="home hero-item image main">
+          <div className="home hero-item image">
           <img src={profileIMG2} alt="Profile image" />
-        </div>
-        <div className="home hero-item text tall">
-          <p>10 years of experience in the creative industries</p>
         </div>
         <div className="home hero-item text large">
           <p>10 years of experience in the creative industries</p>
         </div>
-        <div className="home hero-item text tall">
+          <div className="home hero-item text tall">
+          <p>10 years of experience in the creative industries</p>
+        </div>
+          <div className="home hero-item text large">
           <p>10 years of experience in the creative industries</p>
         </div>
         <div className="home hero-item CTA">
