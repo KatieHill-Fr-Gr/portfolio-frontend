@@ -6,8 +6,8 @@ const currentYear = new Date().getFullYear();
 
 export default function FooterWithTailwind() {
   return (
-    <footer className="w-full" style={{ backgroundColor: '#f3f3f3' }}>
-      <div className="border-t border-gray-200 mx-auto w-full max-w-7xl px-8 py-12">
+    <footer className="w-full" style={{ backgroundColor: 'rgba(255, 231, 232, 0.5)' }}>
+      <div className="mx-auto w-full max-w-7xl px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h5 className="text-2xl font-bold mb-6 text-gray-900">
@@ -44,7 +44,7 @@ export default function FooterWithTailwind() {
           {/* Links */}
           <div className="text-right">
             <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Read more</h6>
-            <ul className="divide-y divide-gray-200 w-full">
+            <ul className="divide-y divide-black w-full">
               <li>
                 <Link
                   to="/projects"
@@ -77,7 +77,7 @@ export default function FooterWithTailwind() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between border-t border-gray-200 pt-4">
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-between border-t border-black pt-4">
           <p className="text-black-700 text-sm mb-4 md:mb-0 text-center md:text-left">
             &copy; {currentYear}{" "}
             Katie Hill. All Rights Reserved.
