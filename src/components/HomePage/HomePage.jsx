@@ -44,12 +44,6 @@ const HomePage = () => {
         <div className="home hero-item text large">
           <p>10 years of experience in the creative industries</p>
         </div>
-          <div className="home hero-item text tall">
-          <p>10 years of experience in the creative industries</p>
-        </div>
-          <div className="home hero-item text large">
-          <p>10 years of experience in the creative industries</p>
-        </div>
         <div className="home hero-item CTA">
           <Link to="/projects" className="page-link">My Work ↗</Link>
         </div>
@@ -58,7 +52,7 @@ const HomePage = () => {
         </div>
       </section>
       <section className="page-content">
-        <h2>My work</h2>
+        <h2>Recent work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
         ) : projects.length > 0 ? (
