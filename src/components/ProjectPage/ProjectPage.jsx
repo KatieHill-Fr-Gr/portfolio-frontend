@@ -17,7 +17,8 @@ const ProjectPage = () => {
 
     const LINK_TYPE_ICONS = {
         live: LuExternalLink,
-        github: LuGithub,
+        github_frontend: LuGithub,
+        github_backend: LuGithub,
     }
 
     useEffect(() => {
@@ -40,7 +41,7 @@ const ProjectPage = () => {
     }, [projectId, navigate])
 
     return (
-       <section className="page-content">
+        <section className="page-content">
             {project?.name ? (
                 <div className="page-title">
                     <div className="project-title">
@@ -49,43 +50,56 @@ const ProjectPage = () => {
                             {project.subtitle}
                         </p>
                     </div>
-                    <div className="project-description">
-                        <p>{project.description}</p>
+
+
+                    <div className="project-content">
+                        {[project.description1, project.description2, project.description3]
+                            .filter(Boolean)
+                            .map((dsc, i) => (
+                                <div key={i} className="project-description">
+                                    <p>{dsc}</p>
+                                </div>
+                            ))
+
+                        }
+                    </div>
+                    <div className="project-meta">
                         {project.links && project.links.length > 0 && (
                             <div className="project-links">
                                 {project.links.map((link, index) => {
                                     const Icon = LINK_TYPE_ICONS[link.link_type]
                                     return (
-                                       <a 
-                                            key={index} 
-                                            href={link.url} 
-                                            target="_blank" 
+                                        <a
+                                            key={index}
+                                            href={link.url}
+                                            target="_blank"
                                             rel="noopener noreferrer"
                                             className="project-link"
                                         >
-                                            <span>{Icon && <Icon size={20} />} {link.link_type}</span>
+                                            <span>{Icon && <Icon size={20} />} {link.label}</span>
                                         </a>
                                     )
                                 })}
                             </div>
                         )}
-                        {project.technologies && project.technologies.length > 0 && (
+                        {project.technologies.length > 0 && (
                             <div className="project-technologies">
                                 <div className="tag-container">
-                                {project.technologies.map((tech, index) => {
-                                    return (
-                                       <div key={index} className="tech-tag"> {tech.name}</div>
-                                    )
-                                })}
+                                    {project.technologies.map((tech, index) => {
+                                        return (
+                                            <div key={index} className="tech-tag"> {tech.name}</div>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         )}
-                        </div>
                     </div>
+                </div>
             ) : (
                 <p>Loading...</p>
             )}
-                        
+
+
             <div className="image-gallery">
                 {project.images && project.images.length > 0 ? (
                     project.images.map((img, index) => (

@@ -249,7 +249,9 @@ const About = () => {
                     </div>
                 </div>
                 <div className="story-section">
-                    <h2>Every story has a beginning. Mine started with content creation & localization</h2>
+                    <div className="about-img-container">
+                    <img src={profileIMG2} alt="About image" />
+                    </div>
                     <div className="about-me">
                         <p> "Why did you learn Greek?" I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
                         <p> Back in 2018, The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>

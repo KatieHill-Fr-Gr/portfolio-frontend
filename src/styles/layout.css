@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -70,14 +72,6 @@ p {
   margin: 0; 
 }
 
-
-.page-title {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  text-align: right;
-}
-
 .subtitle {
   display: flex;
   justify-content: flex-start;
@@ -111,7 +105,6 @@ p {
 .page-img-container {
   display: flex;
   flex: 1 1 100%;
-  background: linear-gradient(180deg, var(--dark-secondary) 0%, var(--dark-primary) 100%);
   min-height: 400px;
   overflow: hidden;
 }
