@@ -5,8 +5,9 @@
 }
 
 :root {
-  --section-spacing: 0rem;
-  --content-padding: 2rem;
+  --section-spacing: 4rem;
+  --content-padding: clamp(1rem, 3vw, 3rem);
+  --content-width: 1280px;
 }
 
 html {
@@ -18,11 +19,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: var(--light-background);
-  color: 000;
+  max-width: 100%;
 }
 
 #root {
@@ -31,21 +28,14 @@ body {
   flex-direction: column;
 }
 
-nav {
-  flex: none;
-}
-
-.page-container {
-  flex: 1;
-}
-
 main {
   flex: 1;
+  padding-top: 4rem;
 }
 
-section {
-  margin-bottom: var(--section-spacing);
-  padding: 0 var(--section-spacing);
+body {
+  background-color: var(--light-background);
+  color: #000;
 }
 
 p {
@@ -53,38 +43,26 @@ p {
   margin-bottom: 1rem;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem var(--content-padding);
-  margin: auto 0;
-  gap: 0.5rem;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+  box-sizing: border-box;
 }
 
-.hero > h1 {
-  font-size: 5rem;
-  padding: 0 2rem;
-  margin: 0; 
-}
-
-.subtitle {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 0;
+.content-wrapper,
+.image-gallery,
+.page-content {
+  min-width: 0;
 }
 
 .page-content {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  padding: 4rem 0;
-  margin: 2rem;
+  margin-block: var(--section-spacing);
   gap: 5rem;
+  min-width: 0;
 }
 
 .content-wrapper {
@@ -92,6 +70,26 @@ p {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .container {
+  padding-top: clamp(6rem, 20vh, 12rem);
+}
+
+.hero > h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  margin: 0;
+  padding: 0;
 }
 
 .image-gallery {

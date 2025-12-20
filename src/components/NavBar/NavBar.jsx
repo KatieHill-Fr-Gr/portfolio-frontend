@@ -9,7 +9,7 @@ const NavBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
+            setScrolled(window.scrollY > 10)
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -27,8 +27,8 @@ const NavBar = () => {
                 <div className="right-section">
                     <Link to="/projects" className="page-link">Projects</Link>
                     <Link to="/about" className="page-link">About</Link>
-                    <Link to="/" className="page-link">Skills</Link>
-                    <Link to="/" className="page-link">Contact</Link>
+                    <Link to="/skills" className="page-link">Skills</Link>
+                    <Link to="/contact" className="page-link">Contact</Link>
                 </div>
                 <div className="mobile-user-controls">
                     <button
@@ -43,6 +43,8 @@ const NavBar = () => {
                         <div className="mobile-links">
                             <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Projects</Link>
                             <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
+                            <Link to="/skills" className="mobile-link" onClick={() => setMenuOpen(false)}>Skills</Link>
+                            <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
                         </div>
                     </div>
                 )}
