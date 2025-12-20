@@ -24,14 +24,16 @@ const ProjectsPage = () => {
   }, [])
 
   const orderedProjects = [...projects]
-  .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
+    .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
 
   return (
     <main>
-    <section className="page-content">
-      <div className="page-title">
-        <h1>See all my latest work</h1>
-      </div>
+      <section>
+        <div className="container">
+        <div className="page-content">
+        <div className="page-title">
+          <h1>See all my latest work</h1>
+        </div>
         <h2>My work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
@@ -65,12 +67,14 @@ const ProjectsPage = () => {
                     View project
                   </Link>
                 </div>
-                </div>
               </div>
+            </div>
           ))
         ) : (
           <p> No projects found</p>
         )}
+        </div>
+        </div>
       </section>
     </main >
   )

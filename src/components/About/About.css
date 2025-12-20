@@ -1,4 +1,3 @@
-
 .about-section,
 .tech-section {
     display: flex;
@@ -64,26 +63,30 @@
     font-weight: 400;
 }
 
+.technologies {
+    flex: 1;
+}
+
 .tag-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .tech-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--light-primary);
-  color: var(--light-white-fonts);
-  font-size: 0.75rem;
-  border-radius: 25px;
-  font-weight: 600;
-  height: 2rem;
-  max-width: 8rem;
-  white-space: normal;
-  text-align: center;
-  line-height: 1.3;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--light-primary);
+    color: var(--light-white-fonts);
+    font-size: 0.75rem;
+    border-radius: 25px;
+    font-weight: 600;
+    height: 2rem;
+    max-width: 8rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
 }
 
 .about-stats {
@@ -106,7 +109,8 @@
     border-right: none;
 }
 
-.item-list {
+.item-list,
+.tech-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -159,7 +163,13 @@
         flex: unset;
         width: 100%;
     }
+
     .tech-grid {
         max-width: 100%;
+    }
+
+    .stat {
+        border-right: none;
+        border-bottom: solid 1px var(--light-divider);
     }
 }

@@ -61,10 +61,12 @@ const About = () => {
 
     return (
         <main>
-            <section className="hero">
-                <h1>Every story has a beginning. Mine started with content creation & localization</h1>
-            </section>
-            <section className="page-content">
+            <section>
+        <div className="container">
+        <div className="page-content">
+          <div className="hero">
+                <h1>Every story has a beginning.</h1>
+        </div>
                 <div className="about-section">
                     <h1>Full-stack software engineer with creative skills</h1>
                     <div className="about-me">
@@ -264,6 +266,8 @@ const About = () => {
                 </div>
 
                 {/* contributors */}
+                </div>
+                </div>
             </section>
         </main>
 
