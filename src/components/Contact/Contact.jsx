@@ -8,12 +8,9 @@ const Contact = () => {
             <section>
                 <div className="container">
                     <div className="page-content">
-                        {/* <div className="notfound-image">
-            {/* <img src={eyeIcon} alt="White silhouette of eye" /> */}
-                        {/* </div> */}
-                        <h1> Oops, page not found</h1>
-                        <p>We can't find the page you were looking for.</p>
-                        <Link to="/projects" className="page-button">Go back to projects</Link>
+                        <h1> Get in touch</h1>
+                        <p>Fill in the form below or email me: khill.fr.gr@gmail.com</p>
+                        <Link to="/projects" className="page-button">Go back to home</Link>
                     </div>
                 </div>
             </section>
