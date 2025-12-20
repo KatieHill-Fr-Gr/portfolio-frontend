@@ -13,6 +13,7 @@ const Contact = () => {
                     <div className="page-content">
                         <h1> Get in touch</h1>
                         <p>Fill in the form below or email me: khill.fr.gr@gmail.com</p>
+                        <ContactForm />
                         <Link to="/projects" className="page-button">Go back to home</Link>
                     </div>
                 </div>
