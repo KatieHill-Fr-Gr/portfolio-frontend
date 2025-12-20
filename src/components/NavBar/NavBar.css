@@ -14,7 +14,7 @@
 }
 
 .navbar.scrolled {
-  background: var(--light-secondary-transparent);
+  background-color: var(--light-secondary-transparent);
   box-shadow: none;
 }
 

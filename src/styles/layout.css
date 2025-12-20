@@ -6,8 +6,8 @@
 
 :root {
   --section-spacing: 4rem;
-  --content-padding: clamp(1rem, 5vw, 4rem);
-  --content-width: 1200px;
+  --content-padding: clamp(1rem, 3vw, 3rem);
+  --content-width: 1280px;
 }
 
 html {
@@ -20,7 +20,6 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 #root {
@@ -29,12 +28,9 @@ body {
   flex-direction: column;
 }
 
-nav {
-  flex: none;
-}
-
 main {
   flex: 1;
+  padding-top: 4rem;
 }
 
 body {
@@ -84,6 +80,10 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero .container {
+  padding-top: clamp(6rem, 20vh, 12rem);
 }
 
 .hero > h1 {
