@@ -6,7 +6,7 @@
 
 :root {
   --section-spacing: 0rem;
-  --content-padding: 2rem;
+  --content-padding: 4rem 4rem;
 }
 
 html {
@@ -57,7 +57,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem var(--content-padding);
+  padding: 1rem;
   margin: auto 0;
   gap: 0.5rem;
   height: 100vh;
@@ -82,7 +82,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 4rem 0;
+  padding: var(--content-padding);
   margin: 2rem;
   gap: 5rem;
 }
