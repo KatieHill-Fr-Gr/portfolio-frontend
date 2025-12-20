@@ -43,6 +43,8 @@ const NavBar = () => {
                         <div className="mobile-links">
                             <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Projects</Link>
                             <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
+                            <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Skills</Link>
+                            <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
                         </div>
                     </div>
                 )}
