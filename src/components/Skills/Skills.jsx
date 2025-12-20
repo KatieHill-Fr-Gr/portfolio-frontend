@@ -33,7 +33,7 @@ const Skills = () => {
                     <div className="page-content">
                         <div className="page-title">
                         <h1>What I do</h1>
-                        <div className="project-summary">
+                        <div className="page-summary">
                         <p>In addition to solid skills in React, Node.js, and Python, I bring over 10 years of experience in digital storytelling for global brands, skills in UX copywriting & design, and a passion for creative problem-solving. </p>
                         <Link to="/projects" className="page-button">See work</Link>
                         </div>

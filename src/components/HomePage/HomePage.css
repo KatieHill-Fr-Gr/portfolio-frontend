@@ -60,7 +60,8 @@
   font-size: 0.9rem;
 }
 
-.project-summary {
+.project-summary,
+.page-summary {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 400;

@@ -21,8 +21,6 @@
 .left-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0 1rem;
   border-right: 1px solid var(--light-divider);
   height: 100%;
 }
@@ -35,6 +33,7 @@ a.home-link {
   font-size: 1.25rem;
   text-decoration: none;
   padding: 1rem;
+  width: 100%;
 }
 
 a.home-link:hover {
