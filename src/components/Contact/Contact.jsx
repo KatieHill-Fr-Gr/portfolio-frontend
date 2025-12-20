@@ -1,8 +1,11 @@
 import './Contact.css'
+import ContactForm from '../ContactForm/ContactForm'
+
 
 import { Link } from 'react-router-dom'
 
 const Contact = () => {
+
     return (
         <main>
             <section>
