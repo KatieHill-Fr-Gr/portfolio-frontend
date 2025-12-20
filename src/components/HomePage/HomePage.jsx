@@ -31,27 +31,12 @@ const HomePage = () => {
 
   return (
     <main>
-      <section className="home hero">
-        <div className="home hero-item text large">
-          <h1>Software engineer</h1>
+      <section>
+        <div className="container">
+        <div className="page-content">
+          <div className="hero">
+                <h1>Every story has a beginning.</h1>
         </div>
-        <div className="home hero-item text">
-          <p>Full-stack software engineer, experienced in building apps in Python, React, Node.js/Express, MongoDB, and PostgreSQL</p>
-        </div>
-          <div className="home hero-item image">
-          <img src={profileIMG2} alt="Profile image" />
-        </div>
-        <div className="home hero-item text large">
-          <p>10 years of experience in the creative industries</p>
-        </div>
-        <div className="home hero-item CTA">
-          <Link to="/projects" className="page-link">My Work ↗</Link>
-        </div>
-        <div className="home hero-item CTA">
-          <Link to="/projects" className="page-link">My Story ↗</Link>
-        </div>
-      </section>
-      <section className="page-content">
         <h2>Recent work</h2>
         {projectsLoading ? (
           <p>Loading projects...</p>
@@ -92,6 +77,8 @@ const HomePage = () => {
         ) : (
           <p> No projects found</p>
         )}
+        </div>
+        </div>
       </section>
     </main >
   )
