@@ -14,6 +14,7 @@ import ProjectPage from './components/ProjectPage/ProjectPage'
 import ProjectsPage from './components/ProjectsPage/ProjectsPage'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
+import Contact from './components/Contact/Contact'
 import NotFound from './components/404NotFound/404NotFound'
 
 // Contexts
@@ -31,6 +32,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/projects/:projectId' element={<ProjectPage />} />
         <Route path='/skills' element={<Skills />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path="/404" element={<NotFound />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
