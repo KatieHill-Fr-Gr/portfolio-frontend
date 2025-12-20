@@ -34,36 +34,42 @@ const Skills = () => {
                         <div className="page-title">
                         <h1>What I do</h1>
                         <div className="page-summary">
-                        <p>In addition to solid skills in React, Node.js, and Python, I bring over 10 years of experience in digital storytelling for global brands, skills in UX copywriting & design, and a passion for creative problem-solving. </p>
+                        <p>I have 10 years of experience in digital storytelling for global brands, skills in UX copywriting and design, and a passion for creative problem-solving.  </p>
                         <Link to="/projects" className="page-button">See work</Link>
                         </div>
                         </div>
 
                 <div className="tech-section">
                     <h2>Tech skills</h2>
-                    <div className="tech-grid">
                         <div className="technologies">
                             <h3 className="tech-category">FRONTEND</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tag-container">
+                                <div className="tech-list">
                                     {technologies
                                         .filter((tech) => tech.category === "Frontend")
                                         .map((tech, index) => (
-                                            <span key={index} className="tech-tag">
+                                            <span key={index}>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
                                                 {tech.name}
                                             </span>
                                         ))}
                                 </div>
                             )}
-                        </div>
+                            </div>
+        
                         <div className="technologies">
                             <h3 className="tech-category">BACKEND</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tag-container">
+                                <div className="tech-list">
                                     {technologies
                                         .filter((tech) => tech.category === "Backend")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-tag">
+                                            <div key={index}>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -73,11 +79,14 @@ const Skills = () => {
                         <div className="technologies">
                             <h3 className="tech-category">DATABASES</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tag-container">
+                                <div className="tech-list">
                                     {technologies
                                         .filter((tech) => tech.category === "Databases")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-tag">
+                                            <div key={index}>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -87,11 +96,14 @@ const Skills = () => {
                         <div className="technologies">
                             <h3 className="tech-category">TOOLS & PLATFORMS</h3>
                             {technologies && technologies.length > 0 && (
-                                <div className="tag-container">
+                                <div className="tech-list">
                                     {technologies
                                         .filter((tech) => tech.category === "Tools & Platforms")
                                         .map((tech, index) => (
-                                            <div key={index} className="tech-tag">
+                                            <div key={index}>
+                                                <div className="icon-container">
+                                                    <img src={tech.icon} alt={tech.name} className="icon" />
+                                                </div>
                                                 <p>{tech.name}</p>
                                             </div>
                                         ))}
@@ -101,9 +113,7 @@ const Skills = () => {
                     </div>
                 </div>
 
-
                     </div>
-                </div>
             </section>
         </main>
     )
