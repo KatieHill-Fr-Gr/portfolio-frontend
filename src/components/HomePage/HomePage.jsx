@@ -35,7 +35,7 @@ const HomePage = () => {
         <div className="container">
         <div className="page-content">
           <div className="hero">
-                <h1>Every story has a beginning.</h1>
+                <h1>Full-stack software engineer</h1>
         </div>
         <h2>Recent work</h2>
         {projectsLoading ? (
