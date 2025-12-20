@@ -10,23 +10,22 @@ export default function FooterWithTailwind() {
       <div className="mx-auto w-full max-w-7xl px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h5 className="text-2xl font-bold mb-6 text-gray-900">
+            <h5 className="text-2xl font-bold mb-6">
               CIAO!
             </h5>
-            <h5 className="text-2xl font-bold mb-6 text-gray-900">
+            <h5 className="text-2xl font-bold mb-6">
               BONJOUR
             </h5>
-            <h5 className="text-2xl font-bold mb-6 text-gray-900">
+            <h5 className="text-2xl font-bold mb-6">
               ΚΑΛΗΜΕΡΑ
             </h5>
           </div>
 
           {/* Contact Details */}
           <div className="text-right">
-            <h6 className="text-lg font-semibold text-gray-900 mb-4 text-left">Let's chat</h6>
-            <ul className="w-full text-gray-600">
+            <h6 className="text-lg font-semibold mb-4 text-left">Let's chat</h6>
+            <ul className="w-full">
               <li className="flex items-center gap-1 w-full py-2">
-                <span>E:</span>
                 <a
                   href="mailto:khill.fr.gr@gmail.com"
                   className="hover:text-gray-900 transition-colors"
@@ -48,7 +47,7 @@ export default function FooterWithTailwind() {
               <li>
                 <Link
                   to="/projects"
-                  className="flex items-center justify-between w-full py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                  className="flex items-center justify-between w-full py-2 hover:text-gray-900 transition-colors"
                 >
                   <span>Projects</span>
                   <span>→</span>
@@ -57,7 +56,7 @@ export default function FooterWithTailwind() {
               <li>
                 <Link
                   to="/about"
-                  className="flex items-center justify-between w-full py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                  className="flex items-center justify-between w-full py-2 hover:text-gray-900 transition-colors"
                 >
                   <span>About</span>
                   <span>→</span>
@@ -66,7 +65,7 @@ export default function FooterWithTailwind() {
               <li>
                 <Link
                   to="/articles"
-                  className="flex items-center justify-between w-full py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                  className="flex items-center justify-between w-full py-2 hover:text-gray-900 transition-colors"
                 >
                   <span>Articles</span>
                   <span>→</span>
@@ -84,7 +83,7 @@ export default function FooterWithTailwind() {
           </p>
 
           {/* Social icons */}
-          <div className="flex gap-4 text-gray-700">
+          <div className="flex gap-4">
             <div className="w-[28px] h-[28px]">
               <SocialIcon url="https://www.instagram.com/katiefrgr" bgColor="black" fgColor="white" style={{ height: '100%', width: '100%' }} />
             </div>
