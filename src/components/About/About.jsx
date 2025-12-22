@@ -16,6 +16,8 @@ const About = () => {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState([])
     const [openItem, setOpenItem] = useState(null)
+    const [visibleIndex, setVisibleIndex] = useState(-1);
+    const intros = ['Every story has a beginning. ', 'Mine started with content creation and localization. ', 'Now I build apps.']
 
     const toggleItem = (index) => {
         setOpenItem(openItem === index ? null : index)
@@ -57,18 +59,34 @@ const About = () => {
         fetchUsers()
     }, [])
 
+    useEffect(() => {
+        intros.forEach((_, i) => {
+            setTimeout(() => setVisibleIndex(i), i * 1000)
+        })
+    }, [])
+
     return (
         <main>
             <section>
                 <div className="container">
                     <div className="page-content">
                         <div className="hero">
-                            <h1>Every story has a beginning.</h1>
+                            <h1>
+                            {intros.map((text, i) => (
+                                <span
+                                    key={i}
+                                    className={`transition-all duration-500 ${i <= visibleIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+                                        }`}
+                                >
+                                    {text}
+                                </span>
+                            ))}
+                            </h1>
                         </div>
                         <div className="about-section">
                             <h1>Full-stack software engineer with creative skills</h1>
                             <div className="about-me">
-                                <p>I build apps in React/Node.js as well as Python (Django/Flask) </p>
+                                <p>I became interested in tech when AI reshaped the translation industry back in 2018. I’ve been coding in Python since 2020 and also have hands-on experience of building React/Node.js apps, as well as integrating AI/LLMs into REST APIs. </p>
                             </div>
                         </div>
                         <div className="tech-section">

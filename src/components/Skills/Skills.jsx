@@ -34,7 +34,7 @@ const Skills = () => {
                         <div className="page-title">
                         <h1>What I do</h1>
                         <div className="page-summary">
-                        <p>In a nutshell, I build apps using React, Node.js, and Python (Django, Flask), following REST API principles, with PostgreSQL and MongoDB. I’m currently learning Docker, Kubernetes, and AWS.</p>
+                        <p>I build apps using React, Node.js, and Python (Django, Flask), following REST API principles, with PostgreSQL and MongoDB. I’m currently learning Docker, Kubernetes, and AWS.</p>
                         <Link to="/projects" className="page-button">See work</Link>
                         </div>
                         </div>

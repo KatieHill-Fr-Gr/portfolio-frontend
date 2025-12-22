@@ -11,8 +11,8 @@ const Contact = () => {
             <section>
                 <div className="container">
                     <div className="page-content">
-                        <h1> Fancy a coffee?</h1>
-                        <p>Send me a message below or email me: khill.fr.gr@gmail.com</p>
+                        <h1> Fancy a chat?</h1>
+                        <p>I'm a caffeine-addict and never say no to a coffee. Send me a message if you want to arrange a call or meet in person.</p>
                         <ContactForm />
                     </div>
                 </div>
