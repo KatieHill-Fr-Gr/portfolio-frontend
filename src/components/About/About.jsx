@@ -1,4 +1,5 @@
 import './About.css'
+import CountUp from 'react-countup'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getTechnologies } from '../../services/technologies'
@@ -137,15 +138,15 @@ const About = () => {
                 <div className="about-section">
                     <div className="about-stats">
                         <div className="stat">
-                            <h2>10</h2>
+                            <h2><CountUp start={0} end={10} duration={2.5} /></h2>
                             <p>years of experience in creative industries</p>
                         </div>
                         <div className="stat">
-                            <h2>35</h2>
-                            <p>repositories on GitHub</p>
+                            <h2><CountUp start={0} end={1038} duration={2.5} /></h2>
+                            <p>contributions on GitHub</p>
                         </div>
                         <div className="stat">
-                            <h2>420+</h2>
+                            <h2><CountUp start={0} end={420} duration={2.5} /></h2>
                             <p>hours of coding in an agile environment</p>
                         </div>
                     </div>

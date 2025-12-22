@@ -38,6 +38,7 @@ a.home-link {
 
 a.home-link:hover {
   background-color: var(--light-secondary-transparent);
+  color: var(--light-primary);
 }
 
 .right-section {
