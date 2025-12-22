@@ -22,9 +22,13 @@ export default function FooterWithTailwind() {
           </div>
 
           {/* Contact Details */}
-          <div className="text-right">
-            <h6 className="text-lg font-semibold mb-4 text-left">Let's chat</h6>
+          <div className="text-left">
+            <h6 className="text-lg font-semibold mb-4 text-left">Say hello</h6>
             <ul className="w-full">
+              <li className="flex items-center gap-1 w-full py-2">
+                <p>Shoreditch Exchange, Senna Building, Gorsuch Place
+                  London E2 8JF</p>
+              </li>
               <li className="flex items-center gap-1 w-full py-2">
                 <a
                   href="mailto:khill.fr.gr@gmail.com"
@@ -32,10 +36,6 @@ export default function FooterWithTailwind() {
                 >
                   khill.fr.gr@gmail.com
                 </a>
-              </li>
-              <li className="flex items-center gap-1 w-full py-2">
-                <span>Based in </span>
-                <span>London, UK</span>
               </li>
             </ul>
           </div>
@@ -64,10 +64,10 @@ export default function FooterWithTailwind() {
               </li>
               <li>
                 <Link
-                  to="/articles"
+                  to="/contact"
                   className="flex items-center justify-between w-full py-2 hover:text-gray-900 transition-colors"
                 >
-                  <span>Articles</span>
+                  <span>Contact</span>
                   <span>→</span>
                 </Link>
               </li>
