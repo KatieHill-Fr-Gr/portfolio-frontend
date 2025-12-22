@@ -16,7 +16,6 @@ const HomePage = () => {
         const projects = await projectsIndex()
         setProjects(projects.data)
       } catch (error) {
-        console.error('Error:', error)
         setProjects([])
       } finally {
         setProjectsLoading(false)
