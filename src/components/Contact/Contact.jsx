@@ -11,8 +11,8 @@ const Contact = () => {
             <section>
                 <div className="container">
                     <div className="page-content">
-                        <h1> Fancy a chat?</h1>
-                        <p>I never say no to a coffee. Send me a message if you want to arrange a call or meet in person.</p>
+                        <h1> Let's work together</h1>
+                        <p>If you'd like to find out more about my work, send me a message to arrange a call or meet up in person.</p>
                         <ContactForm />
                     </div>
                 </div>
