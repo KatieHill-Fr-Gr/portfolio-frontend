@@ -17,7 +17,8 @@ const ProjectPage = () => {
 
     const LINK_TYPE_ICONS = {
         live: LuExternalLink,
-        github: LuGithub,
+        github_frontend: LuGithub,
+        github_backend: LuGithub,
     }
 
     useEffect(() => {
@@ -40,67 +41,74 @@ const ProjectPage = () => {
     }, [projectId, navigate])
 
     return (
-       <section className="page-content">
-            {project?.name ? (
-                <div className="page-title">
-                    <div className="project-title">
-                        <h1>{project.name}</h1>
-                        <p className="project-subtitle">
-                            {project.subtitle}
-                        </p>
-                    </div>
-                    <div className="project-description">
-                        <p>{project.description}</p>
-                        {project.links && project.links.length > 0 && (
-                            <div className="project-links">
-                                {project.links.map((link, index) => {
-                                    const Icon = LINK_TYPE_ICONS[link.link_type]
-                                    return (
-                                       <a 
-                                            key={index} 
-                                            href={link.url} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="project-link"
-                                        >
-                                            <span>{Icon && <Icon size={20} />} {link.link_type}</span>
-                                        </a>
-                                    )
-                                })}
+        <section>
+            <div className="container">
+                <div className="page-content">
+                    {project?.name ? (
+                        <div className="page-title">
+                            <div className="project-title">
+                                <h1>{project.name}</h1>
+                                <p className="project-subtitle">
+                                    {project.subtitle}
+                                </p>
                             </div>
-                        )}
-                        {project.technologies && project.technologies.length > 0 && (
-                            <div className="project-technologies">
-                                {project.technologies.map((tech, index) => {
-                                    return (
-                                       <span key={index}> {tech.name}/</span>
-                                    )
-                                })}
+
+                            <div className="project-summary">
+                                <p>{project.description1}</p>
+                                {project.links && project.links.length > 0 && (
+                                    <div className="project-links">
+                                        {project.links.map((link, index) => {
+                                            const Icon = LINK_TYPE_ICONS[link.link_type]
+                                            return (
+                                                <a
+                                                    key={index}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="project-link"
+                                                >
+                                                    <span>{Icon && <Icon size={20} />} {link.label}</span>
+                                                </a>
+                                            )
+                                        })}
+                                    </div>
+                                )}
+                                {project.technologies && project.technologies.length > 0 && (                  
+                                    <div className="project-technologies">
+                                          <div className="tag-container">
+                                        {project.technologies.map((tech, index) => {
+                                            return (
+                                                <div key={index} className="tech-tag"> {tech.name}</div>
+                                            )
+                                        })}
+                                           </div>
+                                    </div>
+                                )}
                             </div>
+                        </div>
+                    ) : (
+                        <p>Loading...</p>
+                    )}
+
+                    <div className="image-gallery">
+                        {project.images && project.images.length > 0 ? (
+                            project.images.map((img, index) => (
+                                <div key={img.image_url || index} className="page-img-container">
+                                    <img
+                                        src={img.image_url}
+                                        alt={project.name}
+                                        className="page-img"
+                                    />
+                                </div>
+                            ))
+                        ) : (
+                            <p>No images available</p>
                         )}
-                        </div>
                     </div>
-            ) : (
-                <p>Loading...</p>
-            )}
-                        
-            <div className="image-gallery">
-                {project.images && project.images.length > 0 ? (
-                    project.images.map((img, index) => (
-                        <div key={img.image_url || index} className="page-img-container">
-                            <img
-                                src={img.image_url}
-                                alt={project.name}
-                                className="page-img"
-                            />
-                        </div>
-                    ))
-                ) : (
-                    <p>No images available</p>
-                )}
+                    <h2>All projects</h2>
+                    <ProjectsCarousel />
+                </div>
             </div>
-            <h2>All projects</h2>
-            <ProjectsCarousel />
         </section>
 
     )

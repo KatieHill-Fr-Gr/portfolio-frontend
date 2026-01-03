@@ -1,43 +1,79 @@
 .navbar {
   display: flex;
+  background: transparent;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0;
+  height: 4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--light-divider);
 }
 
-.left-section,
-.center-section,
-.right-section {
+.navbar.scrolled {
+  background-color: var(--light-secondary-transparent);
+  box-shadow: none;
+}
+
+.left-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-
-.right-section {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-#main-pages {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+  border-right: 1px solid var(--light-divider);
+  height: 100%;
 }
 
 a.home-link {
+  font-family: "BBH Sans Hegarty", sans-serif;
+  text-transform: uppercase;
   font-weight: 400;
   color: var(--light-fonts);
   font-size: 1.25rem;
   text-decoration: none;
+  padding: 1rem;
+  width: 100%;
 }
 
 a.home-link:hover {
-  color: var(--light-links);
+  background-color: var(--light-secondary-transparent);
+  color: var(--light-primary);
+}
+
+.right-section {
+  display: flex;      
+  gap: 0;           
+  margin-left: auto;   
+  align-items: center;
+  height: 100%;
+}
+
+.right-section a.page-link {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--light-fonts);
+  text-decoration: none;
+  padding: 0 0.75rem; 
+  font-size: 1rem;
+  border-left: 1px solid var(--light-divider);
+  height: 100%;
+}
+
+.right-section a.page-link:hover {
+  background-color: var(--light-secondary-transparent);
+}
+
+.right-section a.page-link:not(:last-child)::after {     
+  margin-left: 0.5rem;
+  color: var(--light-fonts);
+  vertical-align: middle;
+  display: inline;
 }
 
 a.page-link {
+  text-transform: uppercase;
   color: var(--light-fonts);
   text-decoration: none;
   font-size: 1rem;
@@ -46,7 +82,6 @@ a.page-link {
 a.page-link:hover {
   color: var(--light-links);
 }
-
 
 .logo-image {
   width: 1.5rem;
@@ -66,14 +101,13 @@ a.page-link:hover {
 
 .hamburger {
   display: none;
-  background: var(--light-background);
+  background: transparent;
   border: none;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .right-section,
-  .center-section {
+  .right-section {
     display: none;
   }
 
@@ -93,13 +127,12 @@ a.page-link:hover {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 4rem;
     left: 0;
     width: 100%;
-    background: var(--light-background);
+    background: var(--light-fonts);
     padding: 1rem 2rem;
     gap: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
 
   .mobile-links {
@@ -110,7 +143,7 @@ a.page-link:hover {
 
   .mobile-link {
     font-size: 1.1rem;
-    color: var(--light-fonts);
+    color: var(--light-white-fonts);
     text-decoration: none;
     background: none;
     border: none;
@@ -119,11 +152,17 @@ a.page-link:hover {
   }
 
   .mobile-link:hover {
-    color: var(--light-links);
+    color: var(--light-body-font);
   }
 
   .mobile-menu.hidden {
     display: none;
   }
 
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }

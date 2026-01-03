@@ -2,6 +2,7 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
+import profileIMG2 from '../../assets/profileIMG2.jpeg'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -15,7 +16,6 @@ const HomePage = () => {
         const projects = await projectsIndex()
         setProjects(projects.data)
       } catch (error) {
-        console.error('Error:', error)
         setProjects([])
       } finally {
         setProjectsLoading(false)
@@ -24,53 +24,64 @@ const HomePage = () => {
     loadProjects()
   }, [])
 
+  const recentProjects = [...projects]
+    .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
+    .slice(0, 3)
+
   return (
     <main>
-      <section className="hero">
-        <h1>Full-stack developer, React, Node.js, Python</h1>
-      </section>
+      <section>
+        <div className="container">
+          <div className="page-content">
+            <div className="hero">
+          
+                <h1>
+                 Full-stack software engineer
+                </h1>
+        
+            </div>
+            <h2>Recent work</h2>
+            {projectsLoading ? (
+              <p>Loading projects...</p>
+            ) : projects.length > 0 ? (
+              recentProjects.map((project) => (
+                <div key={project.id} className="project-gallery">
 
-      <section className="page-content">
-        <h2>My work</h2>
-        {projectsLoading ? (
-          <p>Loading projects...</p>
-        ) : projects.length > 0 ? (
-          projects.map((project) => (
-            <div key={project.id} className="project-gallery">
-
-              {project.images && project.images.length > 0 && (
-                <div className="image-row">
-                  {project.images.slice(0, 3).map((img, index) => (
-                    <div key={img.image_url || index} className="img-container">
-                      <img
-                        src={img.image_url}
-                        alt={project.name}
-                        className="img"
-                      />
+                  {project.images && project.images.length > 0 && (
+                    <div className="image-row">
+                      {project.images.slice(0, 3).map((img, index) => (
+                        <div key={img.image_url || index} className="img-container">
+                          <img
+                            src={img.image_url}
+                            alt={project.name}
+                            className="img"
+                          />
+                        </div>
+                      )
+                      )}
                     </div>
-                  )
                   )}
+                  <div className="project-row">
+                    <div className="project-info">
+                      <h3>{project.name}</h3>
+                      <p className="project-subtitle">
+                        {project.subtitle}
+                      </p>
+                    </div>
+                    <div className="project-summary">
+                      <p className="summary">{project.summary}</p>
+                      <Link to={`/projects/${project.id}`} className="project-link">
+                        View project
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              )}
-              <div className="project-row">
-                <div className="project-info">
-                  <h3>{project.name}</h3>
-                  <p className="project-subtitle">
-                    {project.subtitle}
-                  </p>
-                </div>
-                <div className="project-description">
-                  <p>{project.description}</p>
-                  <Link to={`/projects/${project.id}`} className="project-link">
-                    View project
-                  </Link>
-                </div>
-                </div>
-              </div>
-          ))
-        ) : (
-          <p> No projects found</p>
-        )}
+              ))
+            ) : (
+              <p> No projects found</p>
+            )}
+          </div>
+        </div>
       </section>
     </main >
   )

@@ -1,23 +1,34 @@
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 import { Menu, X } from "lucide-react"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
 
     return (
         <>
-            <nav className="navbar">
+            <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="left-section">
                     <Link to="/" className="home-link">Katie Hill</Link>
                 </div>
 
-                <div className="center-section">
-                    <Link to="/" className="page-link">Projects</Link>
+                <div className="right-section">
+                    <Link to="/projects" className="page-link">Projects</Link>
                     <Link to="/about" className="page-link">About</Link>
-                    <Link to="/" className="page-link">Contact</Link>
-                    <Link to="/" className="page-link">Articles</Link>
+                    <Link to="/skills" className="page-link">Skills</Link>
+                    <Link to="/contact" className="page-link">Contact</Link>
                 </div>
                 <div className="mobile-user-controls">
                     <button
@@ -32,6 +43,8 @@ const NavBar = () => {
                         <div className="mobile-links">
                             <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Projects</Link>
                             <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
+                            <Link to="/skills" className="mobile-link" onClick={() => setMenuOpen(false)}>Skills</Link>
+                            <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
                         </div>
                     </div>
                 )}

@@ -1,23 +1,52 @@
-/* @tailwind base
-@tailwind components
-@tailwind utilities */
+@import "tailwindcss";
 
 * {
   font-family: "Inclusive Sans", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 :root {
   --light-background: #fff;
-  --light-primary: #fff;
-  --light-links: rgb(246, 3, 246);
+  --light-primary: #fd6b2d;
+  --light-secondary: rgba(255, 231, 232);
+  --light-secondary-transparent: rgba(255, 231, 232, 0.5);
+  --light-links: #fd6b2d;
   --light-fonts: #000;
-  --light-body-font: #b7b7b7;
+  --light-white-fonts: #fff;
+  --light-divider: #000;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "BBH Sans Hegarty", sans-serif;
+}
+
+h1 {
+  text-align: left;
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2.25rem;
+  margin-bottom: 0;
+}
+
+h3 { 
+  font-size: 1.75rem;
+  margin-bottom: 0; 
+}
+
+h4 { 
+  font-size: 1.5rem; 
+}
+
+h5 { 
+  font-size: 1.25rem; 
+}
+
+h6 { 
+  font-size: 1rem; 
 }
 
 p {
@@ -29,39 +58,18 @@ button, input, textarea, select, label {
 }
 
 a {
-  font-family: "Inclusive Sans", sans-serif;
+  text-decoration: none;
 }
 
-.page-button {
-    padding: 0.5rem 1rem;
-    color: var(--light-fonts);
-    text-decoration: none;
-    border: 1px solid var(--light-fonts);
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.page-button:hover {
-    color: white;
-    background-color: var(--light-secondary);
-}
-
-.tag-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.tech-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(45deg, var(--dark-yellow) 0%, var(--dark-red) 100%);
-  color: white;
-  font-size: 0.75rem;
-  border-radius: 25px;
+.sub-heading {
+  background-color: var(--light-primary);
+  color: var(--light-fonts);
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  border: none;
 }
+
+
+
+

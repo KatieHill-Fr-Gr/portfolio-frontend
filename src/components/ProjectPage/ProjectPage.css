@@ -1,3 +1,11 @@
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-align: right;
+  margin-top: 2rem;
+}
+
 .project-title {
   display: flex;
   flex-direction: column;
@@ -6,8 +14,7 @@
 
 .project-links {
   display: flex;
-  flex-direction: column;
-  justify-content: right;
+  justify-content: left;
   gap: 0.5rem;
 }
 
@@ -15,11 +22,7 @@
   display: inline-flex;
   justify-content: left;
   text-decoration: none;
-  color: var(--light-body-font);
-}
-
-.project-link svg {
-  color: var(--light-body-font);
+  color: var(--light-primary);
 }
 
 .project-technologies {
@@ -27,3 +30,12 @@
   margin-top: 2rem;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .page-title {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+}
+
