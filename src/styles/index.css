@@ -61,14 +61,6 @@ a {
   text-decoration: none;
 }
 
-.sub-heading {
-  background-color: var(--light-primary);
-  color: var(--light-fonts);
-  font-size: 1rem;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
 
 
 
