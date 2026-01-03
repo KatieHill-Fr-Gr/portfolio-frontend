@@ -83,12 +83,7 @@ const About = () => {
                             ))}
                             </h1>
                         </div>
-                        {/* <div className="about-section">
-                            <h1>Full-stack software engineer with creative skills</h1>
-                            <div className="about-me">
-                                <p>I became interested in tech when AI reshaped the translation industry back in 2018. I’ve been coding in Python since 2020 and also have hands-on experience of building React/Node.js apps, as well as integrating AI/LLMs into REST APIs. </p>
-                            </div>
-                        </div> */}
+    
                         <div className="tech-section">
                             <h2>Tech skills</h2>
                             <div className="tech-grid">
@@ -113,9 +108,9 @@ const About = () => {
                                             {technologies
                                                 .filter((tech) => tech.category === "Backend")
                                                 .map((tech, index) => (
-                                                    <div key={index}>
-                                                        <p>{tech.name}</p>
-                                                    </div>
+                                                    <span key={index}>
+                                                        {tech.name}
+                                                    </span>
                                                 ))}
                                         </div>
                                     )}
@@ -127,9 +122,9 @@ const About = () => {
                                             {technologies
                                                 .filter((tech) => tech.category === "Databases")
                                                 .map((tech, index) => (
-                                                    <div key={index}>
-                                                        <p>{tech.name}</p>
-                                                    </div>
+                                                    <span key={index}>
+                                                        {tech.name}
+                                                    </span>
                                                 ))}
                                         </div>
                                     )}
@@ -141,9 +136,9 @@ const About = () => {
                                             {technologies
                                                 .filter((tech) => tech.category === "Tools & Platforms")
                                                 .map((tech, index) => (
-                                                    <div key={index}>
-                                                        <p>{tech.name}</p>
-                                                    </div>
+                                                    <span key={index}>
+                                                        {tech.name}
+                                                    </span>
                                                 ))}
                                         </div>
                                     )}
@@ -153,7 +148,7 @@ const About = () => {
                         <div className="about-section">
                             <div className="about-stats">
                                 <div className="stat">
-                                    <h2><ScrollCountUp start={0} end={10} duration={2.5} /></h2>
+                                    <h2 className="sub-heading"><ScrollCountUp start={0} end={10} duration={2.5} /></h2>
                                     <p>years of experience in creative industries</p>
                                 </div>
                                 <div className="stat">
@@ -280,8 +275,6 @@ const About = () => {
 
                             </div>
                         </div>
-
-                        {/* contributors */}
                     </div>
                 </div>
             </section>
