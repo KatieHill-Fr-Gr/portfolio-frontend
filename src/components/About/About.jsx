@@ -233,10 +233,10 @@ const About = () => {
                                             transition: "max-height 0.9s ease",
                                         }}>
                                         <p>
-                                            The eyewear giant Luxottica were looking for consultant copywriters to work with their rapidly growing in-house team following the pandemic in 2020. I started working with them in February 2021, providing cross-channel copywriting for multiple brands in the group’s portfolio including Ray-Ban, Sunglass Hut, Vogue Eyewear and LensCrafters.
+                                            The eyewear giant Luxottica was looking for consultant copywriters to work with the rapidly growing in-house team following the pandemic in 2020. I started working with them in February 2021, providing cross-channel copywriting for multiple brands in the group’s portfolio including Ray-Ban, Sunglass Hut, Vogue Eyewear and LensCrafters.
                                         </p>
                                         <p>
-                                            During the three years I worked with them, I developed multiple campaign concepts, product storytelling, and UX/SEO content across multiple e-commerce sites. I also worked closely with frontend developers and UX designers during UAT phases, supporting agile workflows and tracking progress in Jira/Atlassian. This gave me a taste of cross-functional collaboration between creative and tech teams.                                </p>
+                                            During the three years I worked with them, I developed multiple campaign concepts, product storytelling, and UX/SEO content across multiple e-commerce sites. I also worked closely with frontend developers and designers on improving UX, conducting UAT and tracking progress in Jira/Atlassian. This gave me an insight into software development workflows and sparked my interest in building apps myself.                                </p>
                                     </div>
                                 )}
                                 <div className="item" onClick={() => toggleItem(3)}>
