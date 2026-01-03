@@ -152,7 +152,7 @@ const About = () => {
                                     <p>years of experience in creative industries</p>
                                 </div>
                                 <div className="stat">
-                                    <h2><ScrollCountUp start={0} end={1038} duration={2.5} /></h2>
+                                    <h2><ScrollCountUp start={0} end={1050} duration={2.5} /></h2>
                                     <p>contributions on GitHub</p>
                                 </div>
                                 <div className="stat">
@@ -261,11 +261,12 @@ const About = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="story-section">
+                        <div className="about-section">
+                            <h2>My story</h2>
+                             <div className="about-me">
                             <div className="about-img-container">
                                 <img src={profileIMG2} alt="About image" />
-                            </div>
-                            <div className="about-me">
+                            </div>  
                                 <p> "Why did you learn Greek?" I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
                                 <p> Back in 2018, The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
                                 <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>

@@ -8,22 +8,12 @@
     border-top: solid 1px var(--light-divider);
 }
 
-.story-section {
-    display: flex;
-    gap: 1rem;
-    padding: 2rem 0;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-top: solid 1px var(--light-divider);
-}
-
 .about-me {
-    flex: 2;
     padding: 0;
+    width: 50%;
 }
 
 .about-img-container {
-    flex: 2;
     padding: 0;
 }
 
@@ -48,7 +38,7 @@
 }
 
 .tech-grid {
-    flex: 3;
+    flex: 2;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
@@ -86,6 +76,13 @@
 .stat:last-child {
     border-right: none;
 }
+
+.stat h2,
+.stat h2 * {
+  font-family: "BBH Sans Hegarty", sans-serif;
+  font-size: 4rem;
+}
+
 
 .item-list,
 .tech-list {
