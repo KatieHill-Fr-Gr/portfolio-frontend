@@ -16,7 +16,7 @@ const About = () => {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState([])
     const [openItem, setOpenItem] = useState(null)
-    const [visibleIndex, setVisibleIndex] = useState(-1);
+    const [visibleIndex, setVisibleIndex] = useState(-1)
     const intros = ['Every story has a beginning. ', 'Mine started with content creation and localization. ', 'Now I build apps.']
 
     const toggleItem = (index) => {
@@ -268,7 +268,7 @@ const About = () => {
                                 <img src={profileIMG2} alt="About image" />
                             </div>  
                                 <p> "Why did you learn Greek?" I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
-                                <p> Back in 2018, The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
+                                <p> Back in 2018, The translation and localization industry was ahead of the curve in adopting AI (or Neural Machine Translation as it was known). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
                                 <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
                                 <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
                                 <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
