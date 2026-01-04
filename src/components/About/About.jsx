@@ -16,7 +16,7 @@ const About = () => {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState([])
     const [openItem, setOpenItem] = useState(null)
-    const [visibleIndex, setVisibleIndex] = useState(-1);
+    const [visibleIndex, setVisibleIndex] = useState(-1)
     const intros = ['Every story has a beginning. ', 'Mine started with content creation and localization. ', 'Now I build apps.']
 
     const toggleItem = (index) => {
@@ -83,12 +83,7 @@ const About = () => {
                             ))}
                             </h1>
                         </div>
-                        {/* <div className="about-section">
-                            <h1>Full-stack software engineer with creative skills</h1>
-                            <div className="about-me">
-                                <p>I became interested in tech when AI reshaped the translation industry back in 2018. I’ve been coding in Python since 2020 and also have hands-on experience of building React/Node.js apps, as well as integrating AI/LLMs into REST APIs. </p>
-                            </div>
-                        </div> */}
+    
                         <div className="tech-section">
                             <h2>Tech skills</h2>
                             <div className="tech-grid">
@@ -113,9 +108,9 @@ const About = () => {
                                             {technologies
                                                 .filter((tech) => tech.category === "Backend")
                                                 .map((tech, index) => (
-                                                    <div key={index}>
-                                                        <p>{tech.name}</p>
-                                                    </div>
+                                                    <span key={index}>
+                                                        {tech.name}
+                                                    </span>
                                                 ))}
                                         </div>
                                     )}
@@ -127,9 +122,9 @@ const About = () => {
                                             {technologies
                                                 .filter((tech) => tech.category === "Databases")
                                                 .map((tech, index) => (
-                                                    <div key={index}>
-                                                        <p>{tech.name}</p>
-                                                    </div>
+                                                    <span key={index}>
+                                                        {tech.name}
+                                                    </span>
                                                 ))}
                                         </div>
                                     )}
@@ -141,9 +136,9 @@ const About = () => {
                                             {technologies
                                                 .filter((tech) => tech.category === "Tools & Platforms")
                                                 .map((tech, index) => (
-                                                    <div key={index}>
-                                                        <p>{tech.name}</p>
-                                                    </div>
+                                                    <span key={index}>
+                                                        {tech.name}
+                                                    </span>
                                                 ))}
                                         </div>
                                     )}
@@ -153,11 +148,11 @@ const About = () => {
                         <div className="about-section">
                             <div className="about-stats">
                                 <div className="stat">
-                                    <h2><ScrollCountUp start={0} end={10} duration={2.5} /></h2>
+                                    <h2 className="sub-heading"><ScrollCountUp start={0} end={10} duration={2.5} /></h2>
                                     <p>years of experience in creative industries</p>
                                 </div>
                                 <div className="stat">
-                                    <h2><ScrollCountUp start={0} end={1038} duration={2.5} /></h2>
+                                    <h2><ScrollCountUp start={0} end={1050} duration={2.5} /></h2>
                                     <p>contributions on GitHub</p>
                                 </div>
                                 <div className="stat">
@@ -238,10 +233,10 @@ const About = () => {
                                             transition: "max-height 0.9s ease",
                                         }}>
                                         <p>
-                                            The eyewear giant Luxottica were looking for consultant copywriters to work with their rapidly growing in-house team following the pandemic in 2020. I started working with them in February 2021, providing cross-channel copywriting for multiple brands in the group’s portfolio including Ray-Ban, Sunglass Hut, Vogue Eyewear and LensCrafters.
+                                            The eyewear giant Luxottica was looking for consultant copywriters to work with the rapidly growing in-house team following the pandemic in 2020. I started working with them in February 2021, providing cross-channel copywriting for multiple brands in the group’s portfolio including Ray-Ban, Sunglass Hut, Vogue Eyewear and LensCrafters.
                                         </p>
                                         <p>
-                                            During the three years I worked with them, I developed multiple campaign concepts, product storytelling, and UX/SEO content across multiple e-commerce sites. I also worked closely with frontend developers and UX designers during UAT phases, supporting agile workflows and tracking progress in Jira/Atlassian. This gave me a taste of cross-functional collaboration between creative and tech teams.                                </p>
+                                            During the three years I worked with them, I developed multiple campaign concepts, product storytelling, and UX/SEO content across multiple e-commerce sites. I also worked closely with frontend developers and designers on improving UX, conducting UAT and tracking progress in Jira/Atlassian. This gave me an insight into software development workflows and sparked my interest in building apps myself.                                </p>
                                     </div>
                                 )}
                                 <div className="item" onClick={() => toggleItem(3)}>
@@ -266,13 +261,14 @@ const About = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="story-section">
+                        <div className="about-section">
+                            <h2>My story</h2>
+                             <div className="about-me">
                             <div className="about-img-container">
                                 <img src={profileIMG2} alt="About image" />
-                            </div>
-                            <div className="about-me">
+                            </div>  
                                 <p> "Why did you learn Greek?" I was asked this all the time as a translator and copywriter. Now the question most people ask is “Why did you learn software engineering?”. Well, it’s not as much of a leap as it sounds. </p>
-                                <p> Back in 2018, The translation and localisation industry was ahead of the curve in adopting AI (or Neural Machine Translation to those in the know). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
+                                <p> Back in 2018, The translation and localization industry was ahead of the curve in adopting AI (or Neural Machine Translation as it was known). It had already reshaped the way translators work long before ChatGPT came onto the scene and this led me to develop a deep interest in the world of tech. </p>
                                 <p> I started learning Python during lockdown in 2020 so I could experiment with text analysis. Over the years I began coding more and more, until I eventually decided to retrain as a full-stack software engineer.</p>
                                 <p>My final project on the General Assembly software engineering bootcamp was a translation and project management app, which I’d been wanting to build for a while after wrestling with clunky software in my previous roles.  </p>
                                 <p> Finding creative solutions to business challenges is what drives me, along with a curiosity in how systems are designed, built, and maintained in production.</p>
@@ -280,8 +276,6 @@ const About = () => {
 
                             </div>
                         </div>
-
-                        {/* contributors */}
                     </div>
                 </div>
             </section>
