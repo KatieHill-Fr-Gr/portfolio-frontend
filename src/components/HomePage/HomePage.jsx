@@ -9,7 +9,7 @@ const HomePage = () => {
   const [projects, setProjects] = useState([])
   const [projectsLoading, setProjectsLoading] = useState(true)
   const [visibleIndex, setVisibleIndex] = useState(-1)
-  const intros = ['Full-stack software engineer. ', 'React, ', 'Node.js, ', 'Python, ', 'Français, ', 'Ελληνικά. ', 'Based in London.']
+  const intros = ['Full-stack software engineer. ', 'React, ', 'Node.js, ', 'Python. ', 'Français, ', 'Ελληνικά. ', 'Based in London.']
 
 
   useEffect(() => {
