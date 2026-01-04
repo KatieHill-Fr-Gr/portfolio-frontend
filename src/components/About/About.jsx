@@ -16,7 +16,7 @@ const About = () => {
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState([])
     const [openItem, setOpenItem] = useState(null)
-    const [visibleIndex, setVisibleIndex] = useState(-1);
+    const [visibleIndex, setVisibleIndex] = useState(-1)
     const intros = ['Every story has a beginning. ', 'Mine started with content creation and localization. ', 'Now I build apps.']
 
     const toggleItem = (index) => {

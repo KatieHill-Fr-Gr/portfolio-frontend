@@ -8,6 +8,9 @@ const HomePage = () => {
   const navigate = useNavigate()
   const [projects, setProjects] = useState([])
   const [projectsLoading, setProjectsLoading] = useState(true)
+  const [visibleIndex, setVisibleIndex] = useState(-1)
+  const intros = ['Full-stack software engineer. ', 'React, ', 'Node.js, ', 'Python, ', 'Français, ', 'Ελληνικά. ', 'Based in London.']
+
 
   useEffect(() => {
     const loadProjects = async () => {
@@ -28,17 +31,29 @@ const HomePage = () => {
     .sort((a, b) => new Date(b.date_completed) - new Date(a.date_completed))
     .slice(0, 3)
 
+  useEffect(() => {
+    intros.forEach((_, i) => {
+      setTimeout(() => setVisibleIndex(i), i * 1000)
+    })
+  }, [])
+
   return (
     <main>
       <section>
         <div className="container">
           <div className="page-content">
             <div className="hero">
-          
-                <h1>
-                 Full-stack software engineer
-                </h1>
-        
+              <h1>
+                {intros.map((text, i) => (
+                  <span
+                    key={i}
+                    className={`transition-all duration-500 ${i <= visibleIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+                      }`}
+                  >
+                    {text}
+                  </span>
+                ))}
+              </h1>
             </div>
             <h2>Recent work</h2>
             {projectsLoading ? (
