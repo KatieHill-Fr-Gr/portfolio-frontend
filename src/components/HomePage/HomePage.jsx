@@ -2,7 +2,6 @@ import './HomePage.css'
 import { useState, useEffect, useContext } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { projectsIndex } from '../../services/projects.js'
-import homepageIMG from '../../assets/homepageIMG.JPG'
 
 const HomePage = () => {
   const navigate = useNavigate()
