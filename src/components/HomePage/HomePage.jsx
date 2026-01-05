@@ -10,6 +10,13 @@ const HomePage = () => {
   const [projectsLoading, setProjectsLoading] = useState(true)
   const [visibleIndex, setVisibleIndex] = useState(-1)
   const intros = ['Full-stack software engineer. ', 'React, ', 'Node.js, ', 'Python. ', 'Français, ', 'Ελληνικά. ', 'Based in London.']
+  const specialStyles = {
+  2: { color: '#fd6b2d'},
+  3: { color: '#fd6b2d'},
+  4: { color: '#000', fontFamily: 'Inclusive sans' },
+  5: { color: '#fd6b2d', fontFamily: 'Inclusive sans' }
+    
+}
 
 
   useEffect(() => {
@@ -49,6 +56,7 @@ const HomePage = () => {
                     key={i}
                     className={`transition-all duration-500 ${i <= visibleIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
                       }`}
+                      style={specialStyles[i] || {}}
                   >
                     {text}
                   </span>
