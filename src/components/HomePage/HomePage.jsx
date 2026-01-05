@@ -11,10 +11,8 @@ const HomePage = () => {
   const [visibleIndex, setVisibleIndex] = useState(-1)
   const intros = ['Full-stack software engineer. ', 'React, ', 'Node.js, ', 'Python. ', 'Français, ', 'Ελληνικά. ', 'Based in London.']
   const specialStyles = {
-  2: { color: '#fd6b2d'},
-  3: { color: '#fd6b2d'},
   4: { color: '#000', fontFamily: 'Inclusive sans' },
-  5: { color: '#fd6b2d', fontFamily: 'Inclusive sans' }
+  5: { color: '#000', fontFamily: 'Inclusive sans' }
     
 }
 
