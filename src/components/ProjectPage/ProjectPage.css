@@ -24,10 +24,8 @@
 }
 
 @media (max-width: 768px) {
-  
-  project-title {
+.project-title {
     text-align: left;
   }
-  
 }
 

@@ -147,4 +147,9 @@
         border-right: none;
         border-bottom: solid 1px var(--light-divider);
     }
+
+    .item-list,
+    .tech-list {
+    width: 100%;
+    }
 }
