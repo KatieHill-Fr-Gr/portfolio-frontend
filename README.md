@@ -2,7 +2,7 @@
 # My Portfolio – React-based frontend
 by Katie Hill 
 
-
+<img width="1440" height="684" alt="Screenshot 2026-02-03 at 13 12 09" src="https://github.com/user-attachments/assets/92217997-2d04-4d98-95b1-ef3bf2f0d05a" />
 
 *Screenshot of homepage*
 
