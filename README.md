@@ -22,16 +22,11 @@ alt=“PostgreSQL” width="40" height="40" />
 ## About
 
 
-This repository contains the frontend of my portfolio designed to showcase my engineering projects. It features a dynamic React-based UI that consumes a Django API. While this stack might seem complex for a portfolio site, I chose this particular architecture for several reasons:
+This repository contains the frontend of my portfolio designed to showcase my engineering projects. It features a dynamic React-based UI that consumes a Django API. While this stack might seem complex for a portfolio site, I chose this particular architecture for several reasons: 
 
-**1) Content management**
-Projects are dynamically rendered from the API, which allows me to add and update content through Django's admin interface without touching the codebase.
-
-**2) Secure contact form**
-The backend handles form submissions with proper validation and security.
-
-**3) Full-stack expertise**
-The project itself serves as a real-world example of the technologies I work with professionally.
+- Content management: projects are dynamically rendered from the API, which allows me to add and update content through Django's admin interface without touching the codebase.
+- Secure contact form: the backend handles form submissions with proper validation and security.
+- Full-stack expertise: the project itself serves as a real-world example of the technologies I work with professionally.
 
 You can view the live app here: https://katie-hill-portfolio.netlify.app/
 
